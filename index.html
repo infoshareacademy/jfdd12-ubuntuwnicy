@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <title>QUIZ</title>
+</head>
+<body>
+    <div></div>
+    <div class="form">
+        <h1>Zapisz się na premierę!</h1>
+        <p>Cześć, wyślemy ci tylko jednego maila z informacjami w dniu premiery. :)</p>
+
+        <form class="premiereNewsletter" action="/sent.php">
+            <label for="name">Imię i nazwisko:</label>
+            <input type="text" name="name" required><br>
+            <label for="userEmail">Email:</label>
+            <input type="email" name="userEmail" required><br>
+            <input type="submit" name="newsletterSubmit"><br>
+        </form>
+
+        <footer class="newsletterSecurity">
+            <p>Twój adres i dane są bezpieczne w naszej bazie danych. Nie przekazujemy ich żadnym innym podmiotom.</p>
+        </footer>
+    </div>
+</body>
+</html>
