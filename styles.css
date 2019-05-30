@@ -14,6 +14,7 @@ input[type="submit"]{
 input[name="name"], input[name="userEmail"]{
     padding: 0px;
     border: 1px solid black;
+    width: 150px;
 }
 
 .premiereNewsletter{
@@ -23,6 +24,7 @@ input[name="name"], input[name="userEmail"]{
 }
 
 .newsletterSecurity{
-    width: 25%;
+    width: 80%;
     font-size: 0.7em;
+    text-align: center;
 }
