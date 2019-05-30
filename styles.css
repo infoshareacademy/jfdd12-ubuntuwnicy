@@ -2,23 +2,27 @@ body{
     box-sizing: border-box;
     background-color: blanchedalmond;
 }
-
+.form{
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+}
 input[type="submit"]{
     margin-top: 5px;
 }
 
 input[name="name"], input[name="userEmail"]{
-    float: right;
     padding: 0px;
     border: 1px solid black;
 }
 
 .premiereNewsletter{
-    width: 35%;
+    display: flex;
+    flex-flow: column;
+
 }
 
 .newsletterSecurity{
     width: 25%;
     font-size: 0.7em;
 }
-
