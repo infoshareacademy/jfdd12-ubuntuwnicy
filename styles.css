@@ -1,4 +1,47 @@
+* {
+    box-sizing: border-box;
+  }
+
 body{
     box-sizing: border-box;
     background-color: blanchedalmond;
 }
+
+img{
+    height: 300%;
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(137, 47, 255);
+    font-size: 42px;
+}
+
+a:hover{
+    color: red;
+}
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+}
+
+div.background {
+    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgtUgW--9AsD8ZcBFRaw22jwk_L1MQLVD-ybALkXCs2ddvcviOSA") no-repeat;
+    background-size: 100% 100%;
+    border: 1px solid black;
+  }
+   
+  div.transbox {
+    margin: 400px;
+    background-color: blanchedalmond;
+    opacity: 0.8;
+    filter: alpha(opacity=60); 
+  }
+   
+  div.transbox p {
+    margin: 5%;
+    font-weight: bold;
+    color: #000000;
+  }
