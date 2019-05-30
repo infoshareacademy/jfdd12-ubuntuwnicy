@@ -16,14 +16,13 @@ body {
 }
 
 .icons > div {
-    background: #e6e6ff;
     padding: 1.5rem;
     text-align: center;
 }
 
 
 
-@media screen and (min-width: 401px) {
+@media only screen and (min-width: 401px) {
     body {
         background-color: #ffffff;
         margin: 0;
@@ -34,7 +33,7 @@ body {
 
     .icons {
         display: grid;
-        grid-template-columns: repeat(4, 300px);
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-gap: 1rem;
         justify-items: stretch;
         text-align: center;
@@ -42,7 +41,6 @@ body {
     }
 
     .icons > div {
-        background: #e6e6ff;
         padding: 1.5rem;
         border-radius: 1rem;
     }
