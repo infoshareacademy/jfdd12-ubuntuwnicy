@@ -7,20 +7,31 @@ body{
     background-color: blanchedalmond;
 }
 
-a{
+#myDropdown>a{
     text-decoration: none;
-    color: rgb(137, 47, 255);
+    color: rgb(54, 255, 47);
     font-size: 42px;
+    background-color: brown;
+    border-style: solid;
+    border-width: 10px;
+    border-color: aqua; 
 }
 
-a:hover{
+a{
+  text-decoration: none;
+  color: rgb(137, 47, 255);
+  font-size: 42px;
+}
+
+div.a:hover{
     color: red;
 }
 
 div>p{
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 25px;
+    font-size: 15px;
 }
+
 
 div.background {
     display: flex;
@@ -28,27 +39,37 @@ div.background {
     background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgtUgW--9AsD8ZcBFRaw22jwk_L1MQLVD-ybALkXCs2ddvcviOSA") no-repeat;
     background-size: 100% 100%;
     border: 1px solid black;
-    align-content: flex-start;
+    align-items: center;
+    justify-content: flex-end;
     width: 100%;
-    height: 100vh;
+    height: 78.5vh;
   }
    
+  div.navigation {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
+
+  div.logo{
+    display: flex;
+    align-self: flex-start;
+  }
+
   div.transbox {
-    background-color: blanchedalmond;
+    background-color: white;
     opacity: 0.8;
-    filter: alpha(opacity=60); 
-    align-self: center;
-    justify-content: center;
-    margin-bottom: 50px;
+    filter: alpha(opacity=60);
+    width:400px; 
   }
    
   div.link {
-    background-color: blanchedalmond;
+    background-color: white;
     opacity: 0.8;
     filter: alpha(opacity=60); 
-    align-self: flex-end;
-    justify-content: center;
     margin-bottom: 50px;
+    width:400px;
   }
 
   div.transbox p {
@@ -56,6 +77,27 @@ div.background {
     color: #000000;
   }
 
-  div.transbox p{
-      align-self: flex-end;
+  div.nav {
+    top: 0;
+    right: 0;
   }
+
+  div.menu{
+    opacity: 0.8;
+    color: black;
+  }
+
+  a{
+    display: block;
+  }
+
+  @media (min-width: 401px) {
+    a{
+      display: inline-block;
+    }
+    div>p{
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 30px;
+    }
+  }
+
