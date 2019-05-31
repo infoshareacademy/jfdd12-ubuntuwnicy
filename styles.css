@@ -2,3 +2,76 @@ body{
     box-sizing: border-box;
     background-color: blanchedalmond;
 }
+/* Desktop styles for newsletter premiere form */
+
+.form{
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    text-align: center;
+    font-size: 2em;
+}
+input[type="submit"]{
+    margin-top: 5px;
+    font-size: 1.05em;
+}
+
+input[name="name"], input[name="userEmail"]{
+    padding: 0px;
+    border: 1px solid black;
+    width: 120%;
+    height: 120%;
+}
+
+.premiereNewsletter{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.newsletterSecurity{
+    width: 80%;
+    font-size: 0.7em;
+}
+/* Mobile styles for newsletter form. */
+@media (max-width: 400px){
+    .form{
+        font-size: 0.8em;
+    }
+}
+
+/* Styles for feature list */
+@media (min-width: 401px){
+div.featureList{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 50px;
+    margin: 0 3% 0 3%;
+    justify-items: center;
+}
+.featureListCol1>div>img, .featureListCol2>div>img{
+    width: 60px;
+    height: 60px;
+    float: left;
+    margin: 5px 5px 5px 5px;
+}
+.featureListHeader{
+    text-align: center;
+    margin-bottom: 60px;
+}
+.featureListCol1, .featureListCol2{
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.featureListCol1>div, .featureListCol2>div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #e6e6ff;
+}
+}
