@@ -2,29 +2,41 @@ body{
     box-sizing: border-box;
     background-color: blanchedalmond;
 }
+
+
+
 .form{
     display: flex;
     align-items: center;
     flex-flow: column;
+    text-align: center;
+    font-size: 2em;
 }
 input[type="submit"]{
     margin-top: 5px;
+    font-size: 1.05em;
 }
 
 input[name="name"], input[name="userEmail"]{
     padding: 0px;
     border: 1px solid black;
-    width: 150px;
+    width: 120%;
+    height: 120%;
 }
 
 .premiereNewsletter{
     display: flex;
     flex-flow: column;
-
+    align-items: center;
 }
 
 .newsletterSecurity{
     width: 80%;
     font-size: 0.7em;
-    text-align: center;
+}
+
+@media (max-width: 400px){
+    .form{
+        font-size: 0.8em;
+    }
 }
