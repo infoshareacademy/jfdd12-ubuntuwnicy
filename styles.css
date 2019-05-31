@@ -2,7 +2,7 @@ body{
     box-sizing: border-box;
     background-color: blanchedalmond;
 }
-
+/* Desktop styles for newsletter premiere form */
 .form{
     display: flex;
     align-items: center;
@@ -32,7 +32,7 @@ input[name="name"], input[name="userEmail"]{
     width: 80%;
     font-size: 0.7em;
 }
-
+/* Mobile styles for newsletter form. */
 @media (max-width: 400px){
     .form{
         font-size: 0.8em;
