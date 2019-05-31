@@ -21,3 +21,10 @@ body{
     border-radius: 1rem;
 }
 
+@media screen and (max-width: 400px) {
+    .icons {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
