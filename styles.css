@@ -9,6 +9,9 @@ body{
     box-sizing: border-box;
     background-color: blanchedalmond;
     margin: 0px;
+    background: url("background.png") no-repeat;
+    /* background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgtUgW--9AsD8ZcBFRaw22jwk_L1MQLVD-ybALkXCs2ddvcviOSA") no-repeat;  */
+    background-size: 100% 100%;
 }
 
 /* Navigation bar - list of all sections */
@@ -17,15 +20,39 @@ nav { position: sticky;
         top: 0;
        }
 
-.navClass ul{
+ul.subMenu{
+  display: none;
+}
+
+.navClass ul.mainMenu{
   background-color: rgb(4, 15, 9);
   color: rgb(192, 189, 17);
   font-size: 18px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  margin: 0px;
+  margin-top: 0px;
+  margin-left: 100px;
   padding: 0px 0px;
   text-align: right;
   opacity: 0.7;
+}
+
+ul.mainMenu{
+  margin-left: 100px;
+}
+
+.navClass img.pageLogo{
+  display: flex;
+  justify-content: flex-start;
+}
+
+.navClass ul.mainMenu{
+  margin: 0px 0px 0px 31px;
+}
+
+.navClass ul.mainMenuLogo{
+  padding: 0px 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 .mobileMenu{
@@ -34,8 +61,10 @@ nav { position: sticky;
   width: 120px;
 }
 
-.mobileMenu span{
-  clear: left;
+img.pageLogo{
+  float: left;
+  width: 31px;
+  height: 31px;
 }
 
 .navClass > ul > li{
@@ -50,11 +79,12 @@ nav { position: sticky;
 }
 
 .navClass ul li:hover{
-  background-color:rgb(117, 10, 112)
+  background-color:rgb(117, 10, 112);
+  display: inline-block;
 }
 
 ul.subMenu{
-  margin-top: 5px;
+  margin-top: 25px;
   position: absolute;
   width: 120px;
   display: block;
@@ -85,9 +115,12 @@ ul.subMenu li>a:active{
   color: black;
 }
 
-div>p{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
+li .mobileMenu{
+  width: 5px;
+}
+
+ul.subMenu{
+  padding-left: 0px;
 }
 
 /* Defines the main background and text displayed */
@@ -95,11 +128,11 @@ div>p{
 div.background {
     display: flex;
     flex-direction: column;
-    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgtUgW--9AsD8ZcBFRaw22jwk_L1MQLVD-ybALkXCs2ddvcviOSA") no-repeat;
+    /* background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgtUgW--9AsD8ZcBFRaw22jwk_L1MQLVD-ybALkXCs2ddvcviOSA") no-repeat; */
     background-size: 100% 100%;
-    border: 1px solid black;
-    align-items: center;
-    justify-content: flex-end;
+    /* border: 1px solid black; */
+    align-items: flex-end;
+    justify-content: center;
     width: 100%;
     height: 78.5vh;
   }
@@ -114,22 +147,28 @@ div.background {
   background-color: blanchedalmond;
 }
 
-  div.transbox p {
-    font-weight: bold;
-    color: #000000;
+div.transbox p {
+  font-weight: bold;
+  color: #000000;
+}
+
+a{
+  text-decoration: none;
+  color: rgb(192, 189, 17);
+  width: 100%;
+  height: 100%; 
+}
+
+div.transbox p{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 20px;
+}
+
+@media (min-width: 401px) {
+  div>p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
   }
-
-  a{
-    text-decoration: none;
-    color: rgb(192, 189, 17);
-    width: 100%;
-    height: 100%;  }
-
-  @media (min-width: 401px) {
-    div>p{
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 30px;
-    }
 
 /* Hides menu for mobiles */
 
@@ -138,10 +177,9 @@ div.background {
     }
 
   .menuPC{
-    background-color: #000000;
     display: flex;
     justify-content: flex-end;
-    height: 35px;
+    height: 50px;
     width: 100%;
     position: sticky;
     top: 0;
@@ -153,19 +191,25 @@ div.background {
   }
 
   .menuPC div{
-    margin-top: 5px;
+    margin-top: 13px;
   }
 
   .menuPC a{
     background-color: #000000;
-    font-size: 20px;
-    padding: 8px 20px;
-    width: 100px;
-    height: 100px;
+    font-size: 22x;
+    padding: 20px 22px;
+    width: 100%;
+    height: 100%;
   }
 
   .li:active{
     color: black;
+  }
+
+  img.pageLogo{
+    float: left;
+    width: 50px;
+    height: 50px;
   }
   }
 
