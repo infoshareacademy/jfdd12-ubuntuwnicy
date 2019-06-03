@@ -38,10 +38,8 @@ body {
         text-align: center;
         margin: 0;
     }
-body{
-    box-sizing: border-box;
-    background-color: blanchedalmond;
 }
+
 /* Desktop styles for newsletter premiere form */
 
 .form{
@@ -85,7 +83,7 @@ input[name="name"], input[name="userEmail"]{
 div.featureList{
     display: grid;
     grid-template-columns: 50% 50%;
-    height: 50px;
+    height: 20%;
     margin: 0 3% 0 3%;
     justify-items: center;
 }
