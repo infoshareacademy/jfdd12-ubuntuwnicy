@@ -125,7 +125,7 @@ ul.subMenu{
 
 /* Defines the main background and text displayed */
 
-div.background {
+div.backgroundMain {
     display: flex;
     flex-direction: column;
     /* background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgtUgW--9AsD8ZcBFRaw22jwk_L1MQLVD-ybALkXCs2ddvcviOSA") no-repeat; */
@@ -162,6 +162,21 @@ a{
 div.transbox p{
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 20px;
+}
+
+div.backgroundMain{
+  display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+  grid-template-rows: 33.33% 33.33% 33.33% 33.33% 33.33%;
+  grid-template-areas: "slogan slogan slogan"
+                        "slogan slogan slogan"
+                        "slogan slogan slogan"
+                        "slogan slogan slogan"
+                        "slogan slogan slogan";
+}
+
+div.transbox{
+  grid-area: slogan;
 }
 
 /* FOR LARGER DEVICES */
