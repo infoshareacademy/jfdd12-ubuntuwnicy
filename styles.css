@@ -23,7 +23,7 @@ body {
 
 @media only screen and (min-width: 401px) {
     body {
-        background-color: #ffffff;
+        
         margin: 0;
         padding: 0 250px;
         font-family: 'Roboto', sans-serif;
@@ -38,10 +38,10 @@ body {
         text-align: center;
         margin: 0;
     }
-body{
-    box-sizing: border-box;
-    background-color: blanchedalmond;
+
 }
+
+/* Newsletter form, JakubK */
 /* Desktop styles for newsletter premiere form */
 
 .form{
@@ -73,20 +73,27 @@ input[name="name"], input[name="userEmail"]{
     width: 80%;
     font-size: 0.7em;
 }
-/* Mobile styles for newsletter form. */
-@media (max-width: 400px){
+/* Mobile styles for newsletter form, JakubK */
+/* @media (max-width: 400px){
     .form{
         font-size: 0.8em;
     }
     
-}
+} */
+
+
+/* Feature list, JakubK */
+
+/* div.featureListHeader{
+
+} */
 
 /* Styles for feature list */
 @media (min-width: 401px){
 div.featureList{
     display: grid;
     grid-template-columns: 50% 50%;
-    height: 50px;
+    height: 20%;
     margin: 0 3% 0 3%;
     justify-items: center;
 }
@@ -117,7 +124,7 @@ div.featureList{
 }
 }
 
-/* Mobile styles for feature list */
+/* Mobile styles for feature list, JakubK */
 @media (max-width: 400px){
 
     .featureListCol1>div>img, .featureListCol2>div>img{
