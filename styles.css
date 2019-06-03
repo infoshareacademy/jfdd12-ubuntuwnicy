@@ -1,3 +1,4 @@
+/* mobile styles for icons - MartaKirschenstein */
 * {
     box-sizing: border-box;
 }
@@ -18,9 +19,11 @@ body {
 .icons > div {
     text-align: center;
 }
+/* end of mobile styles for icons - MartaKirschenstein */
 
 
 
+/* desktop styles for icons - MartaKirschenstein */
 @media only screen and (min-width: 401px) {
     body {
         background-color: #ffffff;
@@ -39,9 +42,11 @@ body {
         margin: 0;
     }
 }
+/* end of desktop styles for icons - MartaKirschenstein */
 
-/* Desktop styles for newsletter premiere form */
 
+
+/* Desktop styles for newsletter premiere form - Jakub Karolak*/
 .form{
     display: flex;
     align-items: center;
