@@ -38,6 +38,7 @@ input[name="name"], input[name="userEmail"]{
     .form{
         font-size: 0.8em;
     }
+    
 }
 
 /* Styles for feature list */
@@ -74,4 +75,16 @@ div.featureList{
     width: 100%;
     background-color: #e6e6ff;
 }
+}
+
+/* Mobile styles for feature list */
+@media (max-width: 400px){
+
+    .featureListCol1>div>img, .featureListCol2>div>img{
+        width: 60px;
+        height: 60px;
+        float: left;
+        margin: 5px 5px 5px 5px;
+    }
+
 }
