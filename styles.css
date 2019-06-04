@@ -1,3 +1,4 @@
+/* mobile styles for icons - MartaKirschenstein */
 * {
     box-sizing: border-box;
 }
@@ -18,6 +19,7 @@ body {
 .icons > div {
     text-align: center;
 }
+/* end of mobile styles for icons - MartaKirschenstein */
 
 
 
@@ -38,12 +40,15 @@ body {
         text-align: center;
         margin: 0;
     }
-
 }
+/* end of desktop styles for icons - MartaKirschenstein */
+
+
 
 /* Newsletter form, JakubK */
 /* Desktop styles for newsletter premiere form */
 
+/* Desktop styles for newsletter premiere form - Jakub Karolak*/
 .form{
     display: flex;
     align-items: center;
@@ -83,6 +88,16 @@ input[name="name"], input[name="userEmail"]{
     
 }
 
+/* Styles for feature list */
+@media (min-width: 401px){
+div.featureList{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 20%;
+    margin: 0 3% 0 3%;
+    justify-items: center;
+}
+}
 /* Feature list, JakubK */
 
 .featureListCol1>div>img, .featureListCol2>div>img{
@@ -136,11 +151,11 @@ input[name="name"], input[name="userEmail"]{
 
 /* Desktop styles for the feature list */
 @media (min-width: 481px){
-    div.featureList{
+    div.featureList {
         display: grid;
         grid-template-columns: 50% 50%;
         height: 20%;
         margin: 0 3% 0 3%;
         justify-items: center;       
     }
-    }
+}
