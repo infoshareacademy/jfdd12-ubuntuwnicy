@@ -380,6 +380,31 @@ font-weight:200%;
 
 .about-me {
     font-size:1.2rem;
+}
+/*--------------newsletter form end-------------*/
+
+
+
+/* Feature list, JakubK */
+
+
+
+.featureListCol1>div>img, .featureListCol2>div>img{
+    width: 60px;
+    height: 60px;
+    float: left;
+    margin: 5px 5px 5px 5px;
+}
+.featureListHeader{
+    text-align: center;
+    margin: 5px;
+    background-color: brown;
+}
+.featureListCol1, .featureListCol2{
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
     text-align: center;
     border-top:2px solid;
     border-bottom:2px solid;
@@ -389,10 +414,11 @@ font-weight:200%;
 
 
     div.featureList{
-        display: flex;
-        flex-flow: column;
+        display: grid;
+        grid-auto-columns: 1fr 1fr;
+        /* flex-flow: column; */
         height: 20%;
-        margin: 0 3% 0 3%;
+        /* margin: 0 3% 0 3%; */
         justify-items: center;
       }
 .social {
@@ -482,4 +508,47 @@ div.transbox{
 }
     .card-body{
         margin:2vw; 
+    }}
+/* Desktop styles for the feature list, JakubK */
+@media (min-width: 481px){
+    div.featureList {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        height: 20%;
+        margin: 0 3% 0 3%;
+        justify-items: center;       
     }
+    
+
+.featureListWrapperForHover>div {
+    height: 0px;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+    
+.featureListWrapperForHover:hover>div{
+    
+    transition-property: height;
+    transition-duration: 1s;
+    height: 280px;
+}}
+/*-----------------hiding default 4 icon feature list-----*/
+
+
+
+    
+.featureListWrapperForHover:hover>section{
+    height: 0px;
+    padding: 0;
+    margin: 0;
+}
+.featureListWrapperForHover>section {
+    overflow: hidden;
+    height: 160px;
+    transition-property: height;
+    transition-duration: 1s;
+}
+
+
+/*-----------------feature list end----------*/
