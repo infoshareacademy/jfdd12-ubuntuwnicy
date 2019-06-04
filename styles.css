@@ -44,6 +44,7 @@ body {
 /* Newsletter form, JakubK */
 /* Desktop styles for newsletter premiere form */
 
+
 .form{
     display: flex;
     align-items: center;
@@ -83,7 +84,11 @@ input[name="name"], input[name="userEmail"]{
     
 }
 
+/*--------------newsletter form end-------------*/
+
 /* Feature list, JakubK */
+
+
 
 .featureListCol1>div>img, .featureListCol2>div>img{
     width: 60px;
@@ -134,7 +139,7 @@ input[name="name"], input[name="userEmail"]{
 
 }
 
-/* Desktop styles for the feature list */
+/* Desktop styles for the feature list, JakubK */
 @media (min-width: 481px){
     div.featureList{
         display: grid;
@@ -144,3 +149,12 @@ input[name="name"], input[name="userEmail"]{
         justify-items: center;       
     }
     }
+
+.featureListWrapperForHover>div{
+    display: none;
+}
+    
+.featureListWrapperForHover:hover>div{
+    display: grid;
+}
+/*-----------------feature list end----------*/
