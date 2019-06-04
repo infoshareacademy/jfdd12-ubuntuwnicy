@@ -307,14 +307,49 @@ div.link{
 /* end of desktop styles for icons - MartaKirschenstein */
 
 
-
-/* Newsletter form, JakubK */
-
-
+/* Newsletter premiere form*/
 /* Desktop styles for newsletter premiere form - Jakub Karolak*/
 .form{
     display: flex;
+    align-items: center;
+    flex-flow: column;
+    text-align: center;
+    font-size: 2em;
 }
+
+input[type="submit"]{
+    margin-top: 5px;
+    font-size: 1.05em;
+}
+
+input[name="name"], input[name="userEmail"]{
+    padding: 0px;
+    border: 1px solid black;
+    width: 120%;
+    height: 120%;
+    
+}
+
+.premiereNewsletter{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.newsletterSecurity{
+    width: 80%;
+    font-size: 0.7em;
+}
+/* Mobile styles for newsletter form, JakubK */
+@media (max-width: 480px){
+    .form{
+        font-size: 0.8em;
+    }
+    
+}
+
+/*--------------newsletter form end-------------*/
+
 .container{
     display:flex;
     flex-direction:column;
@@ -355,15 +390,7 @@ background:#74b9ff;
     background:#74b9ff;
 }
 
-/* Styles for feature list */
-@media (min-width: 481px){
-div.featureList{
-    display: grid;
-    grid-template-columns: 50% 50%;
-    height: 20%;
-    margin: 0 3% 0 3%;
-    justify-items: center;
-}}
+
 .profile-image {
     width:12rem;
     height:12rem;
@@ -380,7 +407,7 @@ font-weight:200%;
 .about-me {
     font-size:1.2rem;
 }
-/*--------------newsletter form end-------------*/
+
 
 
 
