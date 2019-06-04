@@ -23,12 +23,11 @@ body {
 
 
 
-/* desktop styles for icons - MartaKirschenstein */
-@media only screen and (min-width: 401px) {
+@media only screen and (min-width: 481px) {
     body {
-        background-color: #ffffff;
-        margin: 0;
-        padding: 0 250px;
+        
+        /* margin: 0;
+        padding: 0 250px; */
         font-family: 'Roboto', sans-serif;
         font-size: 1.25em;
     }
@@ -46,6 +45,9 @@ body {
 
 
 
+/* Newsletter form, JakubK */
+/* Desktop styles for newsletter premiere form */
+
 /* Desktop styles for newsletter premiere form - Jakub Karolak*/
 .form{
     display: flex;
@@ -54,6 +56,7 @@ body {
     text-align: center;
     font-size: 2em;
 }
+
 input[type="submit"]{
     margin-top: 5px;
     font-size: 1.05em;
@@ -64,6 +67,7 @@ input[name="name"], input[name="userEmail"]{
     border: 1px solid black;
     width: 120%;
     height: 120%;
+    
 }
 
 .premiereNewsletter{
@@ -76,11 +80,12 @@ input[name="name"], input[name="userEmail"]{
     width: 80%;
     font-size: 0.7em;
 }
-/* Mobile styles for newsletter form. */
-@media (max-width: 400px){
+/* Mobile styles for newsletter form, JakubK */
+@media (max-width: 480px){
     .form{
         font-size: 0.8em;
     }
+    
 }
 
 /* Styles for feature list */
@@ -92,6 +97,9 @@ div.featureList{
     margin: 0 3% 0 3%;
     justify-items: center;
 }
+}
+/* Feature list, JakubK */
+
 .featureListCol1>div>img, .featureListCol2>div>img{
     width: 60px;
     height: 60px;
@@ -115,6 +123,39 @@ div.featureList{
     align-items: center;
     justify-content: center;
     width: 100%;
-    background-color: #e6e6ff;
 }
+
+/* Mobile styles for the feature list, JakubK */
+@media (max-width: 480px){
+
+    .featureListCol1>div>img, .featureListCol2>div>img{
+        width: 60px;
+        height: 60px;
+        float: left;
+        margin: 5px 5px 5px 5px;
+    }
+
+    div.featureList{
+        display: flex;
+        flex-flow: column;
+        height: 20%;
+        margin: 0 3% 0 3%;
+        justify-items: center;
+    }
+
+    .featureListCol1>div, .featureListCol2>div{
+        flex-flow: column;
+        }
+
+}
+
+/* Desktop styles for the feature list */
+@media (min-width: 481px){
+    div.featureList {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        height: 20%;
+        margin: 0 3% 0 3%;
+        justify-items: center;       
+    }
 }
