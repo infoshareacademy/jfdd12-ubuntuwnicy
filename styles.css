@@ -18,6 +18,13 @@ body {
 
 .icons > div {
     text-align: center;
+    
+}
+
+.icons > div > img {
+    object-fit: contain;
+    width: 30%;
+    font-weight: 500;
 }
 /* end of mobile styles for icons - MartaKirschenstein */
 
@@ -39,6 +46,8 @@ body {
         justify-items: stretch;
         text-align: center;
         margin: 0;
+        padding 0;
+        
     }
 }
 /* end of desktop styles for icons - MartaKirschenstein */
