@@ -1,18 +1,24 @@
-* {
+body{
     box-sizing: border-box;
+    background-color: blanchedalmond;
 }
 
-body {
-    background-color: #ffffff;
-    margin: 0;
+section.three{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 12px;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
-    font-size: 15px;
+    margin:0;
 }
 
-.icons {
-    display: flex;
-    flex-direction: column;
+h1.heading{
+    text-transform:uppercase;
+    letter-spacing: 3px;
+    font-size: 2rem;
+    text-align:center;
+    position:relative;
+    margin-bottom:3rem;
+    padding-bottom:1rem; 
+    border-bottom:6px solid;
 }
 
 .icons > div {
@@ -310,41 +316,44 @@ div.link{
 /* Desktop styles for newsletter premiere form - Jakub Karolak*/
 .form{
     display: flex;
+.container{
+    display:flex;
+    flex-direction:column;
+    align-content:center;
+    align-items:center;
+    
+}
+.card-wrapper{
+    display:flex;
+    flex-direction:column;
+    align-content: center;
     align-items: center;
-    flex-flow: column;
-    text-align: center;
-    font-size: 2em;
-}
-
-input[type="submit"]{
-    margin-top: 5px;
-    font-size: 1.05em;
-}
-
-input[name="name"], input[name="userEmail"]{
-    padding: 0px;
-    border: 1px solid black;
-    width: 120%;
-    height: 120%;
     
 }
 
-.premiereNewsletter{
-    display: flex;
-    flex-flow: column;
-    align-items: center;
+.card-body{
+    display:flex;
+    flex-direction:column;
+    align-content:center;
+    align-items:center;
+    width:16rem;
+    height:28rem;
+    border:2px solid;
+    box-shadow:5px 10px;
+    opacity:0.8;
 }
 
-.newsletterSecurity{
-    width: 80%;
-    font-size: 0.7em;
+.card-body.first{
+    background:#74b9ff
 }
-/* Mobile styles for newsletter form, JakubK */
-@media (max-width: 480px){
-    .form{
-        font-size: 0.8em;
-    }
-    
+.card-body.second{
+background:#74b9ff;
+}
+.card-body.third{
+    background:#74b9ff;
+}
+.card-body.fourth{
+    background:#74b9ff;
 }
 
 /* Styles for feature list */
@@ -356,36 +365,28 @@ div.featureList{
     margin: 0 3% 0 3%;
     justify-items: center;
 }
-}
-/* Feature list, JakubK */
-
-.featureListCol1>div>img, .featureListCol2>div>img{
-    width: 60px;
-    height: 60px;
-    float: left;
-    margin: 5px 5px 5px 5px;
-}
-.featureListHeader{
-    text-align: center;
-    margin-bottom: 60px;
-}
-.featureListCol1, .featureListCol2{
-    width: 100%;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-}
-.featureListCol1>div, .featureListCol2>div{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+.profile-image {
+    width:12rem;
+    height:12rem;
+    border-radius:50%;
+    border: 2px solid 
 }
 
-/* Mobile styles for the feature list, JakubK */
-@media (max-width: 480px){
+.card-body h1 {
+font-size:1.5rem;
+text-transform:capitalize;
+font-weight:200%;
+}
+
+.about-me {
+    font-size:1.2rem;
+    text-align: center;
+    border-top:2px solid;
+    border-bottom:2px solid;
+    padding:1px;
+
+}
+
 
     div.featureList{
         display: flex;
@@ -393,10 +394,43 @@ div.featureList{
         height: 20%;
         margin: 0 3% 0 3%;
         justify-items: center;
+      }
+.social {
+    display:flex;
+    text-align:center;
+    width:100%;
+    padding:4px;
+    justify-content: space-evenly;
+    
+}
+ul.social-media {
+    list-style:none;
+    display:flex;
+    flex-direction:row;
+    text-align:center;
+    justify-content: space-evenly;
+}
+.social-media a {
+    text-decoration:none;
     }
-
-    .featureListCol1>div, .featureListCol2>div{
-        flex-flow: column;
+.social-media i{
+        font-size:3rem;
+    }
+    .fa-github-square{
+        color:black;
+    }
+    .fa-linkedin-square{
+        color:darkblue;
+    }
+    .fa-list-alt{
+        color:darkgoldenrod;
+    }
+    @media screen and (min-width:480px){
+        .card-wrapper{
+            flex-direction: row;
+            flex-wrap:wrap;
+            justify-content: center;
+            align-items:center;    
         }
 }
 
@@ -446,3 +480,6 @@ div.transbox{
   grid-column-end: 8;
   font-size: 100px;
 }
+    .card-body{
+        margin:2vw; 
+    }
