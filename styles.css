@@ -55,9 +55,10 @@ body {
     
 }
 
-.footerInfo {
+.footerInfo p {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
     color: white;
 }
 
