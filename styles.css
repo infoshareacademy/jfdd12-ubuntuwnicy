@@ -227,8 +227,6 @@ a{
     border-radius: 15px 15px 15px 15px;
     padding: 10px 10px;
   }
-}
-
 div.transbox p{
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 20px;
@@ -240,7 +238,7 @@ div.backgroundMain{
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(12, 1fr);  
-  grid-template-areas:
+  /* grid-template-areas: */
 }
 
 div.transbox{
@@ -316,6 +314,7 @@ div.link{
 /* Desktop styles for newsletter premiere form - Jakub Karolak*/
 .form{
     display: flex;
+}
 .container{
     display:flex;
     flex-direction:column;
@@ -364,7 +363,7 @@ div.featureList{
     height: 20%;
     margin: 0 3% 0 3%;
     justify-items: center;
-}
+}}
 .profile-image {
     width:12rem;
     height:12rem;
@@ -385,42 +384,7 @@ font-weight:200%;
 
 
 
-/* Feature list, JakubK */
 
-
-
-.featureListCol1>div>img, .featureListCol2>div>img{
-    width: 60px;
-    height: 60px;
-    float: left;
-    margin: 5px 5px 5px 5px;
-}
-.featureListHeader{
-    text-align: center;
-    margin: 5px;
-    background-color: brown;
-}
-.featureListCol1, .featureListCol2{
-    width: 100%;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    text-align: center;
-    border-top:2px solid;
-    border-bottom:2px solid;
-    padding:1px;
-
-}
-
-
-    div.featureList{
-        display: grid;
-        grid-auto-columns: 1fr 1fr;
-        /* flex-flow: column; */
-        height: 20%;
-        /* margin: 0 3% 0 3%; */
-        justify-items: center;
-      }
 .social {
     display:flex;
     text-align:center;
@@ -462,7 +426,7 @@ ul.social-media {
 
 /* FOR MEDIUM DEVICES */
 
-@media only screen and (min-width: 481px) (max-width: 1120px){
+@media only screen and (min-width: 481px) and (max-width: 1120px){
  div.transbox{
   grid-row-start: 5;
   grid-row-end: 6;
@@ -485,7 +449,7 @@ div.backgroundMain{
 
 div.transbox a{
   font-size: 300px;
-}
+}}
 
 /* FOR LARGE DEVICES Lucjan K */
 
@@ -509,6 +473,44 @@ div.transbox{
     .card-body{
         margin:2vw; 
     }}
+
+/* Feature list, JakubK */
+
+
+
+.featureListCol1>div>img, .featureListCol2>div>img{
+    width: 60px;
+    height: 60px;
+    float: left;
+    margin: 5px 5px 5px 5px;
+}
+.featureListHeader{
+    text-align: center;
+    margin: 5px;
+    background-color: brown;
+}
+.featureListCol1, .featureListCol2{
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    text-align: center;
+    border-top:2px solid;
+    border-bottom:2px solid;
+    padding:1px;
+
+}
+
+
+    div.featureList{
+        display: grid;
+        grid-auto-columns: 1fr 1fr;
+        /* flex-flow: column; */
+        height: 20%;
+        /* margin: 0 3% 0 3%; */
+        justify-items: center;
+      }
+
 /* Desktop styles for the feature list, JakubK */
 @media (min-width: 481px){
     div.featureList {
