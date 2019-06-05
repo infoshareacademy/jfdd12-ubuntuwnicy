@@ -1,22 +1,71 @@
-* {
+body{
     box-sizing: border-box;
+    background-color: blanchedalmond;
 }
 
-body {
-    background-color: #ffffff;
-    margin: 0;
+section.three{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 12px;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
-    font-size: 15px;
+    margin:0;
 }
 
-.icons {
-    display: flex;
-    flex-direction: column;
+h1.heading{
+    text-transform:uppercase;
+    letter-spacing: 3px;
+    font-size: 2rem;
+    text-align:center;
+    position:relative;
+    margin-bottom:3rem;
+    padding-bottom:1rem; 
+    border-bottom:6px solid;
 }
 
 .icons > div {
     text-align: center;
+    
+}
+
+.icons > div > img {
+    object-fit: contain;
+    width: 30%;
+    font-weight: 500;
+}
+/* mobile styles for icons and footer - MartaKirschenstein */
+.mainFooter {
+   width: 100%;
+   height: auto;
+   margin: auto;
+   background:white;
+   padding: 20px 0px;
+   box-shadow: 2px -17px 47px -28px rgba(0,0,0,0.62);
+}
+
+.socialMediaFooter {
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+.socialMediaFooter ul {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.socialMediaFooter ul li {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin: 0px 10px;
+    
+}
+
+.footerInfo p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: grey;
 }
 
 /* Styles the main text on hero page Lucjan K */
@@ -29,7 +78,7 @@ div.transbox p {
   color: #000000;
 }
 
-/* SIATKA DO STRONY HERO Lucjan*/
+/* GRID FOR HERO SECTION Lucjan*/
 
 div.mainContent{
   display: grid;
@@ -53,6 +102,8 @@ div.transbox{
   white-space: wrap;
 }
 
+/* end of mobile styles for icons and footer - MartaKirschenstein */
+
 /* BACKGROUND- SEKCJA HERO LucjanK */
 
 div.sectionHero{
@@ -65,7 +116,40 @@ div.sectionHero{
   height: 80vh;
 }
 
-/* DEFINES MENU FOR MOBILE DEVICES */
+/* end of mobile styles for icons - MartaKirschenstein */
+
+
+@media only screen and (min-width: 481px) {
+    body {
+        /* margin: 0;
+        padding: 0 250px; */
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.25em;
+    }
+
+    .icons {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 1rem;
+        justify-items: stretch;
+        text-align: center;
+        margin: 0;
+        padding 0;
+        
+    }
+    div.sectionHero{
+      font-family: Arial, Helvetica, sans-serif;
+      box-sizing: border-box;
+      margin: 0px;
+      background: url("backgroundImage.jpg") no-repeat;
+      /* background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgtUgW--9AsD8ZcBFRaw22jwk_L1MQLVD-ybALkXCs2ddvcviOSA") no-repeat;  */
+      background-size: 100% 100%;
+      width: 100%;
+      height: 80vh;
+    }
+    }
+
+/* Navigation bar - list of all sections */
 
 .navClass{ position: sticky;  
   top: 0;
@@ -282,6 +366,34 @@ a{
     border-radius: 15px 15px 15px 15px;
     padding: 10px 10px;
   }
+div.transbox p{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 20px;
+}
+
+/* SIATKA DO STRONY HERO Lucjan*/
+
+div.backgroundMain{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);  
+  /* grid-template-areas: */
+}
+
+div.transbox{
+  grid-row-start: 5;
+  grid-row-end: 6;
+  grid-column-start: 3;
+  grid-column-end: 10;
+  white-space: wrap;
+}
+
+div.link{
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 6;
+  grid-column-end: 7;
+  white-space: nowrap;
 }
 
 /* FOR LARGER DEVICES Lucjan K*/
@@ -296,6 +408,7 @@ a{
 /* Newsletter form, JakubK */
 
 
+/* Newsletter premiere form*/
 /* Desktop styles for newsletter premiere form - Jakub Karolak*/
 .form{
     display: flex;
@@ -341,62 +454,112 @@ input[name="name"], input[name="userEmail"]{
     
 }
 
-/* Styles for feature list */
-@media (min-width: 481px){
-div.featureList{
-    display: grid;
-    grid-template-columns: 50% 50%;
-    height: 20%;
-    margin: 0 3% 0 3%;
-    justify-items: center;
-}
-}
-/* Feature list, JakubK */
+/*--------------newsletter form end-------------*/
 
-.featureListCol1>div>img, .featureListCol2>div>img{
-    width: 60px;
-    height: 60px;
-    float: left;
-    margin: 5px 5px 5px 5px;
+.container{
+    display:flex;
+    flex-direction:column;
+    align-content:center;
+    align-items:center;
+    
 }
-.featureListHeader{
-    text-align: center;
-    margin-bottom: 60px;
-}
-.featureListCol1, .featureListCol2{
-    width: 100%;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    text-align: center;
+.card-wrapper{
+    display:flex;
+    flex-direction:column;
+    align-content: center;
     align-items: center;
-}
-.featureListCol1>div, .featureListCol2>div{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+    
 }
 
-/* Mobile styles for the feature list, JakubK */
-@media (max-width: 480px){
+.card-body{
+    display:flex;
+    flex-direction:column;
+    align-content:center;
+    align-items:center;
+    width:16rem;
+    height:28rem;
+    border:2px solid;
+    box-shadow:5px 10px;
+    opacity:0.8;
+}
 
-    div.featureList{
-        display: flex;
-        flex-flow: column;
-        height: 20%;
-        margin: 0 3% 0 3%;
-        justify-items: center;
+.card-body.first{
+    background:#74b9ff
+}
+.card-body.second{
+background:#74b9ff;
+}
+.card-body.third{
+    background:#74b9ff;
+}
+.card-body.fourth{
+    background:#74b9ff;
+}
+
+
+.profile-image {
+    width:12rem;
+    height:12rem;
+    border-radius:50%;
+    border: 2px solid 
+}
+
+.card-body h1 {
+font-size:1.5rem;
+text-transform:capitalize;
+font-weight:200%;
+}
+
+.about-me {
+    font-size:1.2rem;
+}
+
+
+
+
+
+.social {
+    display:flex;
+    text-align:center;
+    width:100%;
+    padding:4px;
+    justify-content: space-evenly;
+    
+}
+ul.social-media {
+    list-style:none;
+    display:flex;
+    flex-direction:row;
+    text-align:center;
+    justify-content: space-evenly;
+}
+.social-media a {
+    text-decoration:none;
     }
-
-    .featureListCol1>div, .featureListCol2>div{
-        flex-flow: column;
+.social-media i{
+        font-size:3rem;
+    }
+    .fa-github-square{
+        color:black;
+    }
+    .fa-linkedin-square{
+        color:darkblue;
+    }
+    .fa-list-alt{
+        color:darkgoldenrod;
+    }
+    @media screen and (min-width:480px){
+        .card-wrapper{
+            flex-direction: row;
+            flex-wrap:wrap;
+            justify-content: center;
+            align-items:center;    
         }
 }
 
 /* FOR MEDIUM DEVICES */
 
-@media (min-width: 481px) and (max-width: 1120px){
+@media only screen and (min-width: 481px) and (max-width: 1120px){
  div.transbox{
   grid-row-start: 5;
   grid-row-end: 6;
@@ -419,25 +582,108 @@ div.mainContent{
 
 div.transbox a{
   font-size: 300px;
-}
+}}
 
 /* FOR LARGE DEVICES Lucjan K */
 
-@media (min-width: 1120px){
-  div.transbox{
-    grid-row-start: 7;
-    grid-row-end: 10;
-    grid-column-start: 5;
-    grid-column-end: 10;
-    white-space: wrap;
-  }
-  div.link{
-    grid-row-start: 5;
-    grid-row-end: 6;
-    grid-column-start: 3;
-    grid-column-end: 12;
-    white-space: nowrap;
-  }
-  div.transbox p{
-    font-size: 50px;
+@media only screen and (min-width: 1120px){
+
+div.link{
+  grid-row-start: 5;
+  grid-row-end: 6;
+  grid-column-start: 3;
+  grid-column-end: 12;
+  white-space: nowrap;
 }
+
+div.transbox{
+  grid-row-start: 7;
+  grid-row-end: 10;
+  grid-column-start: 5;
+  grid-column-end: 8;
+  font-size: 100px;
+}
+    .card-body{
+        margin:2vw; 
+    }}
+
+/* Feature list, JakubK */
+
+
+
+.featureListCol1>div>img, .featureListCol2>div>img{
+    width: 60px;
+    height: 60px;
+    float: left;
+    margin: 5px 5px 5px 5px;
+}
+.featureListHeader{
+    text-align: center;
+    margin: 5px;
+    background-color: brown;
+}
+.featureListCol1, .featureListCol2{
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    text-align: center;
+    border-top:2px solid;
+    border-bottom:2px solid;
+    padding:1px;
+
+}
+
+
+    div.featureList{
+        display: grid;
+        grid-auto-columns: 1fr 1fr;
+        /* flex-flow: column; */
+        height: 20%;
+        /* margin: 0 3% 0 3%; */
+        justify-items: center;
+      }
+
+/* Desktop styles for the feature list, JakubK */
+@media (min-width: 481px){
+    div.featureList {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        height: 20%;
+        margin: 0 3% 0 3%;
+        justify-items: center;       
+    }
+    
+
+.featureListWrapperForHover>div {
+    height: 0px;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+    
+.featureListWrapperForHover:hover>div{
+    
+    transition-property: height;
+    transition-duration: 1s;
+    height: 280px;
+}}
+/*-----------------hiding default 4 icon feature list-----*/
+
+
+
+    
+.featureListWrapperForHover:hover>section{
+    height: 0px;
+    padding: 0;
+    margin: 0;
+}
+.featureListWrapperForHover>section {
+    overflow: hidden;
+    height: 160px;
+    transition-property: height;
+    transition-duration: 1s;
+}
+
+
+/*-----------------feature list end----------*/
