@@ -2,6 +2,8 @@ body{
     box-sizing: border-box;
     background-color: rgb(255, 255, 255);
     margin: 0;
+    max-width: 1920px;
+    max-height: 1080px;
 }
 
 section.three{
