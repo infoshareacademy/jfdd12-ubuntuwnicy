@@ -1,19 +1,24 @@
-/* mobile styles for icons and footer - MartaKirschenstein */
-* {
+body{
     box-sizing: border-box;
+    background-color: blanchedalmond;
 }
 
-body {
-    background-color: #ffffff;
-    margin: 0;
+section.three{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 12px;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
-    font-size: 15px;
+    margin:0;
 }
 
-.icons {
-    display: flex;
-    flex-direction: column;
+h1.heading{
+    text-transform:uppercase;
+    letter-spacing: 3px;
+    font-size: 2rem;
+    text-align:center;
+    position:relative;
+    margin-bottom:3rem;
+    padding-bottom:1rem; 
+    border-bottom:6px solid;
 }
 
 .icons > div {
@@ -26,7 +31,7 @@ body {
     width: 30%;
     font-weight: 500;
 }
-
+/* mobile styles for icons and footer - MartaKirschenstein */
 .mainFooter {
    width: 100%;
    height: auto;
@@ -66,11 +71,24 @@ body {
 
 /* end of mobile styles for icons and footer - MartaKirschenstein */
 
+/* BACKGROUND- SEKCJA HERO LucjanK */
+
+div.sectionHero{
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  margin: 0px;
+  background: url("backgroundImage.jpg") no-repeat;
+  /* background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgtUgW--9AsD8ZcBFRaw22jwk_L1MQLVD-ybALkXCs2ddvcviOSA") no-repeat;  */
+  background-size: 100% 100%;
+  width: 100%;
+  height: 80vh;
+}
+
+/* end of mobile styles for icons - MartaKirschenstein */
 
 
 @media only screen and (min-width: 481px) {
     body {
-        
         /* margin: 0;
         padding: 0 250px; */
         font-family: 'Roboto', sans-serif;
@@ -87,14 +105,257 @@ body {
         padding 0;
         
     }
+    div.sectionHero{
+      font-family: Arial, Helvetica, sans-serif;
+      box-sizing: border-box;
+      margin: 0px;
+      background: url("backgroundImage.jpg") no-repeat;
+      /* background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgtUgW--9AsD8ZcBFRaw22jwk_L1MQLVD-ybALkXCs2ddvcviOSA") no-repeat;  */
+      background-size: 100% 100%;
+      width: 100%;
+      height: 80vh;
+    }
+    }
+
+/* Navigation bar - list of all sections */
+
+nav { position: sticky;  
+        top: 0;
+       }
+
+ul.subMenu{
+  display: none;
+}
+
+.navClass ul.mainMenu{
+  background-color: rgb(4, 15, 9);
+  color: rgb(192, 189, 17);
+  font-size: 18px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-top: 0px;
+  margin-left: 100px;
+  padding: 0px 0px;
+  text-align: right;
+  opacity: 0.7;
+}
+
+ul.mainMenu{
+  margin-left: 100px;
+}
+
+.navClass img.pageLogo{
+  display: flex;
+  justify-content: flex-start;
+  opacity: 0.7;
+}
+
+.navClass ul.mainMenu{
+  margin: 0px 0px 0px 31px;
+}
+
+.navClass ul.mainMenuLogo{
+  padding: 0px 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.mobileMenu{
+  padding: 0px;
+  margin-right: 0px;
+  width: 120px;
+}
+
+img.pageLogo{
+  float: left;
+  width: 31px;
+  height: 31px;
+}
+
+.navClass > ul > li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 5px 0px;
+    position: relative;
+}
+
+.navClass > ul > li > a{
+  margin-left: 0px;
+}
+
+/* .navClass ul li:hover{
+  background-color:rgb(117, 10, 112);
+  display: inline-block;
+} */
+
+ul.subMenu{
+  margin-top: 25px;
+  position: absolute;
+  width: 120px;
+  display: block;
+  background-color:rgb(117, 10, 112);
+  list-style-type: none;
+  text-align: center;
+  opacity: 0;
+}
+
+ul.subMenu li{
+  padding: 5px 0px;
+}
+
+ul.subMenu li a{
+  display: block;
+}
+
+.navClass li:hover .subMenu{
+  opacity: 1;
+}
+
+ul.subMenu li:hover{
+  color: rgb(192, 189, 17);
+  background-color:rgb(10, 117, 99);
+}
+
+ul.subMenu li>a:active{
+  color: black;
+}
+
+li .mobileMenu{
+  width: 5px;
+}
+
+ul.subMenu{
+  padding-left: 0px;
+}
+
+/* Defines the main background and text displayed */
+
+div.backgroundMain {
+    display: flex;
+    flex-direction: column;
+    /* background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgtUgW--9AsD8ZcBFRaw22jwk_L1MQLVD-ybALkXCs2ddvcviOSA") no-repeat; */
+    background-size: 100% 100%;
+    /* border: 1px solid black; */
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+    height: 70vh;
+  }
+  
+/* Hides menu for mobile devices */
+
+.menuPC {
+  display:none;
+}
+
+.pageLogo {
+  background-color: blanchedalmond;
+}
+
+div.transbox p {
+  font-weight: bold;
+  color: #000000;
+}
+
+a{
+  text-decoration: none;
+  color: rgb(192, 189, 17);
+  width: 100%;
+  height: 100%; 
+}
+
+/* SIGN UP BUTTON STYLING Lucjan K */
+
+.link a{
+    text-decoration: none;
+    color: rgb(253, 255, 255);
+    width: 100%;
+    height: 100%; 
+    background-color: green;
+    border: solid;
+    border-radius: 15px 15px 15px 15px;
+    padding: 10px 10px;
+  }
+div.transbox p{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 20px;
+}
+
+/* SIATKA DO STRONY HERO Lucjan*/
+
+div.backgroundMain{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);  
+  /* grid-template-areas: */
+}
+
+div.transbox{
+  grid-row-start: 5;
+  grid-row-end: 6;
+  grid-column-start: 3;
+  grid-column-end: 10;
+  white-space: wrap;
+}
+
+div.link{
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 6;
+  grid-column-end: 7;
+  white-space: nowrap;
+}
+
+/* FOR LARGER DEVICES Lucjan K*/
+
+@media (min-width: 481px) {
+
+/* Hides menu for mobiles Lucjan K*/
+
+    .navClass {
+      display: none;
+    }
+
+  .menuPC{
+    display: flex;
+    justify-content: flex-end;
+    height: 50px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    opacity: 0.7;
+  }
+
+  .menuPC a:hover{
+    background-color: rgb(117, 10, 112);
+  }
+
+  .menuPC div{
+    margin-top: 13px;
+  }
+
+  .menuPC a{
+    background-color: #000000;
+    font-size: 22x;
+    padding: 20px 22px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .li:active{
+    color: black;
+  }
+
+  img.pageLogo{
+    float: left;
+    width: 50px;
+    height: 50px;
+    background-color:blanchedalmond;
+  }
 }
 /* end of desktop styles for icons - MartaKirschenstein */
 
 
-
-/* Newsletter form, JakubK */
-/* Desktop styles for newsletter premiere form */
-
+/* Newsletter premiere form*/
 /* Desktop styles for newsletter premiere form - Jakub Karolak*/
 .form{
     display: flex;
@@ -135,17 +396,162 @@ input[name="name"], input[name="userEmail"]{
     
 }
 
-/* Styles for feature list */
-@media (min-width: 401px){
-div.featureList{
-    display: grid;
-    grid-template-columns: 50% 50%;
-    height: 20%;
-    margin: 0 3% 0 3%;
-    justify-items: center;
+/*--------------newsletter form end-------------*/
+
+.container{
+    display:flex;
+    flex-direction:column;
+    align-content:center;
+    align-items:center;
+    
 }
+.card-wrapper{
+    display:flex;
+    flex-direction:column;
+    align-content: center;
+    align-items: center;
+    
 }
+
+.card-body{
+    display:flex;
+    flex-direction:column;
+    align-content:center;
+    align-items:center;
+    width:16rem;
+    height:28rem;
+    border:2px solid;
+    box-shadow:5px 10px;
+    opacity:0.8;
+}
+
+.card-body.first{
+    background:#74b9ff
+}
+.card-body.second{
+background:#74b9ff;
+}
+.card-body.third{
+    background:#74b9ff;
+}
+.card-body.fourth{
+    background:#74b9ff;
+}
+
+
+.profile-image {
+    width:12rem;
+    height:12rem;
+    border-radius:50%;
+    border: 2px solid 
+}
+
+.card-body h1 {
+font-size:1.5rem;
+text-transform:capitalize;
+font-weight:200%;
+}
+
+.about-me {
+    font-size:1.2rem;
+}
+
+
+
+
+
+.social {
+    display:flex;
+    text-align:center;
+    width:100%;
+    padding:4px;
+    justify-content: space-evenly;
+    
+}
+ul.social-media {
+    list-style:none;
+    display:flex;
+    flex-direction:row;
+    text-align:center;
+    justify-content: space-evenly;
+}
+.social-media a {
+    text-decoration:none;
+    }
+.social-media i{
+        font-size:3rem;
+    }
+    .fa-github-square{
+        color:black;
+    }
+    .fa-linkedin-square{
+        color:darkblue;
+    }
+    .fa-list-alt{
+        color:darkgoldenrod;
+    }
+    @media screen and (min-width:480px){
+        .card-wrapper{
+            flex-direction: row;
+            flex-wrap:wrap;
+            justify-content: center;
+            align-items:center;    
+        }
+}
+
+/* FOR MEDIUM DEVICES */
+
+@media only screen and (min-width: 481px) and (max-width: 1120px){
+ div.transbox{
+  grid-row-start: 5;
+  grid-row-end: 6;
+  grid-column-start: 3;
+  grid-column-end: 12;
+  white-space: wrap;
+}
+
+div.link{
+  grid-row-start: 7;
+  grid-row-end: 10;
+  grid-column-start: 5;
+  grid-column-end: 8;
+}
+
+div.backgroundMain{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+}
+
+div.transbox a{
+  font-size: 300px;
+}}
+
+/* FOR LARGE DEVICES Lucjan K */
+
+@media only screen and (min-width: 1120px){
+
+div.link{
+  grid-row-start: 5;
+  grid-row-end: 6;
+  grid-column-start: 3;
+  grid-column-end: 12;
+  white-space: nowrap;
+}
+
+div.transbox{
+  grid-row-start: 7;
+  grid-row-end: 10;
+  grid-column-start: 5;
+  grid-column-end: 8;
+  font-size: 100px;
+}
+    .card-body{
+        margin:2vw; 
+    }}
+
 /* Feature list, JakubK */
+
+
 
 .featureListCol1>div>img, .featureListCol2>div>img{
     width: 60px;
@@ -155,7 +561,8 @@ div.featureList{
 }
 .featureListHeader{
     text-align: center;
-    margin-bottom: 60px;
+    margin: 5px;
+    background-color: brown;
 }
 .featureListCol1, .featureListCol2{
     width: 100%;
@@ -163,40 +570,23 @@ div.featureList{
     flex-flow: column;
     justify-content: center;
     text-align: center;
-    align-items: center;
-}
-.featureListCol1>div, .featureListCol2>div{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+    border-top:2px solid;
+    border-bottom:2px solid;
+    padding:1px;
+
 }
 
-/* Mobile styles for the feature list, JakubK */
-@media (max-width: 480px){
-
-    .featureListCol1>div>img, .featureListCol2>div>img{
-        width: 60px;
-        height: 60px;
-        float: left;
-        margin: 5px 5px 5px 5px;
-    }
 
     div.featureList{
-        display: flex;
-        flex-flow: column;
+        display: grid;
+        grid-auto-columns: 1fr 1fr;
+        /* flex-flow: column; */
         height: 20%;
-        margin: 0 3% 0 3%;
+        /* margin: 0 3% 0 3%; */
         justify-items: center;
-    }
+      }
 
-    .featureListCol1>div, .featureListCol2>div{
-        flex-flow: column;
-        }
-
-}
-
-/* Desktop styles for the feature list */
+/* Desktop styles for the feature list, JakubK */
 @media (min-width: 481px){
     div.featureList {
         display: grid;
@@ -205,4 +595,37 @@ div.featureList{
         margin: 0 3% 0 3%;
         justify-items: center;       
     }
+    
+
+.featureListWrapperForHover>div {
+    height: 0px;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
 }
+    
+.featureListWrapperForHover:hover>div{
+    
+    transition-property: height;
+    transition-duration: 1s;
+    height: 280px;
+}}
+/*-----------------hiding default 4 icon feature list-----*/
+
+
+
+    
+.featureListWrapperForHover:hover>section{
+    height: 0px;
+    padding: 0;
+    margin: 0;
+}
+.featureListWrapperForHover>section {
+    overflow: hidden;
+    height: 160px;
+    transition-property: height;
+    transition-duration: 1s;
+}
+
+
+/*-----------------feature list end----------*/

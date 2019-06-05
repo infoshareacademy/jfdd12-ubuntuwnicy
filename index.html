@@ -5,65 +5,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" type="image/png" href="/logo.png">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <title>sQuizYou</title>
 </head>
-
-
 <body>
-    <section class="function">
-       <div class="icons">
-            <div><img src="puzzle480.png" alt="icon-1"><p>Ułóż Quiz</p></div>
-            <div><img src="plus480.png" alt="icon-2"><p>Zadaj pytania</p></div>
-            <div><img src="checked480.png" alt="icon-3"><p>Zobacz wynik</p></div>
-            <div><img src="connect480.png" alt="icon-4"><p>Wykonajcie Quiz razem</p></div>
+    <div class=sectionHero>
+        <nav class="navClass">
+            <ul class="mainMenuLogo">
+                <span><img class="pageLogo" src="logo.png"></span>
+            </ul>
+            <ul class="mainMenu">
+                <li class="mobileMenu">
+                    <ul class="subMenu">
+                        <li><a class=mobileMenuBox href="#">Home</a></li>
+                        <li><a class=mobileMenuBox href="#">Product info</a></li>
+                        <li><a class=mobileMenuBox href="#">About Us</a></li>
+                    </ul>
+                    <span class="arrow">Menu &#9660;</span>
+                </li>
+            </ul>
+        </nav>
+        <div class="menuPC">
+            <img class="pageLogo" src="logo.png">
+            <div><a href="#" class="li">Home</a></div>
+            <div><a href="#" class="li">Product info</a></div>
+            <div><a href="#" class="li">About Us</a></div>
         </div>
-    </section>
-
-    <h1 class="featureListHeader">Szczegółowa lista funkcjonalności:</h1>
-
-    <div class="featureList">
-
-        <div class="featureListCol1">
-            <div>
-                <img src="puzzle480.png" alt="Ikonka funkcjonalności">
-                <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
+        <main>
+            <div class="backgroundMain">
+                <div class="transbox">Best quiz generator online. Create your own quiz with this easy tool!</div>
+                <div class="link"><a href="#">Sign up</a></div>
             </div>
-            <div>
-                <img src="plus480.png" alt="Ikonka funkcjonalności">
-                <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
-            </div>
-            <div>
-                <img src="checked480.png" alt="Ikonka funkcjonalności">
-                <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
-            </div>
-            <div>
-                <img src="connect480.png" alt="Ikonka funkcjonalności">
-                <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
-            </div>
-        </div>
-
-        <div class="featureListCol2">
-            <div>
-                <img src="settings480.png" alt="Ikonka funkcjonalności">
-                <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
-            </div>
-            <div>
-                <img src="clock480.png" alt="Ikonka funkcjonalności">
-                <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
-            </div>
-            <div>
-                <img src="share480.png" alt="Ikonka funkcjonalności">
-                <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
-            </div>
-            <div>
-                <img src="idea480.png" alt="Ikonka funkcjonalności">
-                <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
-            </div>
-        </div>
-
+        </main>
     </div>
 
+
+
+    <div class="featureListWrapperForHover">
+        <section class="function">
+            <div class="icons">
+                 <div><img src="puzzle480.png" alt="icon-1"><p>Ułóż Quiz</p></div>
+                 <div><img src="plus480.png" alt="icon-2"><p>Zadaj pytania</p></div>
+                 <div><img src="checked480.png" alt="icon-3"><p>Zobacz wynik</p></div>
+                 <div><img src="connect480.png" alt="icon-4"><p>Wykonajcie Quiz razem</p></div>
+                 </div>
+        </section>
+    
+        <h1 class="featureListHeader">Wyświetl szczegółową listę funkcjonalności.</h1>
+
+        <div class="featureList">
+
+            <div class="featureListCol1">
+                <div>
+                    <img src="puzzle480.png" alt="Ikonka funkcjonalności">
+                    <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div>
+                    <img src="plus480.png" alt="Ikonka funkcjonalności">
+                    <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div>
+                    <img src="checked480.png" alt="Ikonka funkcjonalności">
+                    <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div>
+                    <img src="connect480.png" alt="Ikonka funkcjonalności">
+                    <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+    
+            <div class="featureListCol2">
+                <div>
+                    <img src="settings480.png" alt="Ikonka funkcjonalności">
+                    <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div>
+                    <img src="clock480.png" alt="Ikonka funkcjonalności">
+                    <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div>
+                    <img src="share480.png" alt="Ikonka funkcjonalności">
+                    <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div>
+                    <img src="idea480.png" alt="Ikonka funkcjonalności">
+                    <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
+            </div>
+
+        </div>
+    </div>
+    </div>
     <div class="form">
         <h1>Zapisz się na premierę!</h1>
         <p>Cześć, wyślemy ci tylko jednego maila z informacjami w dniu premiery. :)</p>
@@ -75,12 +107,67 @@
             <input type="email" name="userEmail" required><br>
             <input type="submit" name="newsletterSubmit"><br>
         </form>
+    </div>
+<section class="three">
+    <div class="container">
+        <h1 class="heading">Meet Our Team</h1>
+        <div class=card-wrapper>
+            <div class="card-body first">
+                <img src="" alt="card background" class="card-image">
+                <img src="blank-profile-picture-973461_960_720 (1).png" alt="Marta Kirschenstein" class="profile-image">
+                <h1>Marta Kirschenstein</h1>
+                <p class="about-me">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo, cumque?</p>
+                <div class="social">
+                <ul class="social-media">
+                      <li><a href="#"><i class="fa fa-github-square"></i></a></li>
+                      <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+                      <li><a href="#"><i class="fa fa-list-alt"></i></a></li>
+                </ul> 
+                </div>
+            </div> 
 
-
+            <div class="card-body second">
+                <img src="" alt="card background" class="card-image">
+                <img src="blank-profile-picture-973461_960_720 (1).png" alt="Lucjan Kepinski" class="profile-image">
+                <h1>Lucjan Kępiński</h1>
+                <p class="about-me">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo, cumque?</p>
+                <div class="social">
+                <ul class="social-media">
+                    <li><a href="#"><i class="fa fa-github-square"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+                    <li><a href="#"><i class="fa fa-list-alt"></i></a></li>
+                </ul>   
+                </div>
+            </div> 
     
-        <footer class="newsletterSecurity">
-            <p>Twój adres i dane są bezpieczne w naszej bazie danych. Nie przekazujemy ich żadnym innym podmiotom.</p>
-        </footer>
+           <div class="card-body third">
+               <img src="" alt="card background" class="card-image">
+               <img src="blank-profile-picture-973461_960_720 (1).png" alt="Jakub" class="profile-image">
+               <h1>Jakub Karolak </h1>
+               <p class="about-me">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo, cumque?</p>
+               <div class="social">
+                    <ul class="social-media">
+                        <li><a href="#"><i class="fa fa-github-square"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+                        <li><a href="#"><i class="fa fa-list-alt"></i></a></li>
+                    </ul>
+                </div>
+            </div> 
+      
+            <div class="card-body fourth">
+                <img src="" alt="card background" class="card-image">
+                <img src="blank-profile-picture-973461_960_720 (1).png" alt="Jakub Osipiak" class="profile-image">
+                <h1>Jakub Osipiak</h1>
+                <p class="about-me">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo, cumque?</p>
+                <div class="social">
+                    <ul class="social-media">
+                        <li><a href="#"><i class="fa fa-github-square"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+                        <li><a href="#"><i class="fa fa-list-alt"></i></a></li>
+                    </ul>
+                </div>
+            </div> 
+        </div>       
     </div>
 
     <footer>
@@ -102,6 +189,7 @@
 
     </footer>
   
-
+</section>
 </body>
+
 </html>
