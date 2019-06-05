@@ -239,6 +239,10 @@ ul.subMenu{
       height: 50px;
       background-color:blanchedalmond;
       }
+      div.transbox p {
+        font-size: 40px;
+      }
+
   }
     
 
@@ -425,6 +429,7 @@ div.transbox a{
     grid-row-end: 10;
     grid-column-start: 5;
     grid-column-end: 10;
+    white-space: wrap;
   }
   div.link{
     grid-row-start: 5;
