@@ -102,7 +102,7 @@ div.sectionHero{
         justify-items: stretch;
         text-align: center;
         margin: 0;
-        padding 0;
+        padding: 0;
         
     }
     div.sectionHero{
@@ -362,7 +362,7 @@ div.link{
     align-items: center;
     flex-flow: column;
     text-align: center;
-    font-size: 2em;
+    font-size: 1em;
 }
 
 input[type="submit"]{
@@ -570,10 +570,11 @@ div.transbox{
     flex-flow: column;
     justify-content: center;
     text-align: center;
-    border-top:2px solid;
-    border-bottom:2px solid;
     padding:1px;
 
+}
+.featureListCol1{
+  border-right: 1px solid #000000 
 }
 
 
@@ -608,24 +609,8 @@ div.transbox{
     
     transition-property: height;
     transition-duration: 1s;
-    height: 280px;
+    height: 402px;
 }}
-/*-----------------hiding default 4 icon feature list-----*/
-
-
-
-    
-.featureListWrapperForHover:hover>section{
-    height: 0px;
-    padding: 0;
-    margin: 0;
-}
-.featureListWrapperForHover>section {
-    overflow: hidden;
-    height: 160px;
-    transition-property: height;
-    transition-duration: 1s;
-}
 
 
 /*-----------------feature list end----------*/
