@@ -1,6 +1,7 @@
 body{
     box-sizing: border-box;
-    background-color: blanchedalmond;
+    background-color: rgb(255, 255, 255);
+    margin: 0;
 }
 
 section.three{
@@ -626,6 +627,7 @@ div.transbox{
 .featureListCol1>div, .featureListCol2>div{
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .featureListCol1, .featureListCol2{
@@ -683,7 +685,6 @@ div.featureList{
 @media (max-width: 480px){
 
   .featureListWrapperForHover:hover>div{
-   
   transition-property: height;
   transition-duration: 2s;
   height: 560px;
