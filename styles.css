@@ -1,6 +1,6 @@
 body{
     box-sizing: border-box;
-    background-color: blanchedalmond;
+    background-color: white;
 }
 
 section.three{
@@ -107,9 +107,8 @@ div.transbox{
 /* BACKGROUND- SEKCJA HERO LucjanK */
 
 div.sectionHero{
-  font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
-  background: url("backgroundImage.jpg") no-repeat;
+  background: url("blank-profile-picture-973461_960_720\ \(1\).png") no-repeat;
   /* background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgtUgW--9AsD8ZcBFRaw22jwk_L1MQLVD-ybALkXCs2ddvcviOSA") no-repeat;  */
   background-size: 100% 100%;
   width: 100%;
@@ -139,10 +138,9 @@ div.sectionHero{
     }
 
     div.sectionHero {
-      font-family: Arial, Helvetica, sans-serif;
       box-sizing: border-box;
       margin: 0px;
-      background: url("backgroundImage.jpg") no-repeat;
+      background: url("blank-profile-picture-973461_960_720\ \(1\).png") no-repeat;
       /* background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgtUgW--9AsD8ZcBFRaw22jwk_L1MQLVD-ybALkXCs2ddvcviOSA") no-repeat;  */
       background-size: 100% 100%;
       width: 100%;
@@ -152,8 +150,10 @@ div.sectionHero{
 
 /* Navigation bar - list of all sections */
 
-.navClass{ position: sticky;  
+.navClass{ 
+  position: sticky;  
   top: 0;
+
   }
 
 ul.subMenu{
@@ -161,10 +161,9 @@ ul.subMenu{
 }
 
 .navClass ul.mainMenu{
-  background-color: rgb(4, 15, 9);
-  color: rgb(192, 189, 17);
+  background-color: white;
+  color: black;
   font-size: 18px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin-top: 0px;
   margin-left: 100px;
   padding: 0px 0px;
@@ -278,7 +277,7 @@ ul.subMenu{
       font-family: Arial, Helvetica, sans-serif;
       box-sizing: border-box;
       margin: 0px;
-      background: url("backgroundImage.jpg") no-repeat;
+      background: url("art-artist-background-316466.jpg") no-repeat;
       /* background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgtUgW--9AsD8ZcBFRaw22jwk_L1MQLVD-ybALkXCs2ddvcviOSA") no-repeat;  */
       background-size: 100% 100%;
       width: 100%;
@@ -295,7 +294,7 @@ ul.subMenu{
       position: sticky;
       top: 0;
       opacity: 0.7;
-      background: black;
+      background: white
     }
 
       .menuPC a:hover{
@@ -307,7 +306,7 @@ ul.subMenu{
     }
 
       .menuPC a{
-      background-color: #000000;
+      background-color: white;
       font-size: 22x;
       padding: 15px 18px;
       width: 100%;
@@ -315,14 +314,14 @@ ul.subMenu{
     }
 
       .li:active{
-      color: black;
+      color:white;
     }
 
       img.pageLogo{
       float: left;
       width: 50px;
       height: 50px;
-      background-color:blanchedalmond;
+      background-color:white;
       }
       div.transbox p {
         font-size: 40px;
@@ -345,15 +344,15 @@ div.mainContent {
   }
 
 .pageLogo {
-  background-color: blanchedalmond;
+  background-color: white;
 }
 
-a{
+.mobileMenuBox a {
   text-decoration: none;
-  color: rgb(192, 189, 17);
+  color: black;
   width: 100%;
   height: 100%; 
-}
+} 
 
 /* SIGN UP BUTTON STYLING Lucjan K */
 
@@ -366,6 +365,7 @@ a{
     border: solid;
     border-radius: 15px 15px 15px 15px;
     padding: 10px 10px;
+    text-decoration: none;
   }
 div.transbox p{
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
