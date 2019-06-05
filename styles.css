@@ -139,6 +139,8 @@ div.sectionHero{
     }
     a.li{
       font-size: 18px;
+        padding: 0;
+        
     }
     div.sectionHero{
       font-family: Arial, Helvetica, sans-serif;
@@ -408,16 +410,13 @@ div.link{
 
 
 /* Newsletter form, JakubK */
-
-
-/* Newsletter premiere form*/
 /* Desktop styles for newsletter premiere form - Jakub Karolak*/
 .form{
     display: flex;
     align-items: center;
     flex-flow: column;
     text-align: center;
-    font-size: 2em;
+    font-size: 1em;
 }
 
 input[type="submit"]{
@@ -448,6 +447,9 @@ input[name="name"], input[name="userEmail"]{
         font-size: 0.8em;
     }
       
+/*--------------newsletter form end-------------*/
+
+
 /* Hides menu for mobile devices Lucjan K*/
 
     .menuPC {
@@ -456,7 +458,7 @@ input[name="name"], input[name="userEmail"]{
     
 }
 
-/*--------------newsletter form end-------------*/
+
 
 .container{
     display:flex;
@@ -623,9 +625,7 @@ div.transbox p{
         margin:2vw; 
     }}
 
-/* Feature list, JakubK */
-
-
+/* -----------------Feature list, JakubK ------------*/
 
 .featureListCol1>div>img, .featureListCol2>div>img{
     width: 60px;
@@ -638,68 +638,70 @@ div.transbox p{
     margin: 5px;
     background-color: brown;
 }
+
 .featureListCol1, .featureListCol2{
     width: 100%;
     display: flex;
     flex-flow: column;
     justify-content: center;
     text-align: center;
-    border-top:2px solid;
-    border-bottom:2px solid;
     padding:1px;
 
 }
 
+.featureListCol1{
+  border-right: 1px solid #000000 
+}
 
-    div.featureList{
-        display: grid;
-        grid-auto-columns: 1fr 1fr;
-        /* flex-flow: column; */
-        height: 20%;
-        /* margin: 0 3% 0 3%; */
-        justify-items: center;
-      }
+div.featureList{
+  display: grid;
+  grid-auto-columns: 1fr 1fr;
+  justify-items: center;
+
+}
 
 /* Desktop styles for the feature list, JakubK */
+
 @media (min-width: 481px){
-    div.featureList {
-        display: grid;
-        grid-template-columns: 50% 50%;
-        height: 20%;
-        margin: 0 3% 0 3%;
-        justify-items: center;       
-    }
-    
+  div.featureList {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  height: 20%;
+  margin: 0 3% 0 3%;
+  justify-items: center;       
+}
+}
+
+/* Desktop transition and animation for the extended feature menu */
 
 .featureListWrapperForHover>div {
     height: 0px;
     padding: 0;
     margin: 0;
     overflow: hidden;
+    transition-property: height;
+    transition-duration: 1s;
 }
     
 .featureListWrapperForHover:hover>div{
     
     transition-property: height;
-    transition-duration: 1s;
-    height: 280px;
-}}
-/*-----------------hiding default 4 icon feature list-----*/
-
-
-
-    
-.featureListWrapperForHover:hover>section{
-    height: 0px;
-    padding: 0;
-    margin: 0;
-}
-.featureListWrapperForHover>section {
+    transition-duration: 2s;
+    height: 402px;
     overflow: hidden;
-    height: 160px;
-    transition-property: height;
-    transition-duration: 1s;
 }
 
+/* Mobile transitions and animation for the extended feature menu */
+
+@media (max-width: 480px){
+
+  .featureListWrapperForHover:hover>div{
+    
+    transition-property: height;
+    transition-duration: 2s;
+    height: 481px;
+    overflow: hidden;
+}      
+}
 
 /*-----------------feature list end----------*/
