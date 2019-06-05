@@ -1,6 +1,7 @@
 body{
     box-sizing: border-box;
     background-color: white;
+    margin: 0;
 }
 
 section.three{
@@ -133,6 +134,10 @@ div.sectionHero{
         justify-items: stretch;
         text-align: center;
         margin: 0;
+        padding: 0;    
+    }
+    a.li{
+      font-size: 18px;
         padding: 0;
         
     }
@@ -161,14 +166,14 @@ ul.subMenu{
 }
 
 .navClass ul.mainMenu{
-  background-color: white;
-  color: black;
-  font-size: 18px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(10, 10, 9);
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin-top: 0px;
   margin-left: 100px;
   padding: 0px 0px;
   text-align: right;
-  opacity: 0.7;
 }
 
 ul.mainMenu{
@@ -178,7 +183,6 @@ ul.mainMenu{
 .navClass img.pageLogo{
   display: flex;
   justify-content: flex-start;
-  opacity: 0.7;
 }
 
 .navClass ul.mainMenu{
@@ -199,8 +203,8 @@ ul.mainMenu{
 
 img.pageLogo{
   float: left;
-  width: 31px;
-  height: 31px;
+  width: 33px;
+  height: 33px;
 }
 
 .navClass > ul > li{
@@ -218,11 +222,14 @@ ul.subMenu{
   margin-top: 25px;
   position: absolute;
   width: 120px;
-  display: block;
-  background-color:rgb(117, 10, 112);
+  background-color:rgb(255, 255, 255);
   list-style-type: none;
   text-align: center;
-  opacity: 0;
+  display: 0;
+}
+
+.mobileMenu:hover .subMenu{
+  display:block;
 }
 
 ul.subMenu li{
@@ -234,11 +241,11 @@ ul.subMenu li a{
 }
 
 .mainMenu li:hover .subMenu{
-  opacity: 1;
+  display: 1;
 }
 
 ul.subMenu li:hover{
-  color: rgb(192, 189, 17);
+  color: rgb(5, 5, 2);
   background-color:rgb(10, 117, 99);
 }
 
@@ -289,44 +296,38 @@ ul.subMenu{
     .menuPC{
       display: flex;
       justify-content: flex-end;
-      height: 50px;
+      height: 65px;
       width: 100%;
       position: sticky;
       top: 0;
-      opacity: 0.7;
-      background: #f8f8f8
+      background: rgb(255, 255, 255);
+      box-shadow: -8px 46px 94px -50px rgba(0,0,0,0.42);
     }
-
       .menuPC a:hover{
-      background-color: rgb(117, 10, 112);
+      background-color: rgb(10, 117, 99);
     }
-
       .menuPC div{
-      margin-top: 13px;
+      margin-top: 20px;
     }
-
       .menuPC a{
-      background-color: white;
-      font-size: 22x;
-      padding: 15px 18px;
+      background-color: #fffbfb;
+      font-size: 17px;
+      padding: 20px 19px;
       width: 100%;
       height: 100%;
     }
-
       .li:active{
       color:white;
     }
-
       img.pageLogo{
       float: left;
-      width: 50px;
-      height: 50px;
+      width: 70px;
+      height: 70px;
       background-color:white;
       }
       div.transbox p {
-        font-size: 40px;
+        font-size: 30px;
       }
-
   }
     
 
@@ -347,9 +348,16 @@ div.mainContent {
   background-color: white;
 }
 
-.mobileMenuBox a {
+.subMenu a{
   text-decoration: none;
-  color: black;
+  color: rgb(10, 10, 9);
+  width: 100%;
+  height: 100%; 
+}
+
+.menuPC a{
+  text-decoration: none;
+  color: rgb(10, 10, 9);
   width: 100%;
   height: 100%; 
 } 
@@ -367,10 +375,7 @@ div.mainContent {
     padding: 10px 10px;
     text-decoration: none;
   }
-div.transbox p{
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 20px;
-}
+
 
 /* SIATKA DO STRONY HERO Lucjan*/
 
@@ -407,9 +412,6 @@ div.link{
 
 
 /* Newsletter form, JakubK */
-
-
-/* Newsletter premiere form*/
 /* Desktop styles for newsletter premiere form - Jakub Karolak*/
 .form{
     display: flex;
@@ -447,6 +449,9 @@ input[name="name"], input[name="userEmail"]{
         font-size: 0.8em;
     }
       
+/*--------------newsletter form end-------------*/
+
+
 /* Hides menu for mobile devices Lucjan K*/
 
     .menuPC {
@@ -455,7 +460,7 @@ input[name="name"], input[name="userEmail"]{
     
 }
 
-/*--------------newsletter form end-------------*/
+
 
 .container{
     display:flex;
@@ -583,7 +588,12 @@ div.mainContent{
 
 div.transbox a{
   font-size: 300px;
-}}
+}
+div.transbox p{
+  font-size: 35px;
+}
+
+}
 
 /* FOR LARGE DEVICES Lucjan K */
 
@@ -592,7 +602,7 @@ div.transbox a{
 div.link{
   grid-row-start: 5;
   grid-row-end: 6;
-  grid-column-start: 3;
+  grid-column-start: 6;
   grid-column-end: 12;
   white-space: nowrap;
 }
@@ -600,17 +610,24 @@ div.link{
 div.transbox{
   grid-row-start: 7;
   grid-row-end: 10;
-  grid-column-start: 5;
-  grid-column-end: 8;
-  font-size: 100px;
+  grid-column-start: 4;
+  grid-column-end: 10;
+  white-space: wrap;
 }
+div.mainContent{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+}
+div.transbox p{
+  font-size: 45px;
+}
+
+
     .card-body{
         margin:2vw; 
     }}
 
-/* Feature list, JakubK */
-
-
+/* -----------------Feature list, JakubK ------------*/
 
 .featureListCol1>div>img, .featureListCol2>div>img{
     width: 60px;
@@ -623,6 +640,7 @@ div.transbox{
     margin: 5px;
     background-color: brown;
 }
+
 .featureListCol1, .featureListCol2{
     width: 100%;
     display: flex;
@@ -632,44 +650,60 @@ div.transbox{
     padding:1px;
 
 }
+
 .featureListCol1{
   border-right: 1px solid #000000 
 }
 
+div.featureList{
+  display: grid;
+  grid-auto-columns: 1fr 1fr;
+  justify-items: center;
 
-    div.featureList{
-        display: grid;
-        grid-auto-columns: 1fr 1fr;
-        /* flex-flow: column; */
-        height: 20%;
-        /* margin: 0 3% 0 3%; */
-        justify-items: center;
-      }
+}
 
 /* Desktop styles for the feature list, JakubK */
+
 @media (min-width: 481px){
-    div.featureList {
-        display: grid;
-        grid-template-columns: 50% 50%;
-        height: 20%;
-        margin: 0 3% 0 3%;
-        justify-items: center;       
-    }
-    
+  div.featureList {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  height: 20%;
+  margin: 0 3% 0 3%;
+  justify-items: center;       
+}
+}
+
+/* Desktop transition and animation for the extended feature menu */
 
 .featureListWrapperForHover>div {
     height: 0px;
     padding: 0;
     margin: 0;
     overflow: hidden;
+    transition-property: height;
+    transition-duration: 1s;
 }
     
 .featureListWrapperForHover:hover>div{
     
     transition-property: height;
-    transition-duration: 1s;
+    transition-duration: 2s;
     height: 402px;
-}}
+    overflow: hidden;
+}
 
+/* Mobile transitions and animation for the extended feature menu */
+
+@media (max-width: 480px){
+
+  .featureListWrapperForHover:hover>div{
+    
+    transition-property: height;
+    transition-duration: 2s;
+    height: 481px;
+    overflow: hidden;
+}      
+}
 
 /*-----------------feature list end----------*/
