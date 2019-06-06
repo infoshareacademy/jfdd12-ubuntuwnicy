@@ -19,9 +19,7 @@ section.about-me{
 }
 
 h1.heading{
-    letter-spacing: 3px;
     font-size: 2em;
-    font-weight: bold;
     text-align:center;
     position:relative;
 }
