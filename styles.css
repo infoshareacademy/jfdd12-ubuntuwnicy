@@ -1,12 +1,16 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body{
     box-sizing: border-box;
-    background-color: rgb(255, 255, 255);
+    background-color: white;
     margin: 0;
     max-width: 1920px;
     max-height: 1080px;
 }
 
-section.three{
+section.about-me{
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 12px;
     padding: 0;
@@ -110,13 +114,14 @@ div.transbox{
 /* BACKGROUND- SEKCJA HERO LucjanK */
 
 div.sectionHero{
-  font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
-  /* background: url("backgroundImage.jpg") no-repeat; */
+  background: url("art-artist-background-316466.jpg") no-repeat;
   /* background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgtUgW--9AsD8ZcBFRaw22jwk_L1MQLVD-ybALkXCs2ddvcviOSA") no-repeat;  */
   background-size: 100% 100%;
   width: 100%;
   height: 80vh;
+  background-size: auto;
+  background-position: bottom;
 }
 
 /* end of mobile styles for icons - MartaKirschenstein */
@@ -144,22 +149,25 @@ div.sectionHero{
         padding: 0;
         
     }
-    div.sectionHero{
-      font-family: Arial, Helvetica, sans-serif;
+
+    div.sectionHero {
       box-sizing: border-box;
       margin: 0px;
-      /* background: url("backgroundImage.jpg") no-repeat; */
+      background: url("art-artist-background-316466.jpg") no-repeat;
       /* background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgtUgW--9AsD8ZcBFRaw22jwk_L1MQLVD-ybALkXCs2ddvcviOSA") no-repeat;  */
-      background-size: 100% 100%;
       width: 100%;
       height: 80vh;
+      background-size: auto;
+      background-position: bottom;
     }
-    }
+  }
 
 /* Navigation bar - list of all sections */
 
-.navClass{ position: sticky;  
+.navClass{ 
+  position: sticky;  
   top: 0;
+
   }
 
 ul.subMenu{
@@ -285,7 +293,7 @@ ul.subMenu{
       font-family: Arial, Helvetica, sans-serif;
       box-sizing: border-box;
       margin: 0px;
-      /* background: url("backgroundImage.jpg") no-repeat; */
+      background: url("art-artist-background-316466.jpg") no-repeat;
       /* background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgtUgW--9AsD8ZcBFRaw22jwk_L1MQLVD-ybALkXCs2ddvcviOSA") no-repeat;  */
       background-size: 100% 100%;
       width: 100%;
@@ -301,7 +309,7 @@ ul.subMenu{
       width: 100%;
       position: sticky;
       top: 0;
-      background: rgb(255, 255, 255);
+      background: #f8f8f8;
       box-shadow: -8px 46px 94px -50px rgba(0,0,0,0.42);
     }
       .menuPC a:hover{
@@ -318,13 +326,13 @@ ul.subMenu{
       height: 100%;
     }
       .li:active{
-      color: black;
+      color:white;
     }
       img.pageLogo{
       float: left;
       width: 70px;
       height: 70px;
-      background-color:blanchedalmond;
+      background-color:white;
       }
       div.transbox p {
         font-size: 30px;
@@ -346,7 +354,7 @@ div.mainContent {
   }
 
 .pageLogo {
-  background-color: blanchedalmond;
+  background-color: white;
 }
 
 .subMenu a{
@@ -361,7 +369,7 @@ div.mainContent {
   color: rgb(10, 10, 9);
   width: 100%;
   height: 100%; 
-}
+} 
 
 /* SIGN UP BUTTON STYLING Lucjan K */
 
@@ -374,6 +382,7 @@ div.mainContent {
     border: solid;
     border-radius: 15px 15px 15px 15px;
     padding: 10px 10px;
+    text-decoration: none;
   }
 
 
@@ -482,10 +491,10 @@ input[name="name"], input[name="userEmail"]{
     flex-direction:column;
     align-content:center;
     align-items:center;
-    width:16rem;
+    width:17rem;
     height:28rem;
-    border:2px solid;
-    box-shadow:5px 10px;
+    border:3px solid;
+    box-shadow:10px 10px 34px -2px rgba(0,0,0,0.75);
     opacity:0.8;
 }
 
@@ -507,7 +516,7 @@ background:#74b9ff;
     width:12rem;
     height:12rem;
     border-radius:50%;
-    border: 2px solid 
+    border: 2px solid;
 }
 
 .card-body h1 {
@@ -516,31 +525,58 @@ text-transform:capitalize;
 font-weight:200%;
 }
 
-.about-me {
+.short-description {
     font-size:1.2rem;
+    text-align: center;
+    border-top:2px solid;
+    border-bottom:2px solid;
+    margin:3px;
+    padding:1px;
 }
 
-
-
-
-
 .social {
-    display:flex;
-    text-align:center;
+    display:block;
+    justify-content:center;
+    align-items: center;
     width:100%;
-    padding:4px;
-    justify-content: space-evenly;
+    margin:auto;
     
 }
 ul.social-media {
-    list-style:none;
     display:flex;
-    flex-direction:row;
-    text-align:center;
-    justify-content: space-evenly;
+    justify-content:space-around;
+    margin-right:25px;   
 }
-.social-media a {
+
+.social-media li{
+    list-style:none;
+}
+.social-media .fa {
     text-decoration:none;
+    font-size:3rem;
+    text-align: center;
+    transition:all 0.4s ease;
+}
+.social-media .fa:hover {
+    opacity: 0.8;
+}
+
+.fa-github-square{
+    color:black;
+}
+.fa-linkedin-square{
+     color:#006292
+}
+.fa-list-alt{
+     color:darkgoldenrod;
+}
+@media screen and (min-width:480px){
+    .card-wrapper{
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items:center;    
+    }
     }
 .social-media i{
         font-size:3rem;
