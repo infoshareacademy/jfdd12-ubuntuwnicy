@@ -7,6 +7,8 @@ body{
     background-color: white;
     margin: 0;
     font-family: 'Roboto', sans-serif;
+    max-width: 1920px;
+    max-height: 1080px;
 }
 
 section.about-me{
@@ -38,6 +40,16 @@ h1.heading{
     font-weight: 500;
 }
 /* mobile styles for icons and footer - MartaKirschenstein */
+
+@media (max-width: 480px) {
+
+  div.icons{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
 .mainFooter {
    width: 100%;
    height: auto;
@@ -93,18 +105,18 @@ div.mainContent{
 }
 
 div.link{
-  grid-row-start: 5;
-  grid-row-end: 6;
-  grid-column-start: 6;
-  grid-column-end: 8;
+  grid-row-start: 9;
+  grid-row-end: 10;
+  grid-column-start: 4;
+  grid-column-end: 6;
   white-space: nowrap;
 }
 
 div.transbox{
-  grid-row-start: 6;
-  grid-row-end: 7;
+  grid-row-start: 3;
+  grid-row-end: 6;
   grid-column-start: 6;
-  grid-column-end: 7;
+  grid-column-end: 11;
   white-space: wrap;
 }
 
@@ -170,6 +182,11 @@ div.sectionHero{
   
 
   }
+
+#aboutUs{
+  z-index: -2;
+  position: relative;
+}
 
 ul.subMenu{
   display: none;
@@ -308,7 +325,7 @@ ul.subMenu{
       justify-content: flex-end;
       height: 65px;
       width: 100%;
-      position: sticky;
+      position: fixed;
       top: 0;
       background: #f8f8f8;
       box-shadow: -8px 46px 94px -50px rgba(0,0,0,0.42);
@@ -321,8 +338,8 @@ ul.subMenu{
     }
       .menuPC a{
       background-color: #f8f8f8;
-      font-size: 17px;
-      padding: 20px 19px;
+      font-size: 16px;
+      padding: 22px 19px;
       width: 100%;
       height: 100%;
     }
@@ -331,9 +348,9 @@ ul.subMenu{
     }
       img.pageLogo{
       float: left;
-      width: 70px;
-      height: 70px;
-      background-color:#f8f8f8;
+      width: 65px;
+      height: 65px;
+      background-color: #f8f8f8;
       }
       div.transbox p {
         font-size: 30px;
@@ -385,32 +402,6 @@ div.mainContent {
     padding: 10px 10px;
     text-decoration: none;
   }
-
-
-/* SIATKA DO STRONY HERO Lucjan*/
-
-div.backgroundMain{
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(12, 1fr);  
-  /* grid-template-areas: */
-}
-
-div.transbox{
-  grid-row-start: 5;
-  grid-row-end: 6;
-  grid-column-start: 3;
-  grid-column-end: 10;
-  white-space: wrap;
-}
-
-div.link{
-  grid-row-start: 2;
-  grid-row-end: 3;
-  grid-column-start: 6;
-  grid-column-end: 7;
-  white-space: nowrap;
-}
 
 /* FOR LARGER DEVICES Lucjan K*/
 /* Hides menu for mobiles Lucjan K*/
@@ -604,9 +595,9 @@ ul.social-media {
 
 @media only screen and (min-width: 481px) and (max-width: 1120px){
  div.transbox{
-  grid-row-start: 5;
-  grid-row-end: 6;
-  grid-column-start: 3;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  grid-column-start: 7;
   grid-column-end: 12;
   white-space: wrap;
 }
@@ -614,8 +605,8 @@ ul.social-media {
 div.link{
   grid-row-start: 7;
   grid-row-end: 10;
-  grid-column-start: 5;
-  grid-column-end: 8;
+  grid-column-start: 3;
+  grid-column-end: 6;
 }
 
 div.mainContent{
@@ -627,7 +618,7 @@ div.transbox a{
   font-size: 300px;
 }
 div.transbox p{
-  font-size: 35px;
+  font-size: 25px;
 }
 
 }
@@ -637,18 +628,18 @@ div.transbox p{
 @media only screen and (min-width: 1120px){
 
 div.link{
-  grid-row-start: 5;
-  grid-row-end: 6;
-  grid-column-start: 6;
+  grid-row-start: 10;
+  grid-row-end: 11;
+  grid-column-start: 4;
   grid-column-end: 12;
   white-space: nowrap;
 }
 
 div.transbox{
-  grid-row-start: 7;
-  grid-row-end: 10;
-  grid-column-start: 4;
-  grid-column-end: 10;
+  grid-row-start: 3;
+  grid-row-end: 7;
+  grid-column-start: 7;
+  grid-column-end: 12;
   white-space: wrap;
 }
 div.mainContent{
@@ -667,25 +658,31 @@ div.transbox p{
 /* -----------------Feature list, JakubK ------------*/
 
 .featureListCol1>div>img, .featureListCol2>div>img{
-    width: 60px;
-    height: 60px;
-    float: left;
-    margin: 5px 5px 5px 5px;
+  width: 60px;
+  height: 60px;
+  margin: 5px 5px 5px 5px;
 }
 .featureListHeader{
-    text-align: center;
-    margin: 5px;
-    background-color: brown;
+  text-align: center;
+  margin: 5px;
+  background-color: brown;
+}
+.featureListWrapperForHover:hover>h1{
+  background-color: coral;
+}
+
+.featureListCol1>div, .featureListCol2>div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .featureListCol1, .featureListCol2{
-    width: 100%;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    text-align: center;
-    padding:1px;
-
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  text-align: center;
 }
 
 .featureListCol1{
@@ -714,20 +711,20 @@ div.featureList{
 /* Desktop transition and animation for the extended feature menu */
 
 .featureListWrapperForHover>div {
-    height: 0px;
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
-    transition-property: height;
-    transition-duration: 1s;
+  height: 0px;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  transition-property: height;
+  transition-duration: 1s;
 }
     
 .featureListWrapperForHover:hover>div{
     
-    transition-property: height;
-    transition-duration: 2s;
-    height: 402px;
-    overflow: hidden;
+  transition-property: height;
+  transition-duration: 2s;
+  height: 402px;
+  overflow: hidden;
 }
 
 /* Mobile transitions and animation for the extended feature menu */
@@ -735,11 +732,10 @@ div.featureList{
 @media (max-width: 480px){
 
   .featureListWrapperForHover:hover>div{
-    
-    transition-property: height;
-    transition-duration: 2s;
-    height: 481px;
-    overflow: hidden;
+  transition-property: height;
+  transition-duration: 2s;
+  height: 560px;
+  overflow: hidden;
 }      
 }
 
