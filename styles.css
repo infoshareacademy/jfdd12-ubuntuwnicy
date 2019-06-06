@@ -307,7 +307,7 @@ ul.subMenu{
       width: 100%;
       position: sticky;
       top: 0;
-      background: #f8f8f8
+      background: #f8f8f8;
       box-shadow: -8px 46px 94px -50px rgba(0,0,0,0.42);
     }
       .menuPC a:hover{
