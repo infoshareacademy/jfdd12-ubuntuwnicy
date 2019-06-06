@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body{
     box-sizing: border-box;
     background-color: white;
@@ -109,11 +113,13 @@ div.transbox{
 
 div.sectionHero{
   box-sizing: border-box;
-  background: url("blank-profile-picture-973461_960_720\ \(1\).png") no-repeat;
+  background: url("art-artist-background-316466.jpg") no-repeat;
   /* background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgtUgW--9AsD8ZcBFRaw22jwk_L1MQLVD-ybALkXCs2ddvcviOSA") no-repeat;  */
   background-size: 100% 100%;
   width: 100%;
   height: 80vh;
+  background-size: auto;
+  background-position: bottom;
 }
 
 /* end of mobile styles for icons - MartaKirschenstein */
@@ -145,11 +151,12 @@ div.sectionHero{
     div.sectionHero {
       box-sizing: border-box;
       margin: 0px;
-      background: url("blank-profile-picture-973461_960_720\ \(1\).png") no-repeat;
+      background: url("art-artist-background-316466.jpg") no-repeat;
       /* background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgtUgW--9AsD8ZcBFRaw22jwk_L1MQLVD-ybALkXCs2ddvcviOSA") no-repeat;  */
-      background-size: 100% 100%;
       width: 100%;
       height: 80vh;
+      background-size: auto;
+      background-position: bottom;
     }
   }
 
@@ -300,7 +307,7 @@ ul.subMenu{
       width: 100%;
       position: sticky;
       top: 0;
-      background: rgb(255, 255, 255);
+      background: #f8f8f8
       box-shadow: -8px 46px 94px -50px rgba(0,0,0,0.42);
     }
       .menuPC a:hover{
