@@ -105,8 +105,8 @@ div.mainContent{
 }
 
 div.link{
-  grid-row-start: 9;
-  grid-row-end: 10;
+  grid-row-start: 11;
+  grid-row-end: 12;
   grid-column-start: 4;
   grid-column-end: 6;
   white-space: nowrap;
@@ -178,7 +178,8 @@ div.sectionHero{
 .navClass{ 
   position: fixed;  
   top: 0;
-  display: grid;
+  right: 0;
+  left: 0;
   
 
   }
@@ -468,6 +469,7 @@ input[name="name"], input[name="userEmail"]{
     flex-direction:column;
     align-content:center;
     align-items:center;
+    margin: 5%;
     
 }
 .card-wrapper{
@@ -484,23 +486,22 @@ input[name="name"], input[name="userEmail"]{
     align-content:center;
     align-items:center;
     width:17rem;
-    height:28rem;
-    border:3px solid;
+    height:20rem;
     box-shadow:10px 10px 34px -2px rgba(0,0,0,0.75);
     opacity:0.8;
 }
 
 .card-body.first{
-    background:#74b9ff
+    background: #ffffff;
 }
 .card-body.second{
-background:#74b9ff;
+background: #ffffff;;
 }
 .card-body.third{
-    background:#74b9ff;
+    background:#ffffff;
 }
 .card-body.fourth{
-    background:#74b9ff;
+    background:#ffffff;
 }
 
 
