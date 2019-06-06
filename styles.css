@@ -39,6 +39,16 @@ h1.heading{
     font-weight: 500;
 }
 /* mobile styles for icons and footer - MartaKirschenstein */
+
+@media (max-width: 480px) {
+
+  div.icons{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
 .mainFooter {
    width: 100%;
    height: auto;
