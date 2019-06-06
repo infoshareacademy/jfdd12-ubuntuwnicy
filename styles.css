@@ -8,7 +8,7 @@ body{
     margin: 0;
 }
 
-section.three{
+section.about-me{
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 12px;
     padding: 0;
@@ -489,10 +489,10 @@ input[name="name"], input[name="userEmail"]{
     flex-direction:column;
     align-content:center;
     align-items:center;
-    width:16rem;
+    width:17rem;
     height:28rem;
-    border:2px solid;
-    box-shadow:5px 10px;
+    border:3px solid;
+    box-shadow:10px 10px 34px -2px rgba(0,0,0,0.75);
     opacity:0.8;
 }
 
@@ -514,7 +514,7 @@ background:#74b9ff;
     width:12rem;
     height:12rem;
     border-radius:50%;
-    border: 2px solid 
+    border: 2px solid;
 }
 
 .card-body h1 {
@@ -523,31 +523,58 @@ text-transform:capitalize;
 font-weight:200%;
 }
 
-.about-me {
+.short-description {
     font-size:1.2rem;
+    text-align: center;
+    border-top:2px solid;
+    border-bottom:2px solid;
+    margin:3px;
+    padding:1px;
 }
 
-
-
-
-
 .social {
-    display:flex;
-    text-align:center;
+    display:block;
+    justify-content:center;
+    align-items: center;
     width:100%;
-    padding:4px;
-    justify-content: space-evenly;
+    margin:auto;
     
 }
 ul.social-media {
-    list-style:none;
     display:flex;
-    flex-direction:row;
-    text-align:center;
-    justify-content: space-evenly;
+    justify-content:space-around;
+    margin-right:25px;   
 }
-.social-media a {
+
+.social-media li{
+    list-style:none;
+}
+.social-media .fa {
     text-decoration:none;
+    font-size:3rem;
+    text-align: center;
+    transition:all 0.4s ease;
+}
+.social-media .fa:hover {
+    opacity: 0.8;
+}
+
+.fa-github-square{
+    color:black;
+}
+.fa-linkedin-square{
+     color:#006292
+}
+.fa-list-alt{
+     color:darkgoldenrod;
+}
+@media screen and (min-width:480px){
+    .card-wrapper{
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items:center;    
+    }
     }
 .social-media i{
         font-size:3rem;
