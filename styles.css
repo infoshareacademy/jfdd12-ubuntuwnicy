@@ -77,7 +77,7 @@ h1.heading{
 
 div.transbox p {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 20px;
+  font-size: 8vw;
   font-weight: bold;
   font-style: oblique;
   color: #000000;
@@ -92,18 +92,18 @@ div.mainContent{
 }
 
 div.link{
-  grid-row-start: 9;
-  grid-row-end: 10;
-  grid-column-start: 4;
-  grid-column-end: 6;
+  grid-row-start: 8;
+  grid-row-end: 9;
+  grid-column-start: 2;
+  grid-column-end: 4;
   white-space: nowrap;
 }
 
 div.transbox{
-  grid-row-start: 3;
-  grid-row-end: 6;
-  grid-column-start: 6;
-  grid-column-end: 11;
+  grid-row-start: 2;
+  grid-row-end: 12;
+  grid-column-start: 2;
+  grid-column-end: 12;
   white-space: wrap;
 }
 
@@ -113,7 +113,7 @@ div.transbox{
 
 div.sectionHero{
   box-sizing: border-box;
-  background: url("art-artist-background-316466.jpg") no-repeat;
+  /* background: url("art-artist-background-316466.jpg") no-repeat; */
   /* background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgtUgW--9AsD8ZcBFRaw22jwk_L1MQLVD-ybALkXCs2ddvcviOSA") no-repeat;  */
   background-size: 100% 100%;
   width: 100%;
@@ -151,7 +151,7 @@ div.sectionHero{
     div.sectionHero {
       box-sizing: border-box;
       margin: 0px;
-      background: url("art-artist-background-316466.jpg") no-repeat;
+      /* background: url("art-artist-background-316466.jpg") no-repeat; */
       /* background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgtUgW--9AsD8ZcBFRaw22jwk_L1MQLVD-ybALkXCs2ddvcviOSA") no-repeat;  */
       width: 100%;
       height: 80vh;
@@ -165,7 +165,8 @@ div.sectionHero{
 .navClass{ 
   position: sticky;  
   top: 0;
-
+  left: 0;
+  right: 0;
   }
 
 #aboutUs{
@@ -296,7 +297,7 @@ ul.subMenu{
       font-family: Arial, Helvetica, sans-serif;
       box-sizing: border-box;
       margin: 0px;
-      background: url("art-artist-background-316466.jpg") no-repeat;
+      /* background: url("art-artist-background-316466.jpg") no-repeat; */
       /* background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgtUgW--9AsD8ZcBFRaw22jwk_L1MQLVD-ybALkXCs2ddvcviOSA") no-repeat;  */
       background-size: 100% 100%;
       width: 100%;
@@ -324,7 +325,7 @@ ul.subMenu{
       .menuPC a{
       background-color: #fffbfb;
       font-size: 16px;
-      padding: 24px 19px;
+      padding: 22px 19px;
       width: 100%;
       height: 100%;
     }
@@ -333,8 +334,8 @@ ul.subMenu{
     }
       img.pageLogo{
       float: left;
-      width: 70px;
-      height: 70px;
+      width: 65px;
+      height: 65px;
       background-color:white;
       }
       div.transbox p {
