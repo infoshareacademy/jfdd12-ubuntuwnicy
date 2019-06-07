@@ -114,24 +114,20 @@ div.mainContent{
 }
 
 div.link{
-  grid-row-start: 8;
-  grid-row-end: 10;
-  grid-column-start: 2;
-  grid-column-end: 4;
+  grid-row-start: 10;
+  grid-row-end: 12;
+  grid-column-start: 4;
+  grid-column-end: 8;
   white-space: nowrap;
 }
 
 div.transbox{
-  grid-row-start: 2;
+  grid-row-start: 4;
   grid-row-end: 10;
   grid-column-start: 2;
   grid-column-end: 12;
   white-space: wrap;
 }
-
-/* end of mobile styles for icons and footer - MartaKirschenstein */
-
-/* BACKGROUND- SEKCJA HERO LucjanK */
 
 div.sectionHero{
   box-sizing: border-box;
@@ -327,7 +323,7 @@ ul.subMenu{
       /* background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgtUgW--9AsD8ZcBFRaw22jwk_L1MQLVD-ybALkXCs2ddvcviOSA") no-repeat;  */
       background-size: 100% 100%;
       width: 100vw;
-      height: 80vh;
+      height: 85vh;
     }
     .navClass{
       display: none;
@@ -380,7 +376,7 @@ div.mainContent {
     background-size: 100% 100%;
     /* border: 1px solid black; */
     width: 100vw;
-    height: 70vh;
+    height: 85vh;
   }
 
 .pageLogo {
@@ -556,7 +552,7 @@ ul.social-media {
  div.transbox{
   grid-row-start: 4;
   grid-row-end: 5;
-  grid-column-start: 7;
+  grid-column-start: 6;
   grid-column-end: 12;
   white-space: wrap;
 }
@@ -577,7 +573,7 @@ div.transbox a{
   font-size: 300px;
 }
 div.transbox p{
-  font-size: 25px;
+  font-size: 30px;
 }
 
 }
@@ -587,17 +583,17 @@ div.transbox p{
 @media only screen and (min-width: 1120px){
 
 div.link{
-  grid-row-start: 10;
+  grid-row-start: 8;
   grid-row-end: 11;
-  grid-column-start: 4;
-  grid-column-end: 12;
+  grid-column-start: 2;
+  grid-column-end: 6;
   white-space: nowrap;
 }
 
 div.transbox{
   grid-row-start: 3;
   grid-row-end: 7;
-  grid-column-start: 7;
+  grid-column-start: 6;
   grid-column-end: 12;
   white-space: wrap;
 }
@@ -607,6 +603,9 @@ div.mainContent{
 }
 div.transbox p{
   font-size: 45px;
+}
+div.sectionHero{
+  height: 80vh;
 }
 
 
