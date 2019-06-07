@@ -6,37 +6,41 @@ body{
     box-sizing: border-box;
     background-color: white;
     margin: 0;
+    font-family: 'Roboto', sans-serif;
     max-width: 1920px;
     max-height: 1080px;
 }
 
 section.about-me{
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Roboto', sans-serif;  
     font-size: 12px;
     padding: 0;
     margin:0;
 }
 
 h1.heading{
-    text-transform:uppercase;
-    letter-spacing: 3px;
-    font-size: 2rem;
+    font-size: 2em;
     text-align:center;
     position:relative;
-    margin-bottom:3rem;
-    padding-bottom:1rem; 
-    border-bottom:6px solid;
+}
+
+.icons {
+  box-shadow: 0px 0px 38px -21px rgba(2,114,155,0.68);
 }
 
 .icons > div {
     text-align: center;
-    
 }
 
 .icons > div > img {
     object-fit: contain;
     width: 30%;
     font-weight: 500;
+}
+
+.icons div p {
+  font-weight: bold;
+  font-size: 1.25rem;
 }
 /* mobile styles for icons and footer - MartaKirschenstein */
 
@@ -55,7 +59,7 @@ h1.heading{
    margin: auto;
    background:white;
    padding: 20px 0px;
-   box-shadow: 2px -17px 47px -28px rgba(0,0,0,0.62);
+   box-shadow: 0px 0px 38px -21px rgba(0,0,0,0.68);
 }
 
 .socialMediaFooter {
@@ -88,11 +92,10 @@ h1.heading{
 /* Styles the main text on hero page Lucjan K */
 
 div.transbox p {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 8vw;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
   font-weight: bold;
-  font-style: oblique;
-  color: #000000;
+  color: #ffffff;
 }
 
 /* GRID FOR HERO SECTION Lucjan*/
@@ -104,10 +107,10 @@ div.mainContent{
 }
 
 div.link{
-  grid-row-start: 8;
-  grid-row-end: 9;
-  grid-column-start: 2;
-  grid-column-end: 4;
+  grid-row-start: 11;
+  grid-row-end: 12;
+  grid-column-start: 4;
+  grid-column-end: 6;
   white-space: nowrap;
 }
 
@@ -125,7 +128,7 @@ div.transbox{
 
 div.sectionHero{
   box-sizing: border-box;
-  /* background: url("art-artist-background-316466.jpg") no-repeat; */
+  background: url("backgrounds-blank-blue-953214.jpg") no-repeat;
   /* background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgtUgW--9AsD8ZcBFRaw22jwk_L1MQLVD-ybALkXCs2ddvcviOSA") no-repeat;  */
   background-size: 100% 100%;
   width: 100%;
@@ -152,7 +155,8 @@ div.sectionHero{
         justify-items: stretch;
         text-align: center;
         margin: 0;
-        padding: 0;    
+        padding: 2% 10%;  
+        box-shadow: 0px 0px 38px -21px rgba(2,114,155,0.68); 
     }
     a.li{
       font-size: 18px;
@@ -163,7 +167,7 @@ div.sectionHero{
     div.sectionHero {
       box-sizing: border-box;
       margin: 0px;
-      /* background: url("art-artist-background-316466.jpg") no-repeat; */
+      background: url("backgrounds-blank-blue-953214.jpg") no-repeat;
       /* background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgtUgW--9AsD8ZcBFRaw22jwk_L1MQLVD-ybALkXCs2ddvcviOSA") no-repeat;  */
       width: 100%;
       height: 80vh;
@@ -175,10 +179,12 @@ div.sectionHero{
 /* Navigation bar - list of all sections */
 
 .navClass{ 
-  position: sticky;  
+  position: fixed;  
   top: 0;
-  left: 0;
   right: 0;
+  left: 0;
+  
+
   }
 
 #aboutUs{
@@ -191,10 +197,10 @@ ul.subMenu{
 }
 
 .navClass ul.mainMenu{
-  background-color: rgb(255, 255, 255);
+  background-color: #f8f8f8;
   color: rgb(10, 10, 9);
   font-size: 20px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin-top: 0px;
   margin-left: 100px;
   padding: 0px 0px;
@@ -304,12 +310,13 @@ ul.subMenu{
         justify-items: stretch;
         text-align: center;
         margin: 0;
+        box-shadow: 0px 0px 38px -21px rgba(2,114,155,0.68);
     }
     div.sectionHero{
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: 'Roboto', sans-serif;
       box-sizing: border-box;
       margin: 0px;
-      /* background: url("art-artist-background-316466.jpg") no-repeat; */
+      background: url("backgrounds-blank-blue-953214.jpg") no-repeat;
       /* background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgtUgW--9AsD8ZcBFRaw22jwk_L1MQLVD-ybALkXCs2ddvcviOSA") no-repeat;  */
       background-size: 100% 100%;
       width: 100%;
@@ -326,7 +333,7 @@ ul.subMenu{
       position: fixed;
       top: 0;
       background: #f8f8f8;
-      box-shadow: -8px 46px 94px -50px rgba(0,0,0,0.42);
+      box-shadow: 0px 0px 38px -21px rgba(0,0,0,0.68);
     }
       .menuPC a:hover{
       background-color: rgb(10, 117, 99);
@@ -335,7 +342,7 @@ ul.subMenu{
       margin-top: 20px;
     }
       .menuPC a{
-      background-color: #fffbfb;
+      background-color: #f8f8f8;
       font-size: 16px;
       padding: 22px 19px;
       width: 100%;
@@ -348,7 +355,7 @@ ul.subMenu{
       float: left;
       width: 65px;
       height: 65px;
-      background-color:white;
+      background-color: #f8f8f8;
       }
       div.transbox p {
         font-size: 30px;
@@ -370,7 +377,7 @@ div.mainContent {
   }
 
 .pageLogo {
-  background-color: white;
+  background-color: #f8f8f8;
 }
 
 .subMenu a{
@@ -418,6 +425,8 @@ div.mainContent {
     flex-flow: column;
     text-align: center;
     font-size: 1em;
+    padding: 2% 10%; 
+    box-shadow: 0px 0px 38px -21px rgba(2,114,155,0.68);
 }
 
 input[type="submit"]{
@@ -430,8 +439,8 @@ input[type="submit"]{
     background-color: green;
     border: solid;
     border-radius: 15px 15px 15px 15px;
-    padding: 10px 10px;
     text-decoration: none;
+    padding: 10%;
 }
 
 input[name="name"], input[name="userEmail"]{
@@ -439,6 +448,8 @@ input[name="name"], input[name="userEmail"]{
     border: 1px solid black;
     width: 120%;
     height: 120%;
+    padding: 10%;
+    border-radius: 15px 15px 15px 15px;
 }
 
 .premiereNewsletter{
@@ -491,23 +502,22 @@ input[name="name"], input[name="userEmail"]{
     align-content:center;
     align-items:center;
     width:17rem;
-    height:28rem;
-    border:3px solid;
-    box-shadow:10px 10px 34px -2px rgba(0,0,0,0.75);
+    height:20rem;
+    box-shadow: 0px 0px 38px -21px rgba(2,114,155,0.68);
     opacity:0.8;
 }
 
 .card-body.first{
-    background:#74b9ff
+    background: #ffffff;
 }
 .card-body.second{
-background:#74b9ff;
+background: #ffffff;;
 }
 .card-body.third{
-    background:#74b9ff;
+    background:#ffffff;
 }
 .card-body.fourth{
-    background:#74b9ff;
+    background:#ffffff;
 }
 
 
@@ -617,7 +627,7 @@ div.link{
 }
 
 div.mainContent{
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 30px;
 }
 
@@ -650,7 +660,7 @@ div.transbox{
   white-space: wrap;
 }
 div.mainContent{
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 30px;
 }
 div.transbox p{
@@ -672,10 +682,13 @@ div.transbox p{
 .featureListHeader{
   text-align: center;
   margin: 5px;
-  background-color: brown;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 38px -21px rgba(2,114,155,0.68);
+  padding: 2% 10%; 
 }
 .featureListWrapperForHover:hover>h1{
-  background-color: coral;
+  background-color: #02729b;
+  color: #ffffff;
 }
 
 .featureListCol1>div, .featureListCol2>div{
