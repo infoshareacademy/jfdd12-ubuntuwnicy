@@ -240,8 +240,8 @@ ul.mainMenu{
 
 img.pageLogo{
   float: left;
-  width: 33px;
-  height: 33px;
+  width: 32px;
+  height: 32px;
 }
 
 .navClass > ul > li{
@@ -257,7 +257,7 @@ img.pageLogo{
 }
 
 ul.subMenu{
-  margin-top: 25px;
+  margin-top: 27px;
   position: absolute;
   width: 120px;
   background-color:rgb(255, 255, 255);
