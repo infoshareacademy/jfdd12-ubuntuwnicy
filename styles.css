@@ -42,6 +42,11 @@ h1.heading{
   font-weight: bold;
   font-size: 1.25rem;
 }
+
+
+
+
+
 /* mobile styles for icons and footer - MartaKirschenstein */
 
 @media (max-width: 480px) {
@@ -50,7 +55,9 @@ h1.heading{
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
-
+  .menuPC{
+    display: none;
+  }
 }
 
 .mainFooter {
@@ -107,16 +114,16 @@ div.mainContent{
 }
 
 div.link{
-  grid-row-start: 11;
-  grid-row-end: 12;
-  grid-column-start: 4;
-  grid-column-end: 6;
+  grid-row-start: 8;
+  grid-row-end: 10;
+  grid-column-start: 2;
+  grid-column-end: 4;
   white-space: nowrap;
 }
 
 div.transbox{
   grid-row-start: 2;
-  grid-row-end: 12;
+  grid-row-end: 10;
   grid-column-start: 2;
   grid-column-end: 12;
   white-space: wrap;
@@ -131,8 +138,8 @@ div.sectionHero{
   background: url("backgrounds-blank-blue-953214.jpg") no-repeat;
   /* background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgtUgW--9AsD8ZcBFRaw22jwk_L1MQLVD-ybALkXCs2ddvcviOSA") no-repeat;  */
   background-size: 100% 100%;
-  width: 100%;
-  height: 80vh;
+  width: 100vw;
+  height: 100vh;
   background-size: auto;
   background-position: bottom;
 }
@@ -169,7 +176,7 @@ div.sectionHero{
       margin: 0px;
       background: url("backgrounds-blank-blue-953214.jpg") no-repeat;
       /* background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgtUgW--9AsD8ZcBFRaw22jwk_L1MQLVD-ybALkXCs2ddvcviOSA") no-repeat;  */
-      width: 100%;
+      width: 100vw;
       height: 80vh;
       background-size: auto;
       background-position: bottom;
@@ -183,8 +190,7 @@ div.sectionHero{
   top: 0;
   right: 0;
   left: 0;
-  
-
+  white-space: nowrap;
   }
 
 #aboutUs{
@@ -234,8 +240,8 @@ ul.mainMenu{
 
 img.pageLogo{
   float: left;
-  width: 33px;
-  height: 33px;
+  width: 32px;
+  height: 32px;
 }
 
 .navClass > ul > li{
@@ -243,6 +249,7 @@ img.pageLogo{
     display: inline-block;
     padding: 5px 0px;
     position: relative;
+    font-size: 18px;
 }
 
 .navClass > ul > li > a{
@@ -250,7 +257,7 @@ img.pageLogo{
 }
 
 ul.subMenu{
-  margin-top: 25px;
+  margin-top: 27px;
   position: absolute;
   width: 120px;
   background-color:rgb(255, 255, 255);
@@ -319,7 +326,7 @@ ul.subMenu{
       background: url("backgrounds-blank-blue-953214.jpg") no-repeat;
       /* background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgtUgW--9AsD8ZcBFRaw22jwk_L1MQLVD-ybALkXCs2ddvcviOSA") no-repeat;  */
       background-size: 100% 100%;
-      width: 100%;
+      width: 100vw;
       height: 80vh;
     }
     .navClass{
@@ -358,7 +365,7 @@ ul.subMenu{
       background-color: #f8f8f8;
       }
       div.transbox p {
-        font-size: 30px;
+        font-size: 30em;
       }
   }
     
@@ -372,7 +379,7 @@ div.mainContent {
     /* background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgtUgW--9AsD8ZcBFRaw22jwk_L1MQLVD-ybALkXCs2ddvcviOSA") no-repeat; */
     background-size: 100% 100%;
     /* border: 1px solid black; */
-    width: 100%;
+    width: 100vw;
     height: 70vh;
   }
 
@@ -399,8 +406,8 @@ div.mainContent {
 .link a{
     text-decoration: none;
     color: rgb(253, 255, 255);
-    width: 100%;
-    height: 100%; 
+    width: 10em;
+    height: 10em; 
     background-color: green;
     border: solid;
     border-radius: 15px 15px 15px 15px;
@@ -415,20 +422,6 @@ div.mainContent {
 
 }
 /* end of desktop styles for icons - MartaKirschenstein */
-
-
-
-
-
-/* Hides menu for mobile devices Lucjan K*/
-
-    .menuPC {
-      display:none;
-    }
-    
-
-
-
 
 .container{
     display:flex;
