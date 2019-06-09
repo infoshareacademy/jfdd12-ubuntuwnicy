@@ -12,7 +12,7 @@
     box-shadow: 0px 0px 38px -21px rgba(2,114,155,0.68);
     padding: 2% 10%; 
   }
-  .featureListWrapperForHover:hover>h1{
+  #featureListWrapperID:hover>h1{
     background-color: #02729b;
     color: #ffffff;
   }
