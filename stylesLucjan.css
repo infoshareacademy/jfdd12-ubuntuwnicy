@@ -227,8 +227,8 @@ ul.mainMenu{
 
 img.pageLogo{
   float: left;
-  width: 58px;
-  height: 58px;
+  width: 59px;
+  height: 59px;
 }
 
 .navClass > ul > li{
@@ -317,7 +317,7 @@ ul.subMenu{
     }
     .menuPC{
       display: flex;
-      justify-content: flex-end;
+      justify-content: space-between;
       height: 67px;
       width: 100%;
       position: fixed;
@@ -594,10 +594,8 @@ div.transbox p{
 div.sectionHero{
   height: 80vh;
 }
-
-
-    .card-body{
-        margin:2vw; 
-    }}
+.card-body{
+    margin:2vw; 
+}}
 
 
