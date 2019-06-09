@@ -56,7 +56,7 @@
   
   /* Desktop transition and animation for the extended feature menu */
   
-  .featureListWrapperForHover>div {
+  #featureListWrapperID:not(.featureListWrapperForHover)>div {
     height: 0px;
     padding: 0;
     margin: 0;
@@ -65,7 +65,7 @@
     transition-duration: 1s;
   }
       
-  .featureListWrapperForHover:hover>div{
+  .featureListWrapperForHover>div{
       
     transition-property: height;
     transition-duration: 2s;
@@ -77,12 +77,13 @@
   
   @media (max-width: 480px){
   
-    .featureListWrapperForHover:hover>div{
-    transition-property: height;
-    transition-duration: 2s;
-    height: 560px;
-    overflow: hidden;
-  }      
+    .featureListWrapperForHover>div{
+      
+      transition-property: height;
+      transition-duration: 2s;
+      height: 560px;
+      overflow: hidden;
+    }
   }
   
   /*-----------------feature list end----------*/
@@ -91,6 +92,7 @@
 .formWrapper{
     display: flex;
     justify-content: center;
+    align-content: center;
     box-shadow: 0px 0px 38px -21px rgba(2,114,155,0.68);
 }
 

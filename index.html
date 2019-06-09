@@ -50,7 +50,7 @@
                  <div><img src="connect480.png" alt="icon-4"><p>Wykonajcie Quiz razem</p></div>
                  </div>
         </section>
-        <div class="featureListWrapperForHover">
+        <div id="featureListWrapperID">
         <h1 class="featureListHeader"  id="signUp">Kliknij tutaj, aby poznać szczegóły działania sQuizYou!</h1>
 
         <div class="featureList">
@@ -103,10 +103,8 @@
             <p>Cześć, wyślemy ci tylko jednego maila z informacjami w dniu premiery. :)</p>
 
             <form class="premiereNewsletter" action="/sent.php">
-                <label for="name">Imię i nazwisko:</label>
-                <input type="text" name="name" required><br>
-                <label for="userEmail">Email:</label>
-                <input type="email" name="userEmail" required><br>
+                <input type="text" name="name" required placeholder="Imię i nazwisko"><br>
+                <input type="email" name="userEmail" placeholder="Adres Email" required><br>
                 <input type="submit" name="newsletterSubmit" value="Wyślij"><br>
             </form>
             <footer class="newsletterSecurity">
@@ -193,6 +191,7 @@
     </footer>
   
 </section>
+<script src="featureListScript.js"></script>
 </body>
 
 </html>
