@@ -88,14 +88,21 @@
   /*-----------------feature list end----------*/
   /* Newsletter form, JakubK */
 /* Desktop styles for newsletter premiere form - Jakub Karolak*/
+.formWrapper{
+    display: flex;
+    justify-content: center;
+}
+
 .form{
     display: flex;
     align-items: center;
     flex-flow: column;
     text-align: center;
-    font-size: 1em;
-    padding: 2% 10%; 
-    box-shadow: 0px 0px 38px -21px rgba(2,114,155,0.68);
+    width: 800px;
+    background: rgba(2,114,155,0.68);
+    border: 4px solid rgba(2,114,155,0.2);
+    border-top: 4px solid rgba(2,114,155,0.1);
+    margin: 0;
 }
 
 input[type="submit"]{
