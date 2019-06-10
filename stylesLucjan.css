@@ -51,6 +51,7 @@ h1.heading{
   right: 0;
   left: 0;
   white-space: nowrap;
+  width: 94vw;
   }
 
 /* mobile styles for icons and footer - MartaKirschenstein */
@@ -116,6 +117,7 @@ div.mainContent{
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(12, 1fr);  
+  max-width: 100vw;
 }
 
 div.link{
@@ -139,7 +141,7 @@ div.sectionHero{
   background: url("black-citrus.jpg") no-repeat;
   /* background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgtUgW--9AsD8ZcBFRaw22jwk_L1MQLVD-ybALkXCs2ddvcviOSA") no-repeat;  */
   background-size: 100% 100%;
-  width: 100vw;
+  width: 94vw;
   height: 100vh;
   background-size: auto;
   background-position: bottom;
@@ -177,7 +179,7 @@ div.sectionHero{
       margin: 0px;
       background: url("black-citrus.jpg") no-repeat;
       /* background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgtUgW--9AsD8ZcBFRaw22jwk_L1MQLVD-ybALkXCs2ddvcviOSA") no-repeat;  */
-      width: 100vw;
+      width: 98vw;
       height: 80vh;
       background-size: auto;
       background-position: bottom;
@@ -309,7 +311,7 @@ ul.subMenu{
       background: url("black-citrus.jpg") no-repeat;
       /* background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgtUgW--9AsD8ZcBFRaw22jwk_L1MQLVD-ybALkXCs2ddvcviOSA") no-repeat;  */
       background-size: 100% 100%;
-      width: 100vw;
+      width: 98vw;
       height: 85vh;
     }
     .navClass{
@@ -363,7 +365,7 @@ div.mainContent {
     /* background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgtUgW--9AsD8ZcBFRaw22jwk_L1MQLVD-ybALkXCs2ddvcviOSA") no-repeat; */
     background-size: 100% 100%;
     /* border: 1px solid black; */
-    width: 100vw;
+    width: 95vw;
     height: 85vh;
   }
 
@@ -563,7 +565,12 @@ div.transbox a{
 div.transbox p{
   font-size: 30px;
 }
-
+div.sectionHero{
+  width: 97vw;
+}
+.menuPC{
+  width: 97vw;
+}
 }
 
 /* FOR LARGE DEVICES Lucjan K */
@@ -594,6 +601,7 @@ div.transbox p{
 }
 div.sectionHero{
   height: 80vh;
+  width: 98vw;
 }
 .card-body{
     margin:2vw; 
