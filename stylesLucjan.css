@@ -25,7 +25,7 @@ h1.heading{
 }
 
 .icons {
-  box-shadow: 0px 0px 38px -21px rgba(2,114,155,0.68);
+  box-shadow: 0px 0px 38px -21px rgba(0,0,0,0.68);
 }
 
 .icons > div {
@@ -138,7 +138,7 @@ div.transbox{
 
 div.sectionHero{
   box-sizing: border-box;
-  background: url("backgrounds-blank-blue-953214.jpg") no-repeat;
+  background: url("black-citrus.jpg") no-repeat;
   /* background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgtUgW--9AsD8ZcBFRaw22jwk_L1MQLVD-ybALkXCs2ddvcviOSA") no-repeat;  */
   background-size: 100% 100%;
   width: 100vw;
@@ -166,7 +166,7 @@ div.sectionHero{
         text-align: center;
         margin: 0;
         padding: 2% 10%;  
-        box-shadow: 0px 0px 38px -21px rgba(2,114,155,0.68); 
+        box-shadow: 0px 0px 38px -21px rgba(0,0,0,0.68);
     }
     a.li{
       font-size: 18px;
@@ -177,7 +177,7 @@ div.sectionHero{
     div.sectionHero {
       box-sizing: border-box;
       margin: 0px;
-      background: url("backgrounds-blank-blue-953214.jpg") no-repeat;
+      background: url("black-citrus.jpg") no-repeat;
       /* background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgtUgW--9AsD8ZcBFRaw22jwk_L1MQLVD-ybALkXCs2ddvcviOSA") no-repeat;  */
       width: 99vw;
       height: 80vh;
@@ -191,7 +191,7 @@ ul.subMenu{
 }
 
 .navClass ul.mainMenu{
-  background-color: #f8f8f8;
+  background-color: rgb(255, 255, 153);
   color: rgb(10, 10, 9);
   font-size: 18px;
   font-family: 'Roboto', sans-serif;
@@ -248,7 +248,7 @@ ul.subMenu{
   margin-top: 43px;
   position: absolute;
   width: 170px;
-  background-color:rgb(255, 255, 255);
+  background-color: rgb(255, 255, 153);
   list-style-type: none;
   text-align: center;
   display: 0;
@@ -268,8 +268,8 @@ ul.subMenu li a{
 }
 
 ul.subMenu li:hover{
-  color: rgb(5, 5, 2);
-  background-color:rgb(10, 117, 99);
+  color:  rgb(255, 255, 153);
+  background-color:grey;
 }
 
 ul.subMenu li>a:active{
@@ -302,13 +302,13 @@ ul.subMenu{
         justify-items: stretch;
         text-align: center;
         margin: 0;
-        box-shadow: 20px 20px 38px -21px rgba(2,114,155,0.68);
+        box-shadow: 0px 0px 38px -21px rgba(0,0,0,0.68);
     }
     div.sectionHero{
       font-family: 'Roboto', sans-serif;
       box-sizing: border-box;
       margin: 0px;
-      background: url("backgrounds-blank-blue-953214.jpg") no-repeat;
+      background: url("black-citrus.jpg") no-repeat;
       /* background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgtUgW--9AsD8ZcBFRaw22jwk_L1MQLVD-ybALkXCs2ddvcviOSA") no-repeat;  */
       background-size: 100% 100%;
       width: 98vw;
@@ -320,34 +320,34 @@ ul.subMenu{
     .menuPC{
       display: flex;
       justify-content: space-between;
-      height: 67px;
-      width: 98vw;
+      height: 70px;
+      width: 100%;
       position: fixed;
       top: 0;
-      background: #f8f8f8;
+      background:  rgb(255, 255, 153);  
       box-shadow: 0px 0px 38px -21px rgba(0,0,0,0.68);
+      opacity: 0.80;
     }
       .menuPC a:hover{
-      background-color: rgb(10, 117, 99);
+      background-color:  rgb(255, 255, 153);
     }
       .menuPC div{
       margin-top: 20px;
     }
       .menuPC a{
-      background-color: #f8f8f8;
-      font-size: 16px;
-      padding: 24px 19px;
+      background-color:  rgb(255, 255, 153);
+      font-size: 20px;
       width: 100%;
       height: 100%;
     }
       .li:active{
-      color:white;
+      color: rgb(255, 255, 153);
     }
       img.pageLogo{
       float: left;
-      width: 65px;
-      height: 65px;
-      background-color: #f8f8f8;
+      width: 70px;
+      height: 70px;
+      background-color:  rgb(255, 255, 153);
       }
       div.transbox p {
         font-size: 30em;
@@ -369,19 +369,19 @@ div.mainContent {
   }
 
 .pageLogo {
-  background-color: #f8f8f8;
+  background-color:  rgb(255, 255, 153);
 }
 
 .subMenu a{
   text-decoration: none;
-  color: rgb(10, 10, 9);
+  color: black;
   width: 100%;
   height: 100%; 
 }
 
 .menuPC a{
   text-decoration: none;
-  color: rgb(10, 10, 9);
+  color: black;
   width: 100%;
   height: 100%; 
 } 
@@ -431,21 +431,21 @@ div.mainContent {
     align-items:center;
     width:17rem;
     height:20rem;
-    box-shadow: 0px 0px 38px -21px rgba(2,114,155,0.68);
+    box-shadow: 0px 0px 38px -21px rgba(0,0,0,0.68);
     opacity:0.8;
 }
 
 .card-body.first{
-    background: #ffffff;
+    background:rgb(230, 230, 230)
 }
 .card-body.second{
-background: #ffffff;;
+    background:rgb(230, 230, 230)
 }
 .card-body.third{
-    background:#ffffff;
+    background:rgb(230, 230, 230)
 }
 .card-body.fourth{
-    background:#ffffff;
+    background:rgb(230, 230, 230)
 }
 
 
