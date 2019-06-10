@@ -140,10 +140,11 @@ div.sectionHero{
   box-sizing: border-box;
   background: url("black-citrus.jpg") no-repeat;
   /* background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgtUgW--9AsD8ZcBFRaw22jwk_L1MQLVD-ybALkXCs2ddvcviOSA") no-repeat;  */
-  background-size: 100% 100%;
-  width: 100vw;
+  background-size: cover;
+  background-position: bottom;
+  /* width: 100vw; */
   height: 100vh;
-  background-size: auto;
+  background-size: cover;
   background-position: bottom;
 }
 
@@ -181,7 +182,7 @@ div.sectionHero{
       /* background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgtUgW--9AsD8ZcBFRaw22jwk_L1MQLVD-ybALkXCs2ddvcviOSA") no-repeat;  */
       width: 99vw;
       height: 80vh;
-      background-size: auto;
+      background-size: cover;
       background-position: bottom;
     }
   }
@@ -310,7 +311,8 @@ ul.subMenu{
       margin: 0px;
       background: url("black-citrus.jpg") no-repeat;
       /* background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgtUgW--9AsD8ZcBFRaw22jwk_L1MQLVD-ybALkXCs2ddvcviOSA") no-repeat;  */
-      background-size: 100% 100%;
+      background-size: cover;
+      background-position: bottom;
       width: 98vw;
       height: 85vh;
     }
@@ -609,5 +611,4 @@ div.sectionHero{
   width: 100%;
 }
 }
-
 
