@@ -152,7 +152,7 @@ h1.heading{
 
 .card-body{
     display:flex;
-    flex: 25%;
+
     flex-direction:column;
     flex-shrink:1;
     align-content:center;
@@ -162,6 +162,7 @@ h1.heading{
     height:20rem;
     box-shadow: 0px 0px 38px -21px rgba(2,114,155,0.68);
     opacity:0.8;
+    z-index: -1;
 }
 
 .card-body.first{
