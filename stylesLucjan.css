@@ -324,7 +324,7 @@ ul.subMenu{
       top: 0;
       background:  rgb(255, 255, 153);  
       box-shadow: 0px 0px 38px -21px rgba(0,0,0,0.68);
-      opacity: 0.68;
+      opacity: 0.80;
     }
       .menuPC a:hover{
       background-color:  rgb(255, 255, 153);
