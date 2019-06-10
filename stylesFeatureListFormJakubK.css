@@ -8,13 +8,13 @@
   .featureListHeader{
     text-align: center;
     margin: 5px;
-    background-color: #ffffff;
-    box-shadow: 0px 0px 38px -21px rgba(2,114,155,0.68);
+    background-color: rgb(230, 230, 230);
+    box-shadow: 0px 0px 38px -21px rgba(0,0,0,0.68);
     padding: 2% 10%; 
   }
-  .featureListWrapperForHover:hover>h1{
-    background-color: #02729b;
-    color: #ffffff;
+  #featureListWrapperID:hover>h1{
+    background-color:  rgb(255, 255, 153);
+    color: grey;
   }
   
   .featureListCol1>div, .featureListCol2>div{
@@ -56,7 +56,7 @@
   
   /* Desktop transition and animation for the extended feature menu */
   
-  .featureListWrapperForHover>div {
+  #featureListWrapperID:not(.featureListWrapperForHover)>div {
     height: 0px;
     padding: 0;
     margin: 0;
@@ -65,7 +65,7 @@
     transition-duration: 1s;
   }
       
-  .featureListWrapperForHover:hover>div{
+  .featureListWrapperForHover>div{
       
     transition-property: height;
     transition-duration: 2s;
@@ -77,25 +77,35 @@
   
   @media (max-width: 480px){
   
-    .featureListWrapperForHover:hover>div{
-    transition-property: height;
-    transition-duration: 2s;
-    height: 560px;
-    overflow: hidden;
-  }      
+    .featureListWrapperForHover>div{
+      
+      transition-property: height;
+      transition-duration: 2s;
+      height: 560px;
+      overflow: hidden;
+    }
   }
   
   /*-----------------feature list end----------*/
   /* Newsletter form, JakubK */
 /* Desktop styles for newsletter premiere form - Jakub Karolak*/
+.formWrapper{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    box-shadow: 0px 0px 38px -21px rgba(0,0,0,0.68);
+    background: rgb(230, 230, 230);
+}
+
 .form{
     display: flex;
     align-items: center;
     flex-flow: column;
     text-align: center;
-    font-size: 1em;
-    padding: 2% 10%; 
-    box-shadow: 0px 0px 38px -21px rgba(2,114,155,0.68);
+    width: 800px;
+    background: rgb(230, 230, 230);
+    box-shadow: 0px 0px 38px -21px rgba(0,0,0,0.68);
+    margin: 0;
 }
 
 input[type="submit"]{
@@ -115,8 +125,8 @@ input[type="submit"]{
 input[name="name"], input[name="userEmail"]{
     padding: 0px;
     border: 1px solid black;
-    width: 120%;
-    height: 120%;
+    width: 200px;
+    height: 10px;
     padding: 10%;
     border-radius: 15px 15px 15px 15px;
 }

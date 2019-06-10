@@ -1,0 +1,614 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+    box-sizing: border-box;
+    background-color: white;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    max-width: 1920px;
+    max-height: 1080px;
+}
+
+section.about-me{
+    font-family: 'Roboto', sans-serif;  
+    font-size: 12px;
+    padding: 0;
+    margin:0;
+}
+
+h1.heading{
+    font-size: 2em;
+    text-align:center;
+    position:relative;
+}
+
+.icons {
+  box-shadow: 0px 0px 38px -21px rgba(0,0,0,0.68);
+}
+
+.icons > div {
+    text-align: center;
+}
+
+.icons > div > img {
+    object-fit: contain;
+    width: 30%;
+    font-weight: 500;
+}
+
+.icons div p {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+/* Navigation bar - list of all sections */
+
+.navClass{ 
+  position: fixed;  
+  top: 0;
+  right: 0;
+  left: 0;
+  white-space: nowrap;
+  width: auto;
+  }
+
+/* mobile styles for icons and footer - MartaKirschenstein */
+
+@media (max-width: 480px) {
+
+  div.icons{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .menuPC{
+    display: none;
+  }
+}
+
+.mainFooter {
+   width: 100%;
+   height: auto;
+   margin: auto;
+   background:white;
+   padding: 20px 0px;
+}
+
+.socialMediaFooter {
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+.socialMediaFooter ul {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.socialMediaFooter ul li {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin: 0px 10px;
+    
+}
+
+.footerInfo p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: grey;
+}
+
+/* Styles the main text on hero page Lucjan K */
+
+div.transbox p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* GRID FOR HERO SECTION Lucjan*/
+
+div.mainContent{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);  
+  max-width: 100vw;
+}
+
+div.link{
+  grid-row-start: 10;
+  grid-row-end: 12;
+  grid-column-start: 2;
+  grid-column-end: 8;
+  white-space: nowrap;
+}
+
+div.transbox{
+  grid-row-start: 4;
+  grid-row-end: 10;
+  grid-column-start: 2;
+  grid-column-end: 12;
+  white-space: wrap;
+}
+
+div.sectionHero{
+  box-sizing: border-box;
+  background: url("black-citrus.jpg") no-repeat;
+  /* background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgtUgW--9AsD8ZcBFRaw22jwk_L1MQLVD-ybALkXCs2ddvcviOSA") no-repeat;  */
+  background-size: cover;
+  background-position: bottom;
+  /* width: 100vw; */
+  height: 100vh;
+  background-size: cover;
+  background-position: bottom;
+}
+
+/* end of mobile styles for icons - MartaKirschenstein */
+
+
+@media only screen and (min-width: 481px) {
+    body {
+        /* margin: 0;
+        padding: 0 250px; */
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.25em;
+    }
+
+    .icons {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 1rem;
+        justify-items: stretch;
+        text-align: center;
+        margin: 0;
+        padding: 2% 10%;  
+        box-shadow: 0px 0px 38px -21px rgba(0,0,0,0.68);
+    }
+    a.li{
+      font-size: 18px;
+        padding: 0;
+        
+    }
+
+    div.sectionHero {
+      box-sizing: border-box;
+      margin: 0px;
+      background: url("black-citrus.jpg") no-repeat;
+      /* background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgtUgW--9AsD8ZcBFRaw22jwk_L1MQLVD-ybALkXCs2ddvcviOSA") no-repeat;  */
+      width: 99vw;
+      height: 80vh;
+      background-size: cover;
+      background-position: bottom;
+    }
+  }
+
+ul.subMenu{
+  display: none;
+}
+
+.navClass ul.mainMenu{
+  background-color: rgb(255, 255, 153);
+  color: rgb(10, 10, 9);
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  margin-top: 0px;
+  margin-left: 100px;
+  padding: 0px 0px;
+  text-align: right;
+}
+
+ul.mainMenu{
+  margin-left: 100px;
+}
+
+.navClass img.pageLogo{
+  display: flex;
+  justify-content: flex-start;
+}
+
+.navClass ul.mainMenu{
+  margin: 0px 0px 0px 40px;
+}
+
+.navClass ul.mainMenuLogo{
+  padding: 0px 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.mobileMenu{
+  padding: 0px;
+  margin-right: 0px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+img.pageLogo{
+  float: left;
+  width: 59px;
+  height: 59px;
+}
+
+.navClass > ul > li{
+    list-style-type: none;
+    padding: 15px 0px;
+    position: relative;
+    font-size: 24px;
+}
+
+.navClass > ul > li > a{
+  margin-left: 0px;
+}
+
+ul.subMenu{
+  margin-top: 43px;
+  position: absolute;
+  width: 170px;
+  background-color: rgb(255, 255, 153);
+  list-style-type: none;
+  text-align: center;
+  display: 0;
+}
+
+.mobileMenu:hover .subMenu{
+  display:block;
+}
+
+ul.subMenu li a{
+  display: block;
+  padding: 45px 0px;
+}
+
+.mainMenu li:hover .subMenu{
+  display: 1;
+}
+
+ul.subMenu li:hover{
+  color:  rgb(255, 255, 153);
+  background-color:grey;
+}
+
+ul.subMenu li>a:active{
+  color: black;
+}
+
+li .mobileMenu{
+  width: 5px;
+}
+
+ul.subMenu{
+  padding-left: 0px;
+}
+
+/* end of mobile styles for icons - MartaKirschenstein */
+
+
+@media only screen and (min-width: 481px) {
+    body {
+        /* margin: 0;
+        padding: 0 250px; */
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.25em;
+    }
+
+    .icons {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 1rem;
+        justify-items: stretch;
+        text-align: center;
+        margin: 0;
+        box-shadow: 0px 0px 38px -21px rgba(0,0,0,0.68);
+    }
+    div.sectionHero{
+      font-family: 'Roboto', sans-serif;
+      box-sizing: border-box;
+      margin: 0px;
+      background: url("black-citrus.jpg") no-repeat;
+      /* background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgtUgW--9AsD8ZcBFRaw22jwk_L1MQLVD-ybALkXCs2ddvcviOSA") no-repeat;  */
+      background-size: cover;
+      background-position: bottom;
+      width: 98vw;
+      height: 85vh;
+    }
+    .navClass{
+      display: none;
+    }
+    .menuPC{
+      display: flex;
+      justify-content: space-around;
+      height: 70px;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      background:  rgb(255, 255, 153);  
+      box-shadow: 0px 0px 38px -21px rgba(0,0,0,0.68);
+      opacity: 0.90;
+    }
+      .menuPC a:hover{
+      background-color:  rgb(255, 255, 153);
+    }
+      .menuPC div{
+      margin-top: 20px;
+    }
+      .menuPC a{
+      background-color:  rgb(255, 255, 153);
+      font-size: 20px;
+      width: 100%;
+      height: 100%;
+    }
+      .li:active{
+      color: rgb(255, 255, 153);
+    }
+      img.pageLogo{
+      float: left;
+      width: 70px;
+      height: 70px;
+      background-color:  rgb(255, 255, 153);
+      }
+      div.transbox p {
+        font-size: 30em;
+      }
+  }
+    
+
+/* Navigation bar - list of all sections */
+
+/* Defines the main background and text displayed Lucjan K*/
+
+div.mainContent {
+    flex-direction: column;
+    /* background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgtUgW--9AsD8ZcBFRaw22jwk_L1MQLVD-ybALkXCs2ddvcviOSA") no-repeat; */
+    background-size: 100% 100%;
+    /* border: 1px solid black; */
+    width: auto;
+    height: 85vh;
+  }
+
+.pageLogo {
+  background-color:  rgb(255, 255, 153);
+}
+
+.subMenu a{
+  text-decoration: none;
+  color: black;
+  width: 100%;
+  height: 100%; 
+}
+
+.menuPC a{
+  text-decoration: none;
+  color: black;
+  width: 100%;
+  height: 100%; 
+} 
+
+/* SIGN UP BUTTON STYLING Lucjan K */
+
+.link a{
+    text-decoration: none;
+    color: rgb(253, 255, 255);
+    width: 20vw;
+    height: 20vh; 
+    font-size: 30px;
+    background-color: green;
+    border: solid;
+    border-radius: 15px 15px 15px 15px;
+    padding: 10px 10px;
+    text-decoration: none;
+  }
+
+/* FOR LARGER DEVICES Lucjan K*/
+/* Hides menu for mobiles Lucjan K*/
+
+@media (min-width: 481px) {
+
+}
+/* end of desktop styles for icons - MartaKirschenstein */
+
+.container{
+    display:flex;
+    flex-direction:column;
+    align-content:center;
+    align-items:center;
+    
+}
+.card-wrapper{
+    display:flex;
+    flex-direction:column;
+    align-content: center;
+    align-items: center;
+    
+}
+
+.card-body{
+    display:flex;
+    flex-direction:column;
+    align-content:center;
+    align-items:center;
+    width:17rem;
+    height:20rem;
+    box-shadow: 0px 0px 38px -21px rgba(0,0,0,0.68);
+    opacity:0.8;
+}
+
+.card-body.first{
+    background:rgb(230, 230, 230)
+}
+.card-body.second{
+    background:rgb(230, 230, 230)
+}
+.card-body.third{
+    background:rgb(230, 230, 230)
+}
+.card-body.fourth{
+    background:rgb(230, 230, 230)
+}
+
+
+.profile-image {
+    width:12rem;
+    height:12rem;
+    border-radius:50%;
+    border: 2px solid;
+}
+
+.card-body h1 {
+font-size:1.5rem;
+text-transform:capitalize;
+font-weight:200%;
+}
+
+.short-description {
+    font-size:1.2rem;
+    text-align: center;
+    border-top:2px solid;
+    border-bottom:2px solid;
+    margin:3px;
+    padding:1px;
+}
+
+.social {
+    display:block;
+    justify-content:center;
+    align-items: center;
+    width:100%;
+    margin:auto;
+    
+}
+ul.social-media {
+    display:flex;
+    justify-content:space-around;
+    margin-right:25px;   
+}
+
+.social-media li{
+    list-style:none;
+}
+.social-media .fa {
+    text-decoration:none;
+    font-size:3rem;
+    text-align: center;
+    transition:all 0.4s ease;
+}
+.social-media .fa:hover {
+    opacity: 0.8;
+}
+
+.fa-github-square{
+    color:black;
+}
+.fa-linkedin-square{
+     color:#006292
+}
+.fa-list-alt{
+     color:darkgoldenrod;
+}
+@media screen and (min-width:480px){
+    .card-wrapper{
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items:center;    
+    }
+.social-media i{
+        font-size:3rem;
+    }
+    .fa-github-square{
+        color:black;
+    }
+    .fa-linkedin-square{
+        color:darkblue;
+    }
+    .fa-list-alt{
+        color:darkgoldenrod;
+    }
+    @media screen and (min-width:480px){
+        .card-wrapper{
+            flex-direction: row;
+            flex-wrap:wrap;
+            justify-content: center;
+            align-items:center;    
+        }
+}
+
+/* FOR MEDIUM DEVICES */
+
+@media only screen and (min-width: 481px) and (max-width: 1120px){
+ div.transbox{
+  grid-row-start: 4;
+  grid-row-end: 5;
+  grid-column-start: 6;
+  grid-column-end: 12;
+  white-space: wrap;
+}
+
+div.link{
+  grid-row-start: 7;
+  grid-row-end: 10;
+  grid-column-start: 3;
+  grid-column-end: 6;
+}
+
+div.mainContent{
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+}
+
+div.transbox a{
+  font-size: 300px;
+}
+div.transbox p{
+  font-size: 30px;
+}
+div.sectionHero{
+  width: 100%;
+}
+.menuPC{
+  width: 100%;
+}
+}
+
+/* FOR LARGE DEVICES Lucjan K */
+
+@media only screen and (min-width: 1120px){
+
+div.link{
+  grid-row-start: 8;
+  grid-row-end: 11;
+  grid-column-start: 2;
+  grid-column-end: 6;
+  white-space: nowrap;
+}
+
+div.transbox{
+  grid-row-start: 3;
+  grid-row-end: 7;
+  grid-column-start: 6;
+  grid-column-end: 12;
+  white-space: wrap;
+}
+div.mainContent{
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+}
+div.transbox p{
+  font-size: 45px;
+}
+div.sectionHero{
+  height: 80vh;
+  width: 100%;
+}
+.card-body{
+    margin:2vw; 
+}
+.menuPC{
+  width: 100%;
+}
+}
+

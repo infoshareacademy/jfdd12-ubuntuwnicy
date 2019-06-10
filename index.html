@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="stylesFeatureListFormJakubK.css" rel="stylesheet">
+    <link href="stylesLucjan.css" rel="stylesheet">
     <title>sQuizYou</title>
 </head>
 <body>
@@ -36,7 +37,7 @@
     </div>
     <div class=sectionHero id="home">
         <div class="mainContent">
-            <div class="transbox"><p>Darmowy quiz generator online. Zapisz się na premierę<br> i stwórz swój własny unikatowy quiz!</p></div>
+            <div class="transbox"><p>Wyciśnij z nas jak najwięcej i stwórz QUIZ na miarę swoich potrzeb.<br>Zapisz się na premierę sQuizYou.</p></div>
             <div class="link"><a href="#signUp">Zapisz mnie!</a></div>
         </div>
     </div>
@@ -50,7 +51,7 @@
                  <div><img src="connect480.png" alt="icon-4"><p>Wykonajcie Quiz razem</p></div>
                  </div>
         </section>
-        <div class="featureListWrapperForHover">
+        <div id="featureListWrapperID">
         <h1 class="featureListHeader"  id="signUp">Kliknij tutaj, aby poznać szczegóły działania sQuizYou!</h1>
 
         <div class="featureList">
@@ -96,27 +97,30 @@
     </div>
     </div>
 
-    <div class="form">
-        <h1>Zapisz się na premierę!</h1>
-        <p>Cześć, wyślemy ci tylko jednego maila z informacjami w dniu premiery. :)</p>
+    <div class="formWrapper">
+        <div class="form">
+            
+            <h1>Zapisz się na premierę!</h1>
+            <p>Cześć, wyślemy ci tylko jednego maila z informacjami w dniu premiery. :)</p>
 
-        <form class="premiereNewsletter" action="/sent.php">
-            <label for="name">Imię i nazwisko:</label>
-            <input type="text" name="name" required><br>
-            <label for="userEmail">Email:</label>
-            <input type="email" name="userEmail" required><br>
-            <input type="submit" name="newsletterSubmit" value="Wyślij"><br>
-        </form>
-        <footer class="newsletterSecurity">
-                <p>Twój adres i dane są bezpieczne w naszej bazie danych. Nie przekazujemy ich żadnym innym podmiotom.</p>
-        </footer>
+            <form class="premiereNewsletter" action="/sent.php">
+                <input type="text" name="name" required placeholder="Imię i nazwisko"><br>
+                <input type="email" name="userEmail" placeholder="Adres Email" required><br>
+                <input type="submit" name="newsletterSubmit" value="Wyślij"><br>
+            </form>
+            <footer class="newsletterSecurity">
+                    <p>Twój adres i dane są bezpieczne w naszej bazie danych. Nie przekazujemy ich żadnym innym podmiotom.</p>
+            </footer>
+        </div>
     </div>
+
 <section class="three" id="aboutUs">
     <div class="container">
         <h1 class="heading">Zespół sQuizYou</h1>
         <div class=card-wrapper>
             <div class="card-body first">
-                <img src="blank-profile-picture-973461_960_720 (1).png" alt="Marta Kirschenstein" class="profile-image">
+                <img src="" alt="card background" class="card-image">
+                <img src="homePageMartaK/Marta.jpg" alt="Marta Kirschenstein" class="profile-image">
                 <h1>Marta Kirschenstein</h1>
                 <div class="social">
                     <ul class="social-media">
@@ -128,7 +132,8 @@
             </div> 
 
             <div class="card-body second">
-                <img src="blank-profile-picture-973461_960_720 (1).png" alt="Lucjan Kepinski" class="profile-image">
+                <img src="" alt="card backround" class="card-image">
+                <img src="homePageLucjanK/photoLK.png" alt="Lucjan Kepinski" class="profile-image">
                 <h1>Lucjan Kępiński</h1>
                 <div class="social">
                   <ul class="social-media">
@@ -140,7 +145,8 @@
             </div> 
     
            <div class="card-body third">
-               <img src="blank-profile-picture-973461_960_720 (1).png" alt="Jakub" class="profile-image">
+               <img src="" alt="card background" class="card-image">
+               <img src="homePageJakubK/photoJK.jpg" alt="Jakub" class="profile-image">
                <h1>Jakub Karolak </h1>
                <div class="social">
                     <ul class="social-media">
@@ -176,13 +182,20 @@
             </ul>
         </div>
 
-        <div class="footerInfo">
-            <p>Warunki korzystania. Copyright © 2019 Wszelkie prawa zastrzeżone.</p>
-            <p>Ostatnia data aktualizacji. Planowana data wydania</p>
+            <div class="footerInfo">
+                <a href="#" alt="warunki korzystania">Warunki korzystania</a>
+                <p>Copyright © 2019 Wszelkie prawa zastrzeżone.</p>
+                <p>Planowana data wydania 29.07.2019</p>
+                <p>Ostania aktualizacja z dnia 09.06.2019</p>
+            </div>
         </div>
     </div>
 </footer>
 
+    </footer>
+  
+</section>
+<script src="featureListScript.js"></script>
 </body>
 
 </html>
