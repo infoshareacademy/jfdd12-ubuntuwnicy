@@ -198,7 +198,7 @@ h1.heading{
     align-items: center;
     width:100%;
     margin:auto;
-    border-top:2px solid; 
+    border-top:2px solid rgb(255, 255, 153); 
 }
 ul.social-media {
     display:flex;
