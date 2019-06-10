@@ -51,7 +51,7 @@ h1.heading{
   right: 0;
   left: 0;
   white-space: nowrap;
-  width: 94vw;
+  width: auto;
   }
 
 /* mobile styles for icons and footer - MartaKirschenstein */
@@ -141,7 +141,7 @@ div.sectionHero{
   background: url("backgrounds-blank-blue-953214.jpg") no-repeat;
   /* background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgtUgW--9AsD8ZcBFRaw22jwk_L1MQLVD-ybALkXCs2ddvcviOSA") no-repeat;  */
   background-size: 100% 100%;
-  width: 94vw;
+  width: 100vw;
   height: 100vh;
   background-size: auto;
   background-position: bottom;
@@ -179,7 +179,7 @@ div.sectionHero{
       margin: 0px;
       background: url("backgrounds-blank-blue-953214.jpg") no-repeat;
       /* background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgtUgW--9AsD8ZcBFRaw22jwk_L1MQLVD-ybALkXCs2ddvcviOSA") no-repeat;  */
-      width: 98vw;
+      width: 99vw;
       height: 80vh;
       background-size: auto;
       background-position: bottom;
@@ -364,7 +364,7 @@ div.mainContent {
     /* background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgtUgW--9AsD8ZcBFRaw22jwk_L1MQLVD-ybALkXCs2ddvcviOSA") no-repeat; */
     background-size: 100% 100%;
     /* border: 1px solid black; */
-    width: 95vw;
+    width: auto;
     height: 85vh;
   }
 
@@ -565,10 +565,10 @@ div.transbox p{
   font-size: 30px;
 }
 div.sectionHero{
-  width: 97vw;
+  width: 100%;
 }
 .menuPC{
-  width: 97vw;
+  width: 100%;
 }
 }
 
@@ -600,10 +600,14 @@ div.transbox p{
 }
 div.sectionHero{
   height: 80vh;
-  width: 98vw;
+  width: 100%;
 }
 .card-body{
     margin:2vw; 
-}}
+}
+.menuPC{
+  width: 100%;
+}
+}
 
 
