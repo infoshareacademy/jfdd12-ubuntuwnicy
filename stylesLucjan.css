@@ -128,9 +128,9 @@ div.mainContent{
 }
 
 div.link{
-  grid-row-start: 10;
-  grid-row-end: 12;
-  grid-column-start: 2;
+  grid-row-start: 7;
+  grid-row-end: 9;
+  grid-column-start: 3;
   grid-column-end: 8;
   white-space: nowrap;
 }
@@ -556,10 +556,10 @@ ul.social-media {
 }
 
 div.link{
-  grid-row-start: 7;
-  grid-row-end: 10;
-  grid-column-start: 3;
-  grid-column-end: 6;
+  grid-row-start: 6;
+  grid-row-end: 9;
+  grid-column-start: 7;
+  grid-column-end: 10;
 }
 
 div.mainContent{
@@ -586,17 +586,17 @@ div.sectionHero{
 @media only screen and (min-width: 1120px){
 
 div.link{
-  grid-row-start: 8;
+  grid-row-start: 7;
   grid-row-end: 11;
-  grid-column-start: 2;
-  grid-column-end: 6;
+  grid-column-start: 7;
+  grid-column-end: 9;
   white-space: nowrap;
 }
 
 div.transbox{
   grid-row-start: 3;
-  grid-row-end: 7;
-  grid-column-start: 6;
+  grid-row-end: 6;
+  grid-column-start: 4;
   grid-column-end: 12;
   white-space: wrap;
 }
