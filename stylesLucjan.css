@@ -1,3 +1,9 @@
+.menuPC{
+  z-index: 999;
+}
+
+
+
 html {
   scroll-behavior: smooth;
 }
@@ -51,7 +57,8 @@ h1.heading{
   right: 0;
   left: 0;
   white-space: nowrap;
-  width: 94vw;
+  width: auto;
+  z-index: 999;
   }
 
 /* mobile styles for icons and footer - MartaKirschenstein */
@@ -140,10 +147,11 @@ div.sectionHero{
   box-sizing: border-box;
   background: url("black-citrus.jpg") no-repeat;
   /* background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgtUgW--9AsD8ZcBFRaw22jwk_L1MQLVD-ybALkXCs2ddvcviOSA") no-repeat;  */
-  background-size: 100% 100%;
-  width: 94vw;
+  background-size: cover;
+  background-position: bottom;
+  /* width: 100vw; */
   height: 100vh;
-  background-size: auto;
+  background-size: cover;
   background-position: bottom;
 }
 
@@ -179,9 +187,9 @@ div.sectionHero{
       margin: 0px;
       background: url("black-citrus.jpg") no-repeat;
       /* background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgtUgW--9AsD8ZcBFRaw22jwk_L1MQLVD-ybALkXCs2ddvcviOSA") no-repeat;  */
-      width: 98vw;
+      width: 99vw;
       height: 80vh;
-      background-size: auto;
+      background-size: cover;
       background-position: bottom;
     }
   }
@@ -310,7 +318,8 @@ ul.subMenu{
       margin: 0px;
       background: url("black-citrus.jpg") no-repeat;
       /* background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgtUgW--9AsD8ZcBFRaw22jwk_L1MQLVD-ybALkXCs2ddvcviOSA") no-repeat;  */
-      background-size: 100% 100%;
+      background-size: cover;
+      background-position: bottom;
       width: 98vw;
       height: 85vh;
     }
@@ -319,14 +328,14 @@ ul.subMenu{
     }
     .menuPC{
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       height: 70px;
       width: 100%;
       position: fixed;
       top: 0;
       background:  rgb(255, 255, 153);  
       box-shadow: 0px 0px 38px -21px rgba(0,0,0,0.68);
-      opacity: 0.80;
+      opacity: 0.90;
     }
       .menuPC a:hover{
       background-color:  rgb(255, 255, 153);
@@ -337,7 +346,6 @@ ul.subMenu{
       .menuPC a{
       background-color:  rgb(255, 255, 153);
       font-size: 20px;
-      padding: 24px 19px;
       width: 100%;
       height: 100%;
     }
@@ -365,7 +373,7 @@ div.mainContent {
     /* background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgtUgW--9AsD8ZcBFRaw22jwk_L1MQLVD-ybALkXCs2ddvcviOSA") no-repeat; */
     background-size: 100% 100%;
     /* border: 1px solid black; */
-    width: 95vw;
+    width: auto;
     height: 85vh;
   }
 
@@ -451,8 +459,8 @@ div.mainContent {
 
 
 .profile-image {
-    width:12rem;
-    height:12rem;
+    width:120px;
+    height:120px;
     border-radius:50%;
     border: 2px solid;
 }
@@ -566,10 +574,10 @@ div.transbox p{
   font-size: 30px;
 }
 div.sectionHero{
-  width: 97vw;
+  width: 100%;
 }
 .menuPC{
-  width: 97vw;
+  width: 100%;
 }
 }
 
@@ -601,10 +609,13 @@ div.transbox p{
 }
 div.sectionHero{
   height: 80vh;
-  width: 98vw;
+  width: 100%;
 }
 .card-body{
     margin:2vw; 
-}}
-
+}
+.menuPC{
+  width: 100%;
+}
+}
 

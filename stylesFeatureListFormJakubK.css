@@ -76,6 +76,23 @@
   /* Mobile transitions and animation for the extended feature menu */
   
   @media (max-width: 480px){
+
+    div.featureList{
+      display: flex;
+      flex-flow: column; 
+
+    }
+
+    div.featureList>div{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    
+    }
+
+    div.featureList>div>div>p{
+      text-align: left;
+    }
   
     .featureListWrapperForHover>div{
       
