@@ -49,6 +49,11 @@ h1.heading{
   font-size: 1.25rem;
 }
 
+#menuForMobile {
+  display: flex;
+  justify-content: flex-end;
+}
+
 /* Navigation bar - list of all sections */
 
 .navClass{ 
@@ -207,6 +212,8 @@ ul.subMenu{
   margin-left: 100px;
   padding: 0px 0px;
   text-align: right;
+  display: flex;
+  justify-content: flex-end;
 }
 
 ul.mainMenu{
@@ -231,8 +238,6 @@ ul.mainMenu{
 .mobileMenu{
   padding: 0px;
   margin-right: 0px;
-  display: flex;
-  justify-content: flex-end;
 }
 
 img.pageLogo{
@@ -244,8 +249,9 @@ img.pageLogo{
 .navClass > ul > li{
     list-style-type: none;
     padding: 15px 0px;
-    position: relative;
     font-size: 24px;
+    width: 100px;
+    justify-content: flex-end
 }
 
 .navClass > ul > li > a{
@@ -618,4 +624,5 @@ div.sectionHero{
 .menuPC{
   width: 100%;
 }
+
 
