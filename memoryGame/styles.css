@@ -1,0 +1,39 @@
+body{
+    box-sizing: border-box;
+    background-color: rgb(26, 1, 1);
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+
+  }
+
+.gameWrapper{
+    display: grid;
+    width: 75%;
+    height: 75%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.gridContainer>div{
+    border: 1px solid rgb(0, 0, 0);
+    height: 190px;
+
+}
+
+.card{
+    background-color: aliceblue;
+}
+
+.cardIsClicked{
+    transform: translateX(50px);
+    transform: rotate(90deg);
+    background-color: red;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 300ms linear;
+    
+}
