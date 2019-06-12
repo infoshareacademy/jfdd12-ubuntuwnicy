@@ -42,3 +42,9 @@ body{
     background-color: red;
     transition: all 300ms linear;
 }
+
+.cardIsHighlighted{
+
+    background-color: yellow;
+
+}
