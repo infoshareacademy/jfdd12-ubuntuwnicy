@@ -1,6 +1,7 @@
 body{
     box-sizing: border-box;
     background-color: rgb(26, 1, 1);
+    font-family: 'Press Start 2P', cursive; 
 }
 
 .gridContainer {
@@ -47,4 +48,10 @@ body{
 
     background-color: yellow;
 
+}
+
+header {
+    color: white;
+    text-align: center;
+    font-size: 1.5em;
 }
