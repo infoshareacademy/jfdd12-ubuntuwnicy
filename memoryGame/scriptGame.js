@@ -25,54 +25,54 @@ function gameLogicAndEventListener() {
             return;
         }
 
-
         if (card.classList.contains('cardIsHighlighted')) {
-            card.classList.toggle("cardIsHighlighted")
+            card.classList.toggle("cardIsHighlighted") // checking if card is already highlighted
             highlightedCards.pop(card)
             console.log("toggling class to card is highlighted")
         } else {
 
-            card.classList.toggle("cardIsHighlighted")
+            card.classList.toggle("cardIsHighlighted") // highlighting a card
             console.log("toggling class to card is highlighted")
-
 
             highlightedCards.push(card)
 
             if(highlightedCards.length === 2) {
                 if (highlightedCards[0].className === highlightedCards[1].className) {
 
-                    highlightedCards[0].classList.add('cardsAreMatching')
-                    highlightedCards[1].classList.add('cardsAreMatching')
+                    addRemoveCardsClass('add', 'cardsAreMatching')
     
                     highlightedCards = []
     
                 } else {
     
-                    // event.stopPropagation();
-    
-                    highlightedCards[0].classList.remove('cardIsHighlighted')
-                    highlightedCards[1].classList.remove('cardIsHighlighted')
-    
-                    highlightedCards[0].classList.add('cardsArentMatching')
-                    highlightedCards[1].classList.add('cardsArentMatching')
+                    addRemoveCardsClass('remove', 'cardIsHighlighted')
+                    addRemoveCardsClass('add', 'cardsArentMatching')
     
                     let highlightedCardsForTimeout = []
                     highlightedCardsForTimeout = highlightedCards
-    
-    
-    
+       
                     setTimeout(function () {
-                        highlightedCardsForTimeout[0].classList.remove('cardsArentMatching')
-                        highlightedCardsForTimeout[1].classList.remove('cardsArentMatching')
-                        // gameLogicAndEventListener()
+                        addRemoveCardsClass('remove', 'cardsArentMatching', highlightedCardsForTimeout)
                     }, 2000)
     
                     highlightedCards = []
                 }
-
                 game.cardsAreLoading = true;
                 setTimeout(() => game.cardsAreLoading = false, 2000);
             }
         }
     }))
+}
+
+
+function addRemoveCardsClass(addRemove = 'add', cardsClass, cardsArr = highlightedCards){
+
+    if (addRemove === 'add'){
+        cardsArr[0].classList.add(cardsClass)
+        cardsArr[1].classList.add(cardsClass)
+    }else{
+        cardsArr[0].classList.remove(cardsClass)
+        cardsArr[1].classList.remove(cardsClass)
+    }
+
 }
