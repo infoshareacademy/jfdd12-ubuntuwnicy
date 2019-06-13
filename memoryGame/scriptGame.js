@@ -1,17 +1,19 @@
 let cards = document.querySelectorAll('.card')
 let highlightedCards = []
-let cardPairsArr = [1, 2, 3, 4, 5, 6, 7, 8]
-let randomizedCards = randomizeCardsFunc([...cardPairsArr, ...cardPairsArr])
+let cardPairsArr = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8]
+let randomizedCards = randomizeCardsFunc(cardPairsArr)
+let timeoutLength = 3000
+let howManyPairsLeft = 8
 
 function randomizeCardsFunc(cards) {
     return cards.slice().sort(() => Math.random() - 0.5)
 }
 
-cards.forEach((cardsElement, index) => {
+cards.forEach((cardsElement, index) => { // adding 'card number' class
 
     cardsElement.classList.add(randomizedCards[index])
     console.log("adding card number class")
-});
+})
 
 const game = {
     cardsAreLoading: false
@@ -31,7 +33,7 @@ function gameLogicAndEventListener() {
             console.log("toggling class to card is highlighted")
         } else {
 
-            card.classList.toggle("cardIsHighlighted") // highlighting a card
+            card.classList.toggle("cardIsHighlighted") // highlighting a card and pushing to the arr
             console.log("toggling class to card is highlighted")
 
             highlightedCards.push(card)
@@ -39,31 +41,19 @@ function gameLogicAndEventListener() {
             if(highlightedCards.length === 2) {
                 if (highlightedCards[0].className === highlightedCards[1].className) {
 
-                    addRemoveCardsClass('add', 'cardsAreMatching')
-    
-                    highlightedCards = []
-    
+                    cardsAreMatching()
+
                 } else {
     
-                    addRemoveCardsClass('remove', 'cardIsHighlighted')
-                    addRemoveCardsClass('add', 'cardsArentMatching')
-    
-                    let highlightedCardsForTimeout = []
-                    highlightedCardsForTimeout = highlightedCards
-       
-                    setTimeout(function () {
-                        addRemoveCardsClass('remove', 'cardsArentMatching', highlightedCardsForTimeout)
-                    }, 2000)
-    
-                    highlightedCards = []
+                    cardsArentMatching()
+
                 }
                 game.cardsAreLoading = true;
-                setTimeout(() => game.cardsAreLoading = false, 2000);
+                setTimeout(() => game.cardsAreLoading = false, timeoutLength)
             }
         }
     }))
 }
-
 
 function addRemoveCardsClass(addRemove = 'add', cardsClass, cardsArr = highlightedCards){
 
@@ -74,5 +64,37 @@ function addRemoveCardsClass(addRemove = 'add', cardsClass, cardsArr = highlight
         cardsArr[0].classList.remove(cardsClass)
         cardsArr[1].classList.remove(cardsClass)
     }
+}
+
+function cardsAreMatching(){
+
+    addRemoveCardsClass('add', 'cardsAreMatching')
+    
+    highlightedCards = []
+    
+    howManyPairsLeft--
+
+    timeoutLength = 500
+
+    if(howManyPairsLeft === 0){
+        cardsAreLoading = true
+        console.log('koniec gry')
+    }
+
+}
+
+function cardsArentMatching() {
+
+    addRemoveCardsClass('remove', 'cardIsHighlighted')
+    addRemoveCardsClass('add', 'cardsArentMatching')
+
+    let highlightedCardsForTimeout = [] // creating new array for setTimeout
+    highlightedCardsForTimeout = highlightedCards
+
+    timeoutLength = 2000
+
+    setTimeout(() => addRemoveCardsClass('remove', 'cardsArentMatching', highlightedCardsForTimeout), timeoutLength)
+
+    highlightedCards = []
 
 }
