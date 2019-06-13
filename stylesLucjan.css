@@ -22,6 +22,7 @@ h1.heading{
     font-size: 2em;
     text-align:center;
     position:relative;
+    z-index: -1;
 }
 
 .icons {
@@ -416,6 +417,7 @@ div.mainContent {
     flex-direction:column;
     align-content:center;
     align-items:center;
+    z-index: -1;
     
 }
 .card-wrapper{
@@ -423,6 +425,7 @@ div.mainContent {
     flex-direction:column;
     align-content: center;
     align-items: center;
+    z-index: -1;
     
 }
 
@@ -435,6 +438,7 @@ div.mainContent {
     height:20rem;
     box-shadow: 0px 0px 38px -21px rgba(0,0,0,0.68);
     opacity:0.8;
+    z-index: -1;
 }
 
 .card-body.first{
