@@ -13,7 +13,8 @@ cards.forEach((cardsElement, index) => {
     console.log("adding card number class")
 });
 
-cards.forEach(card => card.addEventListener("click", function(){
+function gameLogicAndEventListener(){
+cards.forEach(card => card.addEventListener("click", function(event){
 
     if (card.classList.contains('cardIsHighlighted')){
         card.classList.toggle("cardIsHighlighted")
@@ -36,6 +37,8 @@ cards.forEach(card => card.addEventListener("click", function(){
 
         }else if(highlightedCards.length === 2){
 
+            // event.stopPropagation();
+
             highlightedCards[0].classList.remove('cardIsHighlighted')
             highlightedCards[1].classList.remove('cardIsHighlighted')
 
@@ -45,15 +48,17 @@ cards.forEach(card => card.addEventListener("click", function(){
             let highlightedCardsForTimeout = []
             highlightedCardsForTimeout = highlightedCards
 
+            
+
             setTimeout(function(){
                 highlightedCardsForTimeout[0].classList.remove('cardsArentMatching')
                 highlightedCardsForTimeout[1].classList.remove('cardsArentMatching')
+                // gameLogicAndEventListener()
             }, 2000)
             
             highlightedCards = []
         }
     }
-}));
+}))}
 
-
-
+gameLogicAndEventListener()
