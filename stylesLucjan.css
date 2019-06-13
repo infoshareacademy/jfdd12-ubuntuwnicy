@@ -49,12 +49,12 @@ h1.heading{
   font-size: 1.25rem;
 }
 
-#menuForMobile {
-  display: flex;
-  justify-content: flex-end;
-}
-
 /* Navigation bar - list of all sections */
+
+
+.hideMenu {
+  display: none !important;
+}
 
 .navClass{ 
   position: fixed;  
@@ -133,9 +133,9 @@ div.mainContent{
 }
 
 div.link{
-  grid-row-start: 7;
-  grid-row-end: 9;
-  grid-column-start: 3;
+  grid-row-start: 10;
+  grid-row-end: 12;
+  grid-column-start: 2;
   grid-column-end: 8;
   white-space: nowrap;
 }
@@ -212,8 +212,6 @@ ul.subMenu{
   margin-left: 100px;
   padding: 0px 0px;
   text-align: right;
-  display: flex;
-  justify-content: flex-end;
 }
 
 ul.mainMenu{
@@ -238,6 +236,8 @@ ul.mainMenu{
 .mobileMenu{
   padding: 0px;
   margin-right: 0px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 img.pageLogo{
@@ -249,9 +249,8 @@ img.pageLogo{
 .navClass > ul > li{
     list-style-type: none;
     padding: 15px 0px;
+    position: relative;
     font-size: 24px;
-    width: 100px;
-    justify-content: flex-end
 }
 
 .navClass > ul > li > a{
@@ -265,7 +264,6 @@ ul.subMenu{
   background-color: rgb(255, 255, 153);
   list-style-type: none;
   text-align: center;
-  display: 0;
 }
 
 .mobileMenu:hover .subMenu{
@@ -275,10 +273,6 @@ ul.subMenu{
 ul.subMenu li a{
   display: block;
   padding: 45px 0px;
-}
-
-.mainMenu li:hover .subMenu{
-  display: 1;
 }
 
 ul.subMenu li:hover{
@@ -444,11 +438,10 @@ div.mainContent {
     flex-direction:column;
     align-content:center;
     align-items:center;
-    /* width:17rem; */
+    width:17rem;
     height:20rem;
     box-shadow: 0px 0px 38px -21px rgba(0,0,0,0.68);
     opacity:0.8;
-    margin: 0;
 }
 
 .card-body.first{
@@ -563,10 +556,10 @@ ul.social-media {
 }
 
 div.link{
-  grid-row-start: 6;
-  grid-row-end: 9;
-  grid-column-start: 7;
-  grid-column-end: 10;
+  grid-row-start: 7;
+  grid-row-end: 10;
+  grid-column-start: 3;
+  grid-column-end: 6;
 }
 
 div.mainContent{
@@ -593,17 +586,17 @@ div.sectionHero{
 @media only screen and (min-width: 1120px){
 
 div.link{
-  grid-row-start: 7;
+  grid-row-start: 8;
   grid-row-end: 11;
-  grid-column-start: 7;
-  grid-column-end: 9;
+  grid-column-start: 2;
+  grid-column-end: 6;
   white-space: nowrap;
 }
 
 div.transbox{
   grid-row-start: 3;
-  grid-row-end: 6;
-  grid-column-start: 4;
+  grid-row-end: 7;
+  grid-column-start: 6;
   grid-column-end: 12;
   white-space: wrap;
 }
@@ -624,5 +617,5 @@ div.sectionHero{
 .menuPC{
   width: 100%;
 }
-
+}
 
