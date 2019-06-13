@@ -48,3 +48,9 @@ body{
     background-color: yellow;
 
 }
+
+header {
+    color: white;
+    text-align: center;
+    font-size: 2em;
+}
