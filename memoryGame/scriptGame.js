@@ -12,7 +12,7 @@ function randomizeCardsFunc(cards) {
 cards.forEach((cardsElement, index) => { // adding 'card number' class
 
     cardsElement.classList.add(randomizedCards[index])
-    console.log("adding card number class")
+
 })
 
 const game = {
