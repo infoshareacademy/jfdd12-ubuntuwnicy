@@ -1,7 +1,9 @@
 let cards = document.querySelectorAll('.card')
 let highlightedCards = []
 let cardPairsArr = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8]
+let cardPairsArrHard = cardPairsArr.concat( [9,9,10,10,12,12,13,13,14,14,15,15,16,16,17,17,18,18] )
 let randomizedCards = randomizeCardsFunc(cardPairsArr)
+let randomizedCardsHard = randomizeCardsFunc(cardPairsArrHard)
 let timeoutLength = 3000
 let howManyPairsLeft = 8
 let isHardModeOn = false
