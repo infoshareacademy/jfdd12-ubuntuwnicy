@@ -4,36 +4,38 @@ body{
     font-family: 'Press Start 2P', cursive; 
 }
 
+.wrapper {
+    justify-content:  center;
+    flex-direction: column;
+    display: flex;
+    align-items: center;  
+}
+
 .gridContainer {
     width: 800px;
     height: 800px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-
-  }
+    width:50vh;
+    height: 50vh;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(4, 25%);
+    grid-gap: 3%;
+    justify-content: center;
+}
 
 .gridContainerHard {
-    width: 800px;
-    height: 800px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-
-  }
-
-.gameWrapper{
-    display: grid;
-    width: 75%;
-    height: 75%;
-    margin-right: auto;
-    margin-left: auto;
+    width:50vh;
+    height: 50vh;
+    grid-template-columns: repeat(6, 15%);
+    grid-template-rows: repeat(6, 15%);
+    justify-content: center;
 }
 
 .card{
     background-color: aliceblue;
     border: 1px solid rgb(0, 0, 0);
-    height: 190px;
+
 }
 
 .cardsAreMatching{
@@ -48,7 +50,7 @@ body{
 
     transform: rotate(45deg);
     background-color: red;
-    transition: all 2000ms linear;
+    transition: all 500ms linear;
 }
 
 .cardIsHighlighted{
@@ -58,6 +60,9 @@ body{
 }
 
 header {
+    display: flex;
+    width: 100%;
+    justify-content: center;
     color: white;
     text-align: center;
     font-size: 1.5em;
