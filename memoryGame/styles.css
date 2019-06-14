@@ -5,9 +5,20 @@ body{
 }
 
 .gridContainer {
+    width: 800px;
+    height: 800px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
+
+  }
+
+.gridContainerHard {
+    width: 800px;
+    height: 800px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
 
   }
 
@@ -19,14 +30,10 @@ body{
     margin-left: auto;
 }
 
-.gridContainer>div{
-    border: 1px solid rgb(0, 0, 0);
-    height: 190px;
-
-}
-
 .card{
     background-color: aliceblue;
+    border: 1px solid rgb(0, 0, 0);
+    height: 190px;
 }
 
 .cardsAreMatching{
