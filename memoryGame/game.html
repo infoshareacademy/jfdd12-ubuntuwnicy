@@ -6,8 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Gra</title>
     <link href="styles.css" rel='stylesheet'>
+    <link href="stylesLucjan.css" rel='stylesheet'>
 </head>
 <body>
+        <div class="instruction"">
+            <button id="menuButton">X</button>
+            <h1>
+                <h2 class="gameRules">Zasady gry</h2> <br>
+                Gra memory polega na odnajdywaniu par takich samych kart.
+                Gracz odsłania 2 karty. Jeśli są to takie same karty, zostaną one zdjęte z planszy,<br> 
+                jeśli nie, karty będą odwrócone z powrotem (po ok. 2 sekundach). <br>
+                Celem gracza jest zdjęcie wszystkich kart przy możliwie najmniejszej liczbie odsłon <br>
+                i jak najkrótszym czasie, co będzie miało wpływ na wynik końcowy. <br>
+                W grze liczona jest ilość błędnych odsłon. Gra posiada dwa poziomy trudności:
+            </h1>
+        </div>
     <div class="gameWrapper">
         <div class="gridContainer">
         <div class = 'card'></div>
@@ -29,5 +42,6 @@
     </div>
     </div>
     <script src='scriptGame.js'></script>
+    <script src='instruction.js'></script>
 </body>
 </html>
