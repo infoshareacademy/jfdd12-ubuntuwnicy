@@ -51,6 +51,10 @@ h1.heading{
   cursor: grab;
 }
 
+.featureListHeader{
+  cursor: grab;
+}
+
 /* Navigation bar - list of all sections */
 
 
