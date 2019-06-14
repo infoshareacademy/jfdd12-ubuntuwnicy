@@ -47,6 +47,10 @@ h1.heading{
   font-size: 1.25rem;
 }
 
+.arrow{
+  cursor: grab;
+}
+
 /* Navigation bar - list of all sections */
 
 
@@ -149,10 +153,6 @@ div.transbox{
 div.sectionHero{
   box-sizing: border-box;
   background: url("black-citrus.jpg") no-repeat;
-  /* background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgtUgW--9AsD8ZcBFRaw22jwk_L1MQLVD-ybALkXCs2ddvcviOSA") no-repeat;  */
-  background-size: cover;
-  background-position: bottom;
-  /* width: 100vw; */
   height: 100vh;
   background-size: cover;
   background-position: bottom;
@@ -368,9 +368,7 @@ ul.subMenu{
 
 div.mainContent {
     flex-direction: column;
-    /* background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgtUgW--9AsD8ZcBFRaw22jwk_L1MQLVD-ybALkXCs2ddvcviOSA") no-repeat; */
     background-size: 100% 100%;
-    /* border: 1px solid black; */
     width: auto;
     height: 85vh;
   }
