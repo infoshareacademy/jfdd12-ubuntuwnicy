@@ -1,10 +1,52 @@
 let body = document.querySelector('body')
 let button = document.querySelector('#menuButton')
 let instruction = document.querySelector('.instruction')
+let buttonInstruction = document.querySelector('#buttonInstruction')
+let selectDiff = document.querySelector("#selectDifficulty")
+let showDiff = document.querySelector(".difficultyHide")
+let selectEasy = document.querySelector('#selectEasy')
+let selectHard = document.querySelector('#selectHard')
+let diffButton = document.querySelector('#diffButton')
+
+// Adds functionality to instruction panel -> button to hide
 
 button.addEventListener("click", function(event){
-    instruction.classList.toggle("menuIsHidden")
+    instruction.classList.toggle("menuIsHidden");
     console.log("toggling class")
+})
+
+diffButton.addEventListener("click", function(event){
+    showDiff.classList.remove("difficultyShow");
+    console.log("toggling class")
+    selectDiff.removeAttribute('disabled', 'disabled')
+})
+
+
+// Adds functionality to instruction button on game page -> button to display
+
+buttonInstruction.addEventListener("click", function(event){
+    instruction.classList.remove("menuIsHidden")
+    console.log("toggling class")
+})
+
+// Adds functionality to difficulty button - allow to display difficulty
+
+selectDiff.addEventListener("click", function(event){
+    showDiff.classList.toggle("difficultyShow")
+    console.log("toggling class")
+    selectDiff.setAttribute('disabled', 'disabled')
+})
+
+selectEasy.addEventListener("click", function(event){
+    showDiff.classList.remove("difficultyShow")
+    console.log("toggling class")
+    selectDiff.removeAttribute('disabled', 'disabled')
+})
+
+selectHard.addEventListener("click", function(event){
+    showDiff.classList.remove("difficultyShow")
+    console.log("toggling class")
+    selectDiff.removeAttribute('disabled', 'disabled')
 })
 
 
