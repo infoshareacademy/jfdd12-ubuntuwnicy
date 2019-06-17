@@ -1,4 +1,4 @@
-const body = document.getSelection('body')
+const body2 = document.querySelector('body')
 const canvas = document.createElement('canvas')
-body.append('canvas')
+body2.append(canvas)
 
