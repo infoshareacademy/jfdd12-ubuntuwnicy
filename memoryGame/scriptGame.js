@@ -27,21 +27,25 @@ let randomizedCards = randomizeCardsFunc(cardPairsArr);
 let randomizedCardsHard = randomizeCardsFunc(cardPairsArrHard);
 let timeoutLength = 3000;
 let howManyPairsLeft = 8;
+let cardsGlobal
 
 initializeGame();
 
-let cardsGlobal = document.querySelectorAll(".card");
+cardsGlobal = document.querySelectorAll(".card");
 
 const game = {
   cardsAreLoading: false
 };
 
-gameLogicAndEventListener();
+
+
+
+
 
 function gameLogicAndEventListener() {
   cardsGlobal = document.querySelectorAll(".card");
   cardsGlobal.forEach(card =>
-    card.addEventListener("click", function(event) {
+    card.addEventListener("click", function (event) {
       if (game.cardsAreLoading) {
         return;
       }
@@ -126,14 +130,17 @@ function cardsArentMatching() {
 }
 
 function toggleHardMode() {
+  cards = document.querySelectorAll(".card");
+
   isHardModeOn = true;
   let gridContainer = document.querySelector(".gridContainer");
   gridContainer.classList.remove("gridContainer");
   gridContainer.classList.add("gridContainerHard");
-  cardsGlobal.forEach(cardsElement => {
+  cards.forEach(cardsElement => {
     cardsElement.remove();
   });
-
+  
+  randomizePairs()
   for (let i = 0; i < 36; i++) {
     console.log(i);
     divs = document.createElement("div");
@@ -145,19 +152,22 @@ function toggleHardMode() {
 }
 
 function initializeGame() {
+  let cards = document.querySelectorAll(".card")
   if (isHardModeOn) {
     isHardModeOn = false;
     let gridContainer = document.querySelector(".gridContainerHard");
     gridContainer.classList.remove("gridContainerHard");
     gridContainer.classList.add("gridContainer");
-    cardsGlobal.forEach(cardsElement => {
+    cards.forEach(cardsElement => {
       cardsElement.remove();
     });
-  }
+  }cards.forEach(cardsElement => {
+    cardsElement.remove();
+  });
   let gridContainer = document.querySelector(".gridContainer");
 
   let divs = document.createElement("div");
-
+  randomizePairs()
   for (let i = 0; i < 16; i++) {
     console.log(i);
     divs = document.createElement("div");
@@ -165,7 +175,11 @@ function initializeGame() {
     divs.classList.add(randomizedCards[i]);
     gridContainer.appendChild(divs);
   }
+  cardsGlobal = document.querySelectorAll(".card");
+  gameLogicAndEventListener();
 }
 
-// let gridContainer = document.querySelector(".gridContainer");
-// gridContainer.remove();
+function randomizePairs(){
+  randomizedCards = randomizeCardsFunc(cardPairsArr)
+  randomizedCardsHard = randomizeCardsFunc(cardPairsArrHard)
+}
