@@ -17,7 +17,8 @@ div.menuIsHidden{
 
 .gameRules{
     text-align: center;
-    font-size: 35px;
+    font-size: 30px;
+    margin: 50px 50px;
 }
 
 #buttonInstruction, #selectDifficultyEasy, #selectDifficultyHard{
@@ -34,22 +35,9 @@ div.menuIsHidden{
     top: 0;
 }
 
-.difficultyShow{
-    width: 80%;
-    height: 60%;
-    position: fixed;
-    margin: 5em auto;
-    background: white;
-    font-size: 25px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    border: 20px outset green;
-    display: block;
-    opacity: 1;
+.diffText{
     text-align: center;
+    display: block;
 }
 
 .instruction{
@@ -59,7 +47,6 @@ div.menuIsHidden{
     position: fixed;
     margin: 5em auto;
     background-color: white;
-    font-size: 25px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     top: 0;
     right: 0;
@@ -109,7 +96,6 @@ div.menuIsHidden{
 #diffContainer{
     display: flex;
     justify-content: center;
-    margin: 18em 20em;
 }
 
 #selectEasy, #selectHard{

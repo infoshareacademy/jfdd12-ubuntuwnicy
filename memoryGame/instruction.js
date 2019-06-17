@@ -16,23 +16,15 @@ const BackDiv = document.querySelector('#backDiv')
 button.addEventListener("click", function(event){
     instruction.classList.toggle("menuIsHidden");
     console.log("toggling class")
-    BackDiv.classList.remove("backgroundDiv")
+    BackDiv.classList.toggle("backgroundDiv")
 })
-
-diffButton.addEventListener("click", function(event){
-    showDiff.classList.remove("difficultyShow");
-    showDiff.classList.toggle("difficultyHide")
-    console.log("toggling class")
-    diffBackground.classList.remove("backgroundDiv")
-})
-
 
 // Adds functionality to instruction button on game page -> button to display
 
 buttonInstruction.addEventListener("click", function(event){
     instruction.classList.remove("menuIsHidden")
     console.log("toggling class")
-    BackDiv.classList.toggle("backgroundDiv")
+    BackDiv.setAttribute("class", "backgroundDiv")
 })
 
 // Adds functionality to difficulty button - allow to display difficulty
