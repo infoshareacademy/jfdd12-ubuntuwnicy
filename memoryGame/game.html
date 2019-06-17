@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,33 +8,58 @@
     <title>sQuizYour Memory</title>
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link href="styles.css" rel='stylesheet'>
+    <link href="stylesLucjan.css" rel='stylesheet'>
 </head>
+
 <body>
-    <header>
-        <h1>sQuizYour Memory</h1>
-    </header>
+        <div class="instruction">
+            <button id="menuButton">X</button>
+            <h1>
+                <h2 class="gameRules"> Memory game! <br><br>
+                Gra memory polega na odnajdywaniu par takich samych kart.
+                Gracz odsłania 2 karty. Jeśli są to takie same karty, zostaną one zdjęte z planszy 
+                jeśli nie, karty będą odwrócone z powrotem (po ok. 2 sekundach).
+                Celem gracza jest zdjęcie wszystkich kart przy możliwie najmniejszej liczbie odsłon
+                i jak najkrótszym czasie, co będzie miało wpływ na wynik końcowy.
+                W grze liczona jest ilość błędnych odsłon. Gra posiada dwa poziomy trudności: </h2>
+            </h1>
+        </div>
+        <div class="backgroundDiv">
 
-
-    <div class="gameWrapper">
+        </div>
+    <div class="wrapper">
+        <header>
+            <h1>sQuizYour Memory</h1>
+        </header>
         <div class="gridContainer">
-        <div class = 'card'></div>
-        <div class = 'card'></div>
-        <div class = 'card'></div>
-        <div class = 'card'></div>
-        <div class = 'card'></div>
-        <div class = 'card'></div>
-        <div class = 'card'></div>
-        <div class = 'card'></div>
-        <div class = 'card'></div>
-        <div class = 'card'></div>
-        <div class = 'card'></div>
-        <div class = 'card'></div>
-        <div class = 'card'></div>
-        <div class = 'card'></div>
-        <div class = 'card'></div>
-        <div class = 'card'></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+        </div>
     </div>
+    <button id="buttonInstruction">Instrukcja</button>
+    <button id="selectDifficulty">Poziom trudności</button>
+    <div class="difficultyHide">
+        Wybierz poziom trudności gry
+        <button id="selectEasy">Łatwy</button>
+        <button id="selectHard">Trudny</button>
+        <button id="diffButton">X</button>
     </div>
     <script src='scriptGame.js'></script>
+    <script src='instruction.js'></script>
 </body>
+
 </html>

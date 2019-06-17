@@ -1,0 +1,77 @@
+.instruction{
+    width: 80%;
+    height: 60%;
+    display: block;
+    position: fixed;
+    margin: 50px 30px;
+    background: white;
+    font-size: 25px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    border: 20px outset green;
+}
+
+#menuButton{
+    float: right;
+    font-size: 30px;
+    color: white;
+    background: red;
+    width: 50px;
+    height: 50px;
+}
+
+div.menuIsHidden{
+    display: none;
+}
+
+.gameRules{
+    text-align: center;
+    font-size: 35px;
+}
+
+#buttonInstruction{
+    background: green;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.backgroundDiv{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(26, 1, 1);
+    opacity: 0.9;
+    position: fixed;
+    z-index: -1;
+}
+
+.difficultyHide{
+     display: none;
+}
+
+.difficultyShow{
+    width: 80%;
+    height: 60%;
+    position: fixed;
+    margin: 50px 30px;
+    background: white;
+    font-size: 25px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    border: 20px outset green;
+    display: block;
+}
+
+#diffButton{
+    float: right;
+    font-size: 30px;
+    color: white;
+    background: red;
+    width: 50px;
+    height: 50px;
+}

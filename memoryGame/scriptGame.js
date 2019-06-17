@@ -1,9 +1,12 @@
 let cards = document.querySelectorAll('.card')
 let highlightedCards = []
 let cardPairsArr = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8]
+let cardPairsArrHard = cardPairsArr.concat( [9,9,10,10,12,12,13,13,14,14,15,15,16,16,17,17,18,18] )
 let randomizedCards = randomizeCardsFunc(cardPairsArr)
+let randomizedCardsHard = randomizeCardsFunc(cardPairsArrHard)
 let timeoutLength = 3000
 let howManyPairsLeft = 8
+let isHardModeOn = false
 
 function randomizeCardsFunc(cards) {
     return cards.slice().sort(() => Math.random() - 0.5)
@@ -96,5 +99,26 @@ function cardsArentMatching() {
     setTimeout(() => addRemoveCardsClass('remove', 'cardsArentMatching', highlightedCardsForTimeout), timeoutLength)
 
     highlightedCards = []
+
+}
+
+function toggleHardMode() {
+
+    isHardModeOn = true
+
+    let gridContainer = document.querySelector('.gridContainer')
+
+    gridContainer.classList.remove('gridContainer')
+    gridContainer.classList.add('gridContainerHard')
+
+    let hardModeDivs = document.createElement('div')
+
+    for (let i = 0; i < 20; i++) { 
+    
+    console.log(i)
+    hardModeDivs = document.createElement('div')
+    hardModeDivs.classList.add('card')
+    gridContainer.appendChild(hardModeDivs)
+    }
 
 }
