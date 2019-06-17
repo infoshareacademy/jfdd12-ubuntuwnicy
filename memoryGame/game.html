@@ -51,14 +51,17 @@
     </div>
 <div class="buttonContainer">    
     <button id="buttonInstruction">Instrukcja</button>
-    <button id="selectDifficulty">Poziom trudności</button>
+    <button id="selectDifficultyEasy">Poziom łatwy</button>
+    <button id="selectDifficultyHard">Poziom trudny</button>
 </div>
-<div id="difficultyBackground">    
-    <div class="difficultyHide">
-        Wybierz poziom trudności gry
-        <button id="selectEasy">Łatwy</button>
-        <button id="selectHard">Trudny</button>
+<div id="difficultyBackground" class="backgroundDiv">    
+    <div class="difficultyShow">
+        <span class="diffText">Wybierz poziom trudności gry</span>
         <button id="diffButton">X</button>
+        <div id="diffContainer">
+            <button id="selectEasy">Łatwy</button>
+            <button id="selectHard">Trudny</button>
+        </div>
     </div>
 </div>
     <script src='scriptGame.js'></script>

@@ -1,12 +1,13 @@
-let body = document.querySelector('body')
-let button = document.querySelector('#menuButton')
-let instruction = document.querySelector('.backgroundDiv')
-let buttonInstruction = document.querySelector('#buttonInstruction')
-let selectDiff = document.querySelector("#selectDifficulty")
-let showDiff = document.querySelector(".difficultyHide")
-let selectEasy = document.querySelector('#selectEasy')
-let selectHard = document.querySelector('#selectHard')
-let diffButton = document.querySelector('#diffButton')
+const button = document.querySelector('#menuButton')
+const body = document.querySelector('body')
+const instruction = document.querySelector('.backgroundDiv')
+const buttonInstruction = document.querySelector('#buttonInstruction')
+const selectDiffEasy = document.querySelector("#selectDifficultyEasy")
+const selectDiffHard = document.querySelector("#selectDifficultyEasy")
+const showDiff = document.querySelector(".difficultyShow")
+const selectEasy = document.querySelector('#selectEasy')
+const selectHard = document.querySelector('#selectHard')
+const diffButton = document.querySelector('#diffButton')
 const diffBackground = document.querySelector('#difficultyBackground')
 const BackDiv = document.querySelector('#backDiv')
 
@@ -20,8 +21,8 @@ button.addEventListener("click", function(event){
 
 diffButton.addEventListener("click", function(event){
     showDiff.classList.remove("difficultyShow");
+    showDiff.classList.toggle("difficultyHide")
     console.log("toggling class")
-    selectDiff.removeAttribute('disabled', 'disabled')
     diffBackground.classList.remove("backgroundDiv")
 })
 
@@ -36,23 +37,28 @@ buttonInstruction.addEventListener("click", function(event){
 
 // Adds functionality to difficulty button - allow to display difficulty
 
-selectDiff.addEventListener("click", function(event){
+selectDiffEasy.addEventListener("click", function(event){
     showDiff.classList.toggle("difficultyShow")
     console.log("toggling class")
     diffBackground.classList.toggle("backgroundDiv")
-    selectDiff.setAttribute('disabled', 'disabled')
+})
+
+selectDiffHard.addEventListener("click", function(event){
+    showDiff.classList.toggle("difficultyShow")
+    console.log("toggling class")
+    diffBackground.classList.toggle("backgroundDiv")
 })
 
 selectEasy.addEventListener("click", function(event){
+    showDiff.classList.remove("difficultyShow");
+    showDiff.classList.toggle("difficultyHide")
     showDiff.classList.remove("difficultyShow")
-    console.log("toggling class")
-    selectDiff.removeAttribute('disabled', 'disabled')
     diffBackground.classList.remove("backgroundDiv")
 })
 
 selectHard.addEventListener("click", function(event){
+    showDiff.classList.remove("difficultyShow");
+    showDiff.classList.toggle("difficultyHide")
     showDiff.classList.remove("difficultyShow")
-    console.log("toggling class")
-    selectDiff.removeAttribute('disabled', 'disabled')
-       diffBackground.classList.remove("backgroundDiv")
+    diffBackground.classList.remove("backgroundDiv")
 })
