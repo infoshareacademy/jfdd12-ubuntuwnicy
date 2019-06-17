@@ -33,7 +33,7 @@ body {
 .card {
     background-image: url('../logo.png');
     background-size: cover;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgb(255, 255, 153);
     border: 1px solid rgb(0, 0, 0);
 }
 
