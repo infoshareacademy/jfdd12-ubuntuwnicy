@@ -12,6 +12,7 @@
 </head>
 
 <body>
+    <div id="backDiv" class="backgroundDiv">
         <div class="instruction">
             <button id="menuButton">X</button>
             <h1>
@@ -24,9 +25,7 @@
                 W grze liczona jest ilość błędnych odsłon. Gra posiada dwa poziomy trudności: </h2>
             </h1>
         </div>
-        <div class="backgroundDiv">
-
-        </div>
+    </div>
     <div class="wrapper">
         <header>
             <h1>sQuizYour Memory</h1>
@@ -50,14 +49,18 @@
             <div class="card"></div>
         </div>
     </div>
+<div class="buttonContainer">    
     <button id="buttonInstruction">Instrukcja</button>
     <button id="selectDifficulty">Poziom trudności</button>
+</div>
+<div id="difficultyBackground">    
     <div class="difficultyHide">
         Wybierz poziom trudności gry
         <button id="selectEasy">Łatwy</button>
         <button id="selectHard">Trudny</button>
         <button id="diffButton">X</button>
     </div>
+</div>
     <script src='scriptGame.js'></script>
     <script src='instruction.js'></script>
 </body>

@@ -1,24 +1,12 @@
-.instruction{
-    width: 80%;
-    height: 60%;
-    display: block;
-    position: fixed;
-    margin: 50px 30px;
-    background: white;
-    font-size: 25px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    border: 20px outset green;
+body{
+    height: 100vh
 }
 
 #menuButton{
     float: right;
     font-size: 30px;
     color: white;
-    background: red;
+    background: black;
     width: 50px;
     height: 50px;
 }
@@ -44,7 +32,27 @@ div.menuIsHidden{
     background-color: rgb(26, 1, 1);
     opacity: 0.9;
     position: fixed;
-    z-index: -1;
+    z-index: 1;
+    top: 0;
+}
+
+.instruction{
+    width: 80%;
+    height: 60%;
+    display: block;
+    position: fixed;
+    margin: 5em auto;
+    background-color: white;
+    font-size: 25px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    border: 20px outset green;
+    z-index: 2;
+    opacity: 1;
+    white-space: wrap;
 }
 
 .difficultyHide{
@@ -55,7 +63,7 @@ div.menuIsHidden{
     width: 80%;
     height: 60%;
     position: fixed;
-    margin: 50px 30px;
+    margin: 5em auto;
     background: white;
     font-size: 25px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -71,7 +79,24 @@ div.menuIsHidden{
     float: right;
     font-size: 30px;
     color: white;
-    background: red;
+    background: black;
+    /* background: r */
     width: 50px;
     height: 50px;
+}
+
+.buttonContainer{
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+}
+
+#buttonInstruction{
+    margin: 10px 10px;
+    padding: 10px 10px;
+}
+
+#selectDifficulty{
+    margin: 10px 10px;
+    padding: 10px 10px;
 }
