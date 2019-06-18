@@ -14,25 +14,24 @@
   </head>
 
   <body>
+
     <div id="backDiv" class="backgroundDiv">
       <div class="instruction">
-        <button id="menuButton">X</button>
-        <h1>
-          <h2 class="gameRules">
+        <button id="menuButton" class="menuButtonHidden">X</button>
+        <p class="gameRules">
             Memory game! <br /><br />
             Gra memory polega na odnajdywaniu par takich samych kart. Gracz
             odsłania 2 karty. Jeśli są to takie same karty, zostaną one zdjęte z
-            planszy jeśli nie, karty będą odwrócone z powrotem (po ok. 2
-            sekundach). Celem gracza jest zdjęcie wszystkich kart przy możliwie
-            najmniejszej liczbie odsłon i jak najkrótszym czasie, co będzie
-            miało wpływ na wynik końcowy. W grze liczona jest ilość błędnych
-            odsłon. Gra posiada dwa poziomy trudności:
-          </h2>
-        </h1>
-        <span class="diffText">Wybierz poziom trudności gry</span>
-        <div id="diffContainer">
-          <button id="selectEasy">Łatwy</button>
-          <button id="selectHard">Trudny</button>
+            planszy, jeśli nie, karty będą odwrócone z powrotem (po ok. 2
+            sekundach). Celem gracza jest zdjęcie wszystkich kart w jak najkrótszym czasie, co będzie
+            miało wpływ na wynik końcowy. Gra posiada dwa poziomy trudności: Łatwy (plansza 4x4) i Trudny (plansza 6x6)
+        <p>
+        <div class="difficultyShow">        
+            <span class="diffText"><p>Wybierz poziom trudności gry:</p></span>
+            <div id="diffContainer">
+                <button id="selectEasy">Łatwy</button>
+                <button id="selectHard">Trudny</button>
+            </div>
         </div>
       </div>
     </div>
@@ -40,6 +39,11 @@
       <header>
         <h1>sQuizYour Memory</h1>
       </header>
+      <div class="container">
+            <p id="timer">
+                <span id="timer"></span>
+            </p>
+        </div>
       <div class="gridContainer"></div>
     </div>
     <div class="buttonContainer">

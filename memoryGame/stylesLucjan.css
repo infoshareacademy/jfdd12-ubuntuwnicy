@@ -17,8 +17,15 @@ div.menuIsHidden{
 
 .gameRules{
     text-align: center;
-    font-size: 30px;
-    margin: 50px 50px;
+    font-size: 3.6vw;
+    margin: 20px 50px 20px;
+    white-space: wrap;
+}
+
+.diffText{
+    text-align: center;
+    font-size: 3.2vw;
+    display: block;
 }
 
 #buttonInstruction, #selectDifficultyEasy, #selectDifficultyHard{
@@ -33,11 +40,6 @@ div.menuIsHidden{
     background-color: rgb(26, 1, 1);
     position: fixed;
     top: 0;
-}
-
-.diffText{
-    text-align: center;
-    display: block;
 }
 
 .instruction{
@@ -55,7 +57,7 @@ div.menuIsHidden{
     border: 20px outset green;
     z-index: 2;
     opacity: 1;
-    white-space: wrap;
+    color: green;
 }
 
 .difficultyHide{
@@ -99,7 +101,58 @@ div.menuIsHidden{
 }
 
 #selectEasy, #selectHard{
-    padding: 10px 10px;
-    margin: 20px 70px;
+    padding: 2% 2% 3%;
+    margin: 2% 2%;
+    width: 16vw;
+    height: 6vh;
+    font-size: 3vw;
 }
 
+.menuButtonHidden{
+    display: none;
+}
+
+.menuButtonShown{
+    display: block;
+}
+
+.container {
+    background: rgb(26, 1, 1);
+    width: 10%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#timer {
+    color: #fff;
+    font-size: 2rem;
+}
+.label {
+    font-size: 1.5rem;
+    padding-left: 0.25rem;
+}
+
+@media all and (min-width: 481px) and (max-width: 1120px){
+    .gameRules{
+        font-size: 2.7vw;
+    }
+}
+
+
+
+@media all and (min-width: 1120px){
+    .gameRules{
+        font-size: 2.2vw;
+    }
+    .diffText{
+        text-align: center;
+        font-size: 2vw;
+        display: block;
+    }
+    #selectEasy, #selectHard{
+        width: 9vw;
+        height: 4vh;
+        font-size: 1vw;
+    }
+}
