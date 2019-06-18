@@ -10,6 +10,7 @@ const selectHard = document.querySelector('#selectHard')
 const diffButton = document.querySelector('#diffButton')
 const diffBackground = document.querySelector('#difficultyBackground')
 const BackDiv = document.querySelector('#backDiv')
+let time = 0;
 
 // Adds functionality to instruction panel -> button to hide
 
@@ -60,3 +61,10 @@ selectHard.addEventListener("click", function(event){
     instruction.classList.toggle("menuIsHidden")
     toggleHardMode()
 })
+
+var endDate = new Date("July 15, 2019 12:00:00").getTime();
+
+var timer = setInterval(function() {
+    timer = timer + 1;
+    document.getElementById("timer").innerHTML = `<span class='label'>${timer}</span>`;
+}, 1000);

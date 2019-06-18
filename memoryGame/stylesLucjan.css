@@ -116,6 +116,23 @@ div.menuIsHidden{
     display: block;
 }
 
+.container {
+    background: rgb(26, 1, 1);
+    width: 10%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#timer {
+    color: #fff;
+    font-size: 2rem;
+}
+.label {
+    font-size: 1.5rem;
+    padding-left: 0.25rem;
+}
+
 @media all and (min-width: 481px) and (max-width: 1120px){
     .gameRules{
         font-size: 2.7vw;
