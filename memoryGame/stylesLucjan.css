@@ -1,105 +1,107 @@
-body{
-    height: 100vh
+body {
+  height: 100%;
 }
 
-#menuButton{
-    float: right;
-    font-size: 30px;
-    color: white;
-    background: black;
-    width: 50px;
-    height: 50px;
+#menuButton {
+  float: right;
+  font-size: 30px;
+  color: white;
+  background: black;
+  width: 50px;
+  height: 50px;
 }
 
-div.menuIsHidden{
-    display: none;
+div.menuIsHidden {
+  display: none;
 }
 
-.gameRules{
-    text-align: center;
-    font-size: 30px;
-    margin: 50px 50px;
+.gameRules {
+  text-align: center;
+  font-size: 30px;
+  margin: 50px 50px;
 }
 
-#buttonInstruction, #selectDifficultyEasy, #selectDifficultyHard{
-    background: green;
-    color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+#buttonInstruction,
+#selectDifficultyEasy,
+#selectDifficultyHard {
+  background: green;
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.backgroundDiv{
-    width: 100vw;
-    height: 100vh;
-    background-color: rgb(26, 1, 1);
-    position: fixed;
-    top: 0;
+.backgroundDiv {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(26, 1, 1);
+  position: fixed;
+  top: 0;
 }
 
-.diffText{
-    text-align: center;
-    display: block;
+.diffText {
+  text-align: center;
+  display: block;
 }
 
-.instruction{
-    width: 80%;
-    height: 60%;
-    display: block;
-    position: fixed;
-    margin: 5em auto;
-    background-color: white;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    border: 20px outset green;
-    z-index: 2;
-    opacity: 1;
-    white-space: wrap;
+.instruction {
+  width: 80%;
+  height: 60%;
+  display: block;
+  position: fixed;
+  margin: 5em auto;
+  background-color: white;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  border: 20px outset green;
+  z-index: 2;
+  opacity: 1;
+  white-space: wrap;
 }
 
-.difficultyHide{
-     display: none;
+.difficultyHide {
+  display: none;
 }
 
-#diffButton{
-    float: right;
-    font-size: 30px;
-    color: white;
-    background: black;
-    /* background: r */
-    width: 50px;
-    height: 50px;
+#diffButton {
+  float: right;
+  font-size: 30px;
+  color: white;
+  background: black;
+  /* background: r */
+  width: 50px;
+  height: 50px;
 }
 
-.buttonContainer{
-    margin-top: 70px;
-    display: flex;
-    justify-content: center;
+.buttonContainer {
+  margin-top: 70px;
+  display: flex;
+  justify-content: center;
 }
 
-#buttonInstruction{
-    margin: 10px 10px;
-    padding: 10px 10px;
+#buttonInstruction {
+  margin: 10px 10px;
+  padding: 10px 10px;
 }
 
-#selectDifficultyEasy{
-    margin: 10px 10px;
-    padding: 10px 10px;
+#selectDifficultyEasy {
+  margin: 10px 10px;
+  padding: 10px 10px;
 }
 
-#selectDifficultyHard{
-    margin: 10px 10px;
-    padding: 10px 10px;
+#selectDifficultyHard {
+  margin: 10px 10px;
+  padding: 10px 10px;
 }
 
-#diffContainer{
-    display: flex;
-    justify-content: center;
+#diffContainer {
+  display: flex;
+  justify-content: center;
 }
 
-#selectEasy, #selectHard{
-    padding: 10px 10px;
-    margin: 20px 70px;
+#selectEasy,
+#selectHard {
+  padding: 10px 10px;
+  margin: 20px 70px;
 }
-

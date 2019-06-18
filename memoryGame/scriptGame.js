@@ -62,11 +62,11 @@ function initializeGame() {
   });
   let gridContainer = document.querySelector(".gridContainer");
 
-  let divs = document.createElement("div");
+  // let divs = document.createElement("div");
   randomizePairs();
   for (let i = 0; i < 16; i++) {
     console.log(i);
-    divs = document.createElement("div");
+    let divs = document.createElement("div");
     divs.classList.add("card");
     divs.classList.add(randomizedCards[i]);
     gridContainer.appendChild(divs);

@@ -33,6 +33,7 @@ body {
 .card {
   background-color: aliceblue;
   border: 1px solid rgb(0, 0, 0);
+  cursor: pointer;
 }
 
 .cardsAreMatching {

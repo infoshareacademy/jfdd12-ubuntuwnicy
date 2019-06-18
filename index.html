@@ -103,10 +103,10 @@
             <h1>Zapisz się na premierę!</h1>
             <p>Cześć, wyślemy ci tylko jednego maila z informacjami w dniu premiery. :)</p>
 
-            <form class="premiereNewsletter" action="memoryGame/game.html">
+            <form class="premiereNewsletter" id='emailForm' action="#productInfo">
                 <input type="text" name="name" required placeholder="Imię i nazwisko"><br>
                 <input type="email" name="userEmail" placeholder="Adres Email" required><br>
-                <input type="submit" name="newsletterSubmit" value="Wyślij"><br>
+                <input type="submit" id="submitButton" name="newsletterSubmit" value="Wyślij"><br>
             </form>
             <footer class="newsletterSecurity">
                     <p>Twój adres i dane są bezpieczne w naszej bazie danych. Nie przekazujemy ich żadnym innym podmiotom.</p>
@@ -177,9 +177,16 @@
     </div>
 </footer>
 
-    </footer>
-  
-</section>
+<div class="formPopUpBackgroundOff">
+    <div class="formPopUp">
+        <p>Dziękujemy za wypełnienie formularza. Czy chcesz przejść do gry, którą dla ciebie przygotowaliśmy jako nagrodę?</p>
+        <div class="buttonsWrapper">
+            <button class="toGameButton" href="memoryGame/game.html">Kontynuuj</button>
+            <button class="backOutButton">Wyjdź</button>
+        </div>
+    </div>
+</div>
+
 <script src="featureListScript.js"></script>
 </body>
 
