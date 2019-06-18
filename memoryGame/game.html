@@ -14,35 +14,38 @@
   </head>
 
   <body>
-    <div class="instruction">
-      <button id="menuButton">X</button>
-      <h1>
-        <h2 class="gameRules">
-          Memory game! <br /><br />
-          Gra memory polega na odnajdywaniu par takich samych kart. Gracz
-          odsłania 2 karty. Jeśli są to takie same karty, zostaną one zdjęte z
-          planszy jeśli nie, karty będą odwrócone z powrotem (po ok. 2
-          sekundach). Celem gracza jest zdjęcie wszystkich kart przy możliwie
-          najmniejszej liczbie odsłon i jak najkrótszym czasie, co będzie miało
-          wpływ na wynik końcowy. W grze liczona jest ilość błędnych odsłon. Gra
-          posiada dwa poziomy trudności:
-        </h2>
-      </h1>
+    <div id="backDiv" class="backgroundDiv">
+      <div class="instruction">
+        <button id="menuButton">X</button>
+        <h1>
+          <h2 class="gameRules">
+            Memory game! <br /><br />
+            Gra memory polega na odnajdywaniu par takich samych kart. Gracz
+            odsłania 2 karty. Jeśli są to takie same karty, zostaną one zdjęte z
+            planszy jeśli nie, karty będą odwrócone z powrotem (po ok. 2
+            sekundach). Celem gracza jest zdjęcie wszystkich kart przy możliwie
+            najmniejszej liczbie odsłon i jak najkrótszym czasie, co będzie
+            miało wpływ na wynik końcowy. W grze liczona jest ilość błędnych
+            odsłon. Gra posiada dwa poziomy trudności:
+          </h2>
+        </h1>
+        <span class="diffText">Wybierz poziom trudności gry</span>
+        <div id="diffContainer">
+          <button id="selectEasy">Łatwy</button>
+          <button id="selectHard">Trudny</button>
+        </div>
+      </div>
     </div>
-    <div class="backgroundDiv"></div>
     <div class="wrapper">
       <header>
         <h1>sQuizYour Memory</h1>
       </header>
       <div class="gridContainer"></div>
     </div>
-    <button id="buttonInstruction">Instrukcja</button>
-    <button id="selectDifficulty">Poziom trudności</button>
-    <div class="difficultyHide">
-      Wybierz poziom trudności gry
-      <button id="selectEasy">Łatwy</button>
-      <button id="selectHard">Trudny</button>
-      <button id="diffButton">X</button>
+    <div class="buttonContainer">
+      <button id="buttonInstruction">Instrukcja</button>
+      <button id="selectDifficultyEasy">Poziom łatwy</button>
+      <button id="selectDifficultyHard">Poziom trudny</button>
     </div>
     <script src="scriptGame.js"></script>
     <script src="instruction.js"></script>

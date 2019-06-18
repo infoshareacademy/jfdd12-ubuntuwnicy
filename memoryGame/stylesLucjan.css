@@ -1,24 +1,12 @@
-.instruction{
-    width: 80%;
-    height: 60%;
-    display: block;
-    position: fixed;
-    margin: 50px 30px;
-    background: white;
-    font-size: 25px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    border: 20px outset green;
+body{
+    height: 100vh
 }
 
 #menuButton{
     float: right;
     font-size: 30px;
     color: white;
-    background: red;
+    background: black;
     width: 50px;
     height: 50px;
 }
@@ -29,10 +17,11 @@ div.menuIsHidden{
 
 .gameRules{
     text-align: center;
-    font-size: 35px;
+    font-size: 30px;
+    margin: 50px 50px;
 }
 
-#buttonInstruction{
+#buttonInstruction, #selectDifficultyEasy, #selectDifficultyHard{
     background: green;
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -42,36 +31,75 @@ div.menuIsHidden{
     width: 100vw;
     height: 100vh;
     background-color: rgb(26, 1, 1);
-    opacity: 0.9;
     position: fixed;
-    z-index: -1;
+    top: 0;
 }
 
-.difficultyHide{
-     display: none;
+.diffText{
+    text-align: center;
+    display: block;
 }
 
-.difficultyShow{
+.instruction{
     width: 80%;
     height: 60%;
+    display: block;
     position: fixed;
-    margin: 50px 30px;
-    background: white;
-    font-size: 25px;
+    margin: 5em auto;
+    background-color: white;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     top: 0;
     right: 0;
     left: 0;
     bottom: 0;
     border: 20px outset green;
-    display: block;
+    z-index: 2;
+    opacity: 1;
+    white-space: wrap;
+}
+
+.difficultyHide{
+     display: none;
 }
 
 #diffButton{
     float: right;
     font-size: 30px;
     color: white;
-    background: red;
+    background: black;
+    /* background: r */
     width: 50px;
     height: 50px;
 }
+
+.buttonContainer{
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+}
+
+#buttonInstruction{
+    margin: 10px 10px;
+    padding: 10px 10px;
+}
+
+#selectDifficultyEasy{
+    margin: 10px 10px;
+    padding: 10px 10px;
+}
+
+#selectDifficultyHard{
+    margin: 10px 10px;
+    padding: 10px 10px;
+}
+
+#diffContainer{
+    display: flex;
+    justify-content: center;
+}
+
+#selectEasy, #selectHard{
+    padding: 10px 10px;
+    margin: 20px 70px;
+}
+
