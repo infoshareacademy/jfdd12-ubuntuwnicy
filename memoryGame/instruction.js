@@ -3,7 +3,7 @@ const body = document.querySelector('body')
 const instruction = document.querySelector('.backgroundDiv')
 const buttonInstruction = document.querySelector('#buttonInstruction')
 const selectDiffEasy = document.querySelector("#selectDifficultyEasy")
-const selectDiffHard = document.querySelector("#selectDifficultyEasy")
+const selectDiffHard = document.querySelector("#selectDifficultyHard")
 const showDiff = document.querySelector(".difficultyShow")
 const selectEasy = document.querySelector('#selectEasy')
 const selectHard = document.querySelector('#selectHard')
@@ -25,32 +25,38 @@ buttonInstruction.addEventListener("click", function(event){
     instruction.classList.remove("menuIsHidden")
     console.log("toggling class")
     BackDiv.setAttribute("class", "backgroundDiv")
+    button.classList.remove("menuButtonHidden")
+    button.setAttribute("class", "menuButtonShown")
 })
 
 // Adds functionality to difficulty button - allow to display difficulty
 
 selectDiffEasy.addEventListener("click", function(event){
-    showDiff.classList.toggle("difficultyShow")
     console.log("toggling class")
-    diffBackground.classList.toggle("backgroundDiv")
+    button.classList.remove("menuButtonHidden")
+    button.setAttribute("class", "menuButtonShown")
+    initializeGame()
 })
 
 selectDiffHard.addEventListener("click", function(event){
-    showDiff.classList.toggle("difficultyShow")
     console.log("toggling class")
-    diffBackground.classList.toggle("backgroundDiv")
+    button.classList.remove("menuButtonHidden")
+    button.setAttribute("class", "menuButtonShown")
+    toggleHardMode()
 })
 
 selectEasy.addEventListener("click", function(event){
-    showDiff.classList.remove("difficultyShow");
     showDiff.classList.toggle("difficultyHide")
     showDiff.classList.remove("difficultyShow")
-    diffBackground.classList.remove("backgroundDiv")
+    BackDiv.classList.remove("backgroundDiv")
+    instruction.classList.toggle("menuIsHidden")
+    initializeGame()
 })
 
 selectHard.addEventListener("click", function(event){
-    showDiff.classList.remove("difficultyShow");
     showDiff.classList.toggle("difficultyHide")
     showDiff.classList.remove("difficultyShow")
-    diffBackground.classList.remove("backgroundDiv")
+    BackDiv.classList.remove("backgroundDiv")
+    instruction.classList.toggle("menuIsHidden")
+    toggleHardMode()
 })
