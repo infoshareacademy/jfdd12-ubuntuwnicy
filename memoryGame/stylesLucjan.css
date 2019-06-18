@@ -2,6 +2,8 @@ body{
     height: 100vh
 }
 
+/* Styling of the closing button of welcome window */
+
 #menuButton{
     float: right;
     font-size: 30px;
@@ -10,6 +12,8 @@ body{
     width: 50px;
     height: 50px;
 }
+
+/* Hides the welcome window */
 
 div.menuIsHidden{
     display: none;
@@ -118,17 +122,20 @@ div.menuIsHidden{
 
 .container {
     background: rgb(26, 1, 1);
-    width: 10%;
+    width: 7%;
     height: 10vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-#timer {
+#timer, #score{
     color: #fff;
-    font-size: 2rem;
+    font-size: 1.5rem;
+    margin: 0px 6em 0px 3.2em;
+    width: 5em;
+    white-space: nowrap;
 }
-.label {
+.label{
     font-size: 1.5rem;
     padding-left: 0.25rem;
 }
@@ -139,8 +146,6 @@ div.menuIsHidden{
     }
 }
 
-
-
 @media all and (min-width: 1120px){
     .gameRules{
         font-size: 2.2vw;
@@ -150,9 +155,16 @@ div.menuIsHidden{
         font-size: 2vw;
         display: block;
     }
+    .diffText p{
+        margin-bottom: 0px;
+    }
     #selectEasy, #selectHard{
         width: 9vw;
         height: 4vh;
         font-size: 1vw;
+    }
+    #selectEasy, #selectHard{
+        padding: 0% 0%;
+        margin-bottom: 2em;
     }
 }

@@ -10,8 +10,16 @@ const selectHard = document.querySelector('#selectHard')
 const diffButton = document.querySelector('#diffButton')
 const diffBackground = document.querySelector('#difficultyBackground')
 const BackDiv = document.querySelector('#backDiv')
+const inGameTimer = document.getElementById("timer")
+const inGameScore = document.getElementById("score")
 let timer = 0;
 let timerId = 0;
+let score = 10000;
+let scoreId = 0;
+
+scoreId = inGameScore.innerHTML = "SCORE:0"
+timerId = inGameTimer.innerHTML = "TIME:0"
+timer = timer + 1;
 
 // Adds functionality to instruction panel -> button to hide
 
@@ -22,7 +30,7 @@ button.addEventListener("click", function(event){
     startGame()
 })
 
-// Adds functionality to instruction button on game page -> button to display
+// Adds functionality to instruction button on game page -> button to display instruction
 
 buttonInstruction.addEventListener("click", function(event){
     instruction.classList.remove("menuIsHidden")
@@ -33,27 +41,29 @@ buttonInstruction.addEventListener("click", function(event){
     pauseGame()
 })
 
-// Adds functionality to difficulty button - allow to display difficulty
+// Adds functionality to button "Poziom łatwy" on the main page
 
 selectDiffEasy.addEventListener("click", function(event){
     console.log("toggling class")
     button.classList.remove("menuButtonHidden")
     button.setAttribute("class", "menuButtonShown")
-    initializeGame()
-    pauseGame()
     resetGame()
     startGame()
+    initializeGame()
 })
+
+// Adds functionality to button "Poziom trudny" on the main page
 
 selectDiffHard.addEventListener("click", function(event){
     console.log("toggling class")
     button.classList.remove("menuButtonHidden")
     button.setAttribute("class", "menuButtonShown")
-    toggleHardMode()
-    pauseGame()
     resetGame()
     startGame()
+    toggleHardMode()
 })
+
+// Adds functionality to button "Łatwy" on the welcome window
 
 selectEasy.addEventListener("click", function(event){
     showDiff.classList.toggle("difficultyHide")
@@ -64,6 +74,8 @@ selectEasy.addEventListener("click", function(event){
     startGame()
 })
 
+// Adds functionality to button "Trudny" on the welcome window
+
 selectHard.addEventListener("click", function(event){
     showDiff.classList.toggle("difficultyHide")
     showDiff.classList.remove("difficultyShow")
@@ -73,22 +85,35 @@ selectHard.addEventListener("click", function(event){
     startGame()
 })
 
+// Set's a timer while the game is run
+
 function startGame(){
-timerId = document.getElementById("timer").innerHTML = `<span class='label'>${timer}</span>`
 timerId = setInterval(function() {
     console.log('timer', timer);
-    document.getElementById("timer").innerHTML = `<span class='label'>${timer}</span>`;
+    inGameTimer.innerHTML = `TIME:${timer}`;
     timer = timer + 1;
+}, 1000);
+scoreId = setInterval(function() {
+    console.log(inGameScore.innerHTML = `SCORE:${score}`);
+    score = score - 5;
 }, 1000);
 }
 
 
+// Stops the game timer
+
 function pauseGame(){
     clearInterval(timerId)
+    clearInterval(scoreId)
 }
 
+// Resumes the game timer
+
 function resetGame(){
+    clearInterval(timerId);
+    clearInterval(scoreId)
     timer = 0
-    document.getElementById("timer").innerHTML = `<span class='label'>${timer}</span>`;
+    score = 10000
 }
+
 
