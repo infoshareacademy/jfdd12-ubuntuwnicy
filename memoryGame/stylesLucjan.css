@@ -2,23 +2,34 @@ body {
   height: 100%;
 }
 
-#menuButton {
-  float: right;
-  font-size: 30px;
-  color: white;
-  background: black;
-  width: 50px;
-  height: 50px;
+/* Styling of the closing button of welcome window */
+
+#menuButton{
+    float: right;
+    font-size: 30px;
+    color: white;
+    background: black;
+    width: 50px;
+    height: 50px;
 }
 
-div.menuIsHidden {
-  display: none;
+/* Hides the welcome window */
+
+div.menuIsHidden{
+    display: none;
 }
 
-.gameRules {
-  text-align: center;
-  font-size: 30px;
-  margin: 50px 50px;
+.gameRules{
+    text-align: center;
+    font-size: 3.6vw;
+    margin: 20px 50px 20px;
+    white-space: wrap;
+}
+
+.diffText{
+    text-align: center;
+    font-size: 3.2vw;
+    display: block;
 }
 
 #buttonInstruction,
@@ -37,27 +48,22 @@ div.menuIsHidden {
   top: 0;
 }
 
-.diffText {
-  text-align: center;
-  display: block;
-}
-
-.instruction {
-  width: 80%;
-  height: 60%;
-  display: block;
-  position: fixed;
-  margin: 5em auto;
-  background-color: white;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  border: 20px outset green;
-  z-index: 2;
-  opacity: 1;
-  white-space: wrap;
+.instruction{
+    width: 80%;
+    height: 60%;
+    display: block;
+    position: fixed;
+    margin: 5em auto;
+    background-color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    border: 20px outset green;
+    z-index: 2;
+    opacity: 1;
+    color: green;
 }
 
 .difficultyHide {
@@ -100,8 +106,67 @@ div.menuIsHidden {
   justify-content: center;
 }
 
-#selectEasy,
-#selectHard {
-  padding: 10px 10px;
-  margin: 20px 70px;
+#selectEasy, #selectHard{
+    padding: 2% 2% 3%;
+    margin: 2% 2%;
+    width: 16vw;
+    height: 6vh;
+    font-size: 3vw;
+}
+
+.menuButtonHidden{
+    display: none;
+}
+
+.menuButtonShown{
+    display: block;
+}
+
+.container {
+    background: rgb(26, 1, 1);
+    width: 7%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#timer, #score{
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 0px 6em 0px 3.2em;
+    width: 5em;
+    white-space: nowrap;
+}
+.label{
+    font-size: 1.5rem;
+    padding-left: 0.25rem;
+}
+
+@media all and (min-width: 481px) and (max-width: 1120px){
+    .gameRules{
+        font-size: 2.7vw;
+    }
+}
+
+@media all and (min-width: 1120px){
+    .gameRules{
+        font-size: 2.2vw;
+    }
+    .diffText{
+        text-align: center;
+        font-size: 2vw;
+        display: block;
+    }
+    .diffText p{
+        margin-bottom: 0px;
+    }
+    #selectEasy, #selectHard{
+        width: 9vw;
+        height: 4vh;
+        font-size: 1vw;
+    }
+    #selectEasy, #selectHard{
+        padding: 0% 0%;
+        margin-bottom: 2em;
+    }
 }
