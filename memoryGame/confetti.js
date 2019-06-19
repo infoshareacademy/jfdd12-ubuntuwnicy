@@ -22,38 +22,42 @@ let r = 6
 let start = 0
 
 
-function degresForCircle(deg) {
-    return deg * Math.PI/180;
-}
-
 function randomNumber(min, max) {
     return Math.random() * (max - min) + min
 }
 
+function randomColor() {
+    const red = randomNumber(0, 255)
+    const green = randomNumber(0, 255)
+    const blue = randomNumber(0, 255)
 
-function drawRect (rectX, rectY, widthOfRect, heightOfRect, color = 'blue') {
-    ctx.fillStyle = color
+    return `rgb(${red}, ${green}, ${blue})`
+}
+
+
+function drawRect (rectX, rectY, widthOfRect, heightOfRect) {
+    ctx.fillStyle = randomColor()
     ctx.fillRect(rectX, rectY, widthOfRect, heightOfRect)
 }
 
 drawRect(rectX, rectY, widthOfRect, heightOfRect)
 
-function drawTriangle (x, y, color = 'blue') {
+function drawTriangle (x, y) {
     ctx.beginPath()
     ctx.moveTo(x, y)
     ctx.lineTo(x + 6, y + heightOfTriangle)
     ctx.lineTo(x - 6, y + heightOfTriangle)
     ctx.closePath()
-    ctx.fillStyle = color
+    ctx.fillStyle = randomColor()
     ctx.fill()
 }
 
 drawTriangle(x, y)
 
-function drawCircle (circleX, circleY, r, start, degresForCircle, color = 'blue') {
+function drawCircle (circleX, circleY, r, start) {
     ctx.beginPath();
     ctx.arc(circleX, circleY, r, start, 2 * Math.PI)
-    ctx.fillStyle = color
+    ctx.fillStyle = randomColor()
     ctx.fill()
 }
 
