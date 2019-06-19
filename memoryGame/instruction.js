@@ -10,7 +10,12 @@ const selectHard = document.querySelector('#selectHard')
 const diffButton = document.querySelector('#diffButton')
 const diffBackground = document.querySelector('#difficultyBackground')
 const BackDiv = document.querySelector('#backDiv')
-let time = 0;
+const inGameTimer = document.getElementById("timer")
+const inGameScore = document.getElementById("score")
+let timer = 0;
+let timerId;
+let score = 10000;
+let scoreId;
 
 // Adds functionality to instruction panel -> button to hide
 
@@ -18,9 +23,11 @@ button.addEventListener("click", function(event){
     instruction.classList.toggle("menuIsHidden");
     console.log("toggling class")
     BackDiv.classList.toggle("backgroundDiv")
+    startTimerAfterPause()
+    startScoreAfterPause()
 })
 
-// Adds functionality to instruction button on game page -> button to display
+// Adds functionality to instruction button on game page -> button to display instruction
 
 buttonInstruction.addEventListener("click", function(event){
     instruction.classList.remove("menuIsHidden")
@@ -28,23 +35,36 @@ buttonInstruction.addEventListener("click", function(event){
     BackDiv.setAttribute("class", "backgroundDiv")
     button.classList.remove("menuButtonHidden")
     button.setAttribute("class", "menuButtonShown")
+    pauseGame()
 })
 
-// Adds functionality to difficulty button - allow to display difficulty
+// Adds functionality to button "Poziom łatwy" on the main page
 
 selectDiffEasy.addEventListener("click", function(event){
     console.log("toggling class")
     button.classList.remove("menuButtonHidden")
     button.setAttribute("class", "menuButtonShown")
+    resetGame()
+    pauseGame()
+    startTimer()
+    startScore()
     initializeGame()
 })
+
+// Adds functionality to button "Poziom trudny" on the main page
 
 selectDiffHard.addEventListener("click", function(event){
     console.log("toggling class")
     button.classList.remove("menuButtonHidden")
     button.setAttribute("class", "menuButtonShown")
+    resetGame()
+    pauseGame()
+    startTimer()
+    startScore()
     toggleHardMode()
 })
+
+// Adds functionality to button "Łatwy" on the welcome window
 
 selectEasy.addEventListener("click", function(event){
     showDiff.classList.toggle("difficultyHide")
@@ -52,7 +72,11 @@ selectEasy.addEventListener("click", function(event){
     BackDiv.classList.remove("backgroundDiv")
     instruction.classList.toggle("menuIsHidden")
     initializeGame()
+    startTimer()
+    startScore()
 })
+
+// Adds functionality to button "Trudny" on the welcome window
 
 selectHard.addEventListener("click", function(event){
     showDiff.classList.toggle("difficultyHide")
@@ -60,11 +84,68 @@ selectHard.addEventListener("click", function(event){
     BackDiv.classList.remove("backgroundDiv")
     instruction.classList.toggle("menuIsHidden")
     toggleHardMode()
+    startTimer()
+    startScore()
 })
 
-var endDate = new Date("July 15, 2019 12:00:00").getTime();
+// Set's a timer while the game is run
 
-var timer = setInterval(function() {
+function startTimer(){
+timerId = inGameTimer.innerHTML = `TIME:0`
+timer = timer + 1;
+timerId = setInterval(function() {
+    inGameTimer.innerHTML = `TIME:${timer}`;
     timer = timer + 1;
-    document.getElementById("timer").innerHTML = `<span class='label'>${timer}</span>`;
+}, 1000); 
+return timerId
+}
+
+// Set's a score while the game is run
+
+function startScore(){
+scoreId = inGameScore.innerHTML = `SCORE:10000`
+score = score - 5;
+scoreId = setInterval(function() {
+    console.log(inGameScore.innerHTML = `SCORE:${score}`);
+    score = score - 5;
+}, 1000); 
+return scoreId
+}
+
+// Resumes the timer after leaving instruction panel
+
+function startTimerAfterPause(){
+this.timer = timer;
+timerId = setInterval(function() {
+    inGameTimer.innerHTML = `TIME:${timer}`;
+    timer = timer + 1;
 }, 1000);
+}
+
+// Resumes the score after leaving instruction panel
+
+function startScoreAfterPause(){
+this.score = score;
+scoreId = setInterval(function() {
+    console.log(inGameScore.innerHTML = `SCORE:${score}`);
+    score = score - 5;
+}, 1000);
+}
+
+// Stops the game timer
+
+function pauseGame(){
+    clearInterval(timerId)
+    clearInterval(scoreId)
+}
+
+// Resumes the game timer
+
+function resetGame(){
+    clearInterval(timerId);
+    clearInterval(scoreId)
+    timer = 0
+    score = 10000
+}
+
+
