@@ -122,6 +122,8 @@ function cardsAreMatching() {
   if (howManyPairsLeft === 0) {
     cardsAreLoading = true;
     console.log("koniec gry");
+    pauseGame()
+    inGameScore.style.opacity = "1"
   }
 }
 

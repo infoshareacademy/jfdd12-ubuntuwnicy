@@ -23,8 +23,9 @@ button.addEventListener("click", function(event){
     instruction.classList.toggle("menuIsHidden");
     console.log("toggling class")
     BackDiv.classList.toggle("backgroundDiv")
+    if (howManyPairsLeft !== 0){
     startTimerAfterPause()
-    startScoreAfterPause()
+    startScoreAfterPause()}
 })
 
 // Adds functionality to instruction button on game page -> button to display instruction
@@ -48,6 +49,7 @@ selectDiffEasy.addEventListener("click", function(event){
     pauseGame()
     startTimer()
     startScore()
+    inGameScore.style.opacity = "0"
     initializeGame()
 })
 
@@ -61,6 +63,7 @@ selectDiffHard.addEventListener("click", function(event){
     pauseGame()
     startTimer()
     startScore()
+    inGameScore.style.opacity = "0"
     toggleHardMode()
 })
 
@@ -106,7 +109,7 @@ function startScore(){
 scoreId = inGameScore.innerHTML = `SCORE:10000`
 score = score - 5;
 scoreId = setInterval(function() {
-    console.log(inGameScore.innerHTML = `SCORE:${score}`);
+    inGameScore.innerHTML = `SCORE:${score}`;
     score = score - 5;
 }, 1000); 
 return scoreId
