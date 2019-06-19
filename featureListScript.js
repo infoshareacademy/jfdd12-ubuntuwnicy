@@ -5,6 +5,8 @@ const formSubmitButton = document.getElementById("submitButton");
 
 let backOutButton = document.querySelector('.backOutButton')
 
+if (checkIfFormWasFilled) { hideForm() }
+
 document.getElementById("signUp").addEventListener("click", function () {
   featureListEl.classList.toggle("featureListWrapperForHover");
   console.log("toggling class");
@@ -26,6 +28,8 @@ formSubmitButton.addEventListener("click", function () {
     formPopUpBackground.classList.remove("formPopUpBackgroundOff");
     formPopUpBackground.classList.add("formPopUpBackground");
 
+
+
   }
 });
 
@@ -40,4 +44,27 @@ backOutButton.addEventListener('click', function () {
 
 function checkIfFormIsValid() {
   return document.getElementById("emailForm").checkValidity();
+}
+
+function addUserToLocalStorage() {
+  return localStorage.setItem('formSent', true)
+}
+
+function checkIfFormWasFilled() {
+  return localStorage.getItem('formSent')
+}
+
+function hideForm() {
+
+  let form = document.querySelector('.form')
+  let formWasFilled = document.querySelector('.formWasFilledHidden')
+  let formWrapper = document.querySelector('.formWrapper')
+
+  form.classList.remove('form')
+  form.classList.add('formHidden')
+
+  formWrapper.append(formWasFilled)
+  formWasFilled.classList.remove('formWasFilledHidden')
+  formWasFilled.classList.add('formWasFilled')
+
 }
