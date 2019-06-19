@@ -9,17 +9,13 @@ canvas.setAttribute('height', '800');
 const ctx = canvas.getContext('2d');
 
 
-let heightOfTriangle = 12 * (Math.sqrt(3)/2);
-let x = randomNumber(0, 800)
-let y = randomNumber(0, 800)
-let rectX = randomNumber(0, 800)
-let rectY = randomNumber(0, 800)
-let circleX = randomNumber(0, 800)
-let circleY = circleX
-let widthOfRect = 10
-let heightOfRect = 10
-let r = 6
-let start = 0
+const heightOfTriangle = 12 * (Math.sqrt(3)/2);
+const x = 400
+const y = 790
+const widthOfRect = 10
+const heightOfRect = 10
+const r = 6
+const start = 0
 
 
 function randomNumber(min, max) {
@@ -35,12 +31,10 @@ function randomColor() {
 }
 
 
-function drawRect (rectX, rectY, widthOfRect, heightOfRect) {
+function drawRect (x, y, widthOfRect, heightOfRect) {
     ctx.fillStyle = randomColor()
-    ctx.fillRect(rectX, rectY, widthOfRect, heightOfRect)
+    ctx.fillRect(x, y, widthOfRect, heightOfRect)
 }
-
-drawRect(rectX, rectY, widthOfRect, heightOfRect)
 
 function drawTriangle (x, y) {
     ctx.beginPath()
@@ -52,13 +46,17 @@ function drawTriangle (x, y) {
     ctx.fill()
 }
 
-drawTriangle(x, y)
-
-function drawCircle (circleX, circleY, r, start) {
+function drawCircle (x, y, r, start) {
     ctx.beginPath();
-    ctx.arc(circleX, circleY, r, start, 2 * Math.PI)
+    ctx.arc(x, y, r, start, 2 * Math.PI)
     ctx.fillStyle = randomColor()
     ctx.fill()
 }
 
-drawCircle(circleX, circleY, r, start)
+function confettiExplode () {
+    drawRect(x, y, widthOfRect, heightOfRect)
+    drawTriangle(x, y)
+    drawCircle(x, y, r, start)
+}
+
+confettiExplode()
