@@ -204,7 +204,7 @@ input[name="userEmail"] {
   width: inherit;
   height: inherit;
 }
-.buttonsWrapper > button {
+.buttonsWrapper>a, .buttonsWrapper>button{
   height: 20px;
   cursor: pointer;
   font-size: 1.05em;
@@ -220,11 +220,11 @@ input[name="userEmail"] {
   cursor: pointer;
 }
 
-.toGameButton {
+/* .toGameButton {
   left: 0;
   bottom: 0;
 }
 .backOutButton {
   left: 0;
   bottom: 0;
-}
+} */
