@@ -104,7 +104,7 @@ function addRemoveCardsClass(
 ) {
   if (addRemove === "add") {
     cardsArr[0].classList.add(cardsClass);
-    cardsAlsrr[1].classList.add(cardsClass);
+    cardsArr[1].classList.add(cardsClass);
   } else {
     cardsArr[0].classList.remove(cardsClass);
     cardsArr[1].classList.remove(cardsClass);
@@ -182,13 +182,17 @@ function isGameFinished() {
 
   if (howManyPairsLeft === 0) {
 
-    console.log("koniec gry");
+    console.log("koniec gry")
+    pauseGame()
+    inGameScore.style.opacity = "1"
   }
 }
 
 function finishGame() { //debug tool for finishing the game from console
-
   howManyPairsLeft = 0
+  cardsAreLoading = true;
+  console.log("koniec gry");
+  pauseGame()
+  inGameScore.style.opacity = "1"
   isGameFinished()
-
 }
