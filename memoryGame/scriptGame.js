@@ -193,12 +193,26 @@ function isGameFinished() {
   if (howManyPairsLeft === 0) {
 
     console.log("koniec gry");
+    pauseGame()
+
+  }
+}
+
+function isGameFinished() {
+
+  if (howManyPairsLeft === 0) {
+
+    console.log("koniec gry")
+    pauseGame()
+    inGameScore.style.opacity = "1"
   }
 }
 
 function finishGame() { //debug tool for finishing the game from console
-
   howManyPairsLeft = 0
+  cardsAreLoading = true;
+  console.log("koniec gry");
+  pauseGame()
+  inGameScore.style.opacity = "1"
   isGameFinished()
-
 }

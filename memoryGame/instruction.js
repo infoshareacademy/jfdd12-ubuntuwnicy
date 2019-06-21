@@ -19,7 +19,7 @@ let scoreId;
 
 // Adds functionality to instruction panel -> button to hide
 
-button.addEventListener("click", function(event){
+button.addEventListener("click", function (event) {
     instruction.classList.toggle("menuIsHidden");
     console.log("toggling class")
     BackDiv.classList.toggle("backgroundDiv")
@@ -29,7 +29,7 @@ button.addEventListener("click", function(event){
 
 // Adds functionality to instruction button on game page -> button to display instruction
 
-buttonInstruction.addEventListener("click", function(event){
+buttonInstruction.addEventListener("click", function (event) {
     instruction.classList.remove("menuIsHidden")
     console.log("toggling class")
     BackDiv.setAttribute("class", "backgroundDiv")
@@ -40,7 +40,7 @@ buttonInstruction.addEventListener("click", function(event){
 
 // Adds functionality to button "Poziom łatwy" on the main page
 
-selectDiffEasy.addEventListener("click", function(event){
+selectDiffEasy.addEventListener("click", function (event) {
     console.log("toggling class")
     button.classList.remove("menuButtonHidden")
     button.setAttribute("class", "menuButtonShown")
@@ -53,7 +53,7 @@ selectDiffEasy.addEventListener("click", function(event){
 
 // Adds functionality to button "Poziom trudny" on the main page
 
-selectDiffHard.addEventListener("click", function(event){
+selectDiffHard.addEventListener("click", function (event) {
     console.log("toggling class")
     button.classList.remove("menuButtonHidden")
     button.setAttribute("class", "menuButtonShown")
@@ -66,7 +66,7 @@ selectDiffHard.addEventListener("click", function(event){
 
 // Adds functionality to button "Łatwy" on the welcome window
 
-selectEasy.addEventListener("click", function(event){
+selectEasy.addEventListener("click", function (event) {
     showDiff.classList.toggle("difficultyHide")
     showDiff.classList.remove("difficultyShow")
     BackDiv.classList.remove("backgroundDiv")
@@ -78,7 +78,7 @@ selectEasy.addEventListener("click", function(event){
 
 // Adds functionality to button "Trudny" on the welcome window
 
-selectHard.addEventListener("click", function(event){
+selectHard.addEventListener("click", function (event) {
     showDiff.classList.toggle("difficultyHide")
     showDiff.classList.remove("difficultyShow")
     BackDiv.classList.remove("backgroundDiv")
@@ -90,58 +90,58 @@ selectHard.addEventListener("click", function(event){
 
 // Set's a timer while the game is run
 
-function startTimer(){
-timerId = inGameTimer.innerHTML = `TIME:0`
-timer = timer + 1;
-timerId = setInterval(function() {
-    inGameTimer.innerHTML = `TIME:${timer}`;
+function startTimer() {
+    timerId = inGameTimer.innerHTML = `TIME:0`
     timer = timer + 1;
-}, 1000); 
-return timerId
+    timerId = setInterval(function () {
+        inGameTimer.innerHTML = `TIME:${timer}`;
+        timer = timer + 1;
+    }, 1000);
+    return timerId
 }
 
 // Set's a score while the game is run
 
-function startScore(){
-scoreId = inGameScore.innerHTML = `SCORE:10000`
-score = score - 5;
-scoreId = setInterval(function() {
-    console.log(inGameScore.innerHTML = `SCORE:${score}`);
+function startScore() {
+    scoreId = inGameScore.innerHTML = `SCORE:10000`
     score = score - 5;
-}, 1000); 
-return scoreId
+    scoreId = setInterval(function () {
+        inGameScore.innerHTML = `SCORE:${score}`
+        score = score - 5;
+    }, 1000);
+    return scoreId
 }
 
 // Resumes the timer after leaving instruction panel
 
-function startTimerAfterPause(){
-this.timer = timer;
-timerId = setInterval(function() {
-    inGameTimer.innerHTML = `TIME:${timer}`;
-    timer = timer + 1;
-}, 1000);
+function startTimerAfterPause() {
+    this.timer = timer;
+    timerId = setInterval(function () {
+        inGameTimer.innerHTML = `TIME:${timer}`;
+        timer = timer + 1;
+    }, 1000);
 }
 
 // Resumes the score after leaving instruction panel
 
-function startScoreAfterPause(){
-this.score = score;
-scoreId = setInterval(function() {
-    console.log(inGameScore.innerHTML = `SCORE:${score}`);
-    score = score - 5;
-}, 1000);
+function startScoreAfterPause() {
+    this.score = score;
+    scoreId = setInterval(function () {
+        console.log(inGameScore.innerHTML = `SCORE:${score}`);
+        score = score - 5;
+    }, 1000);
 }
 
 // Stops the game timer
 
-function pauseGame(){
+function pauseGame() {
     clearInterval(timerId)
     clearInterval(scoreId)
 }
 
 // Resumes the game timer
 
-function resetGame(){
+function resetGame() {
     clearInterval(timerId);
     clearInterval(scoreId)
     timer = 0
