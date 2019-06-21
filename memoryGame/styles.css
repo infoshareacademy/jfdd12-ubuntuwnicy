@@ -53,9 +53,31 @@ body {
 }
 
 .cardIsHighlighted {
-    background-color: yellow;
+    /* background-color: yellow; */
+    animation: cardIsHighlighted  0.5s linear both;
+    background-color: green;
+    background-image: url(../plus480.png);
+    transform: background-image;
 
 }
+
+@keyframes cardIsHighlighted {
+    0% {
+
+              transform: scale(1) rotateX(0);
+    }
+    50% {
+
+              transform: scale(2.5) rotateX(-90deg);
+
+    }
+    100% {
+
+              transform: scale(1) rotateX(-180deg);
+
+    }
+  }
+
 
 header {
   display: flex;

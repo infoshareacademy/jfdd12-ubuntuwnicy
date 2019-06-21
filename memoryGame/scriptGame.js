@@ -48,6 +48,8 @@ function randomizePairs() {
 
 function initializeGame() {
 
+  howManyPairsLeft = 8
+
   highlightedCards = []
 
   let cards = document.querySelectorAll(".card");
@@ -81,6 +83,8 @@ function initializeGame() {
 function toggleHardMode() {
 
   highlightedCards = []
+
+  howManyPairsLeft = 18
 
   cards = document.querySelectorAll(".card");
 
