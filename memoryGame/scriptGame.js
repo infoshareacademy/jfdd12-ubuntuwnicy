@@ -114,7 +114,7 @@ function addRemoveCardsClass(
 function gameLogicAndEventListener() {
   cardsGlobal = document.querySelectorAll(".card");
   cardsGlobal.forEach(card =>
-    card.addEventListener("click", function(event) {
+    card.addEventListener("click", function (event) {
       if (game.cardsAreLoading) {
         return;
       }
@@ -152,10 +152,8 @@ function cardsAreMatching() {
 
   timeoutLength = 500;
 
-  if (howManyPairsLeft === 0) {
-    cardsAreLoading = true;
-    console.log("koniec gry");
-  }
+  isGameFinished()
+
 }
 
 function cardsArentMatching() {
@@ -178,4 +176,19 @@ function cardsArentMatching() {
   );
 
   highlightedCards = [];
+}
+
+function isGameFinished() {
+
+  if (howManyPairsLeft === 0) {
+
+    console.log("koniec gry");
+  }
+}
+
+function finishGame() { //debug tool for finishing the game from console
+
+  howManyPairsLeft = 0
+  isGameFinished()
+
 }
