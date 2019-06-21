@@ -130,7 +130,7 @@ timerId = setInterval(function() {
 function startScoreAfterPause(){
 this.score = score;
 scoreId = setInterval(function() {
-    console.log(inGameScore.innerHTML = `SCORE:${score}`);
+    inGameScore.innerHTML = `SCORE:${score}`;
     score = score - 5;
 }, 1000);
 }

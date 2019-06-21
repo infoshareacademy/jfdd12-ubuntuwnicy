@@ -47,6 +47,9 @@ function randomizePairs() {
 }
 
 function initializeGame() {
+
+  howManyPairsLeft = 8
+
   let cards = document.querySelectorAll(".card");
   if (isHardModeOn) {
     isHardModeOn = false;
@@ -76,6 +79,9 @@ function initializeGame() {
 }
 
 function toggleHardMode() {
+
+  howManyPairsLeft = 18
+
   cards = document.querySelectorAll(".card");
 
   isHardModeOn = true;
