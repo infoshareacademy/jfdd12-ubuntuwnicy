@@ -8,64 +8,152 @@ canvas.setAttribute('height', '800');
 
 const ctx = canvas.getContext('2d');
 
-
-const heightOfTriangle = 12 * (Math.sqrt(3)/2);
-const xRect = getRandomNumber(0, 800)
-const yRect = getRandomNumber(0, 12)
-const xTriangle = getRandomNumber(0, 800)
-const yTriangle = getRandomNumber(0, 12)
-const xCircle = getRandomNumber(0, 800)
-const yCircle = getRandomNumber(0, 12)
-const widthOfRect = 10  
-const heightOfRect = 10
-const r = 6
-const start = 0
-
+let pieces = [];
+let numberOfPieces = 80;
+let lastUpdateTime = Date.now();
+let heightOfTriangle = 12 * (Math.sqrt(3)/2);
 
 function getRandomNumber(min, max) {
-    return Math.random() * (max - min) + min
+    return Math.random() * (max - min) + min;
 }
 
 function getRandomColor() {
-    const red = getRandomNumber(0, 255)
-    const green = getRandomNumber(0, 255)
-    const blue = getRandomNumber(0, 255)
+    const red = getRandomNumber(0, 255);
+    const green = getRandomNumber(0, 255);
+    const blue = getRandomNumber(0, 255);
 
-    return `rgb(${red}, ${green}, ${blue})`
+    return `rgb(${red}, ${green}, ${blue})`;
 }
 
+function drawRect() {
+    ctx.clearRect(0, 0, 800, 800);
+    
+    ctx.font = "60px Arial";
+    ctx.fillStyle = "white";
+    ctx.textAlign = "center";
+    ctx.textBaseline = 'middle';
+    ctx.fillText("Congratulations!", 800/2, 800/2);
 
-function drawRect (xRect, yRect, widthOfRect, heightOfRect) {
-    ctx.fillStyle = getRandomColor()
-    ctx.fillRect(xRect, yRect, widthOfRect, heightOfRect)
+    pieces.forEach(function (p) {
+        ctx.save();
+        ctx.fillStyle = p.color;
+        ctx.translate(p.x - p.size / 2, p.y - p.size / 2);
+        ctx.rotate(p.rotation);
+        ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size);
+        ctx.restore();
+    });
+    requestAnimationFrame(drawRect);
 }
 
-function drawTriangle (xTriangle, yTriangle) {
-    ctx.beginPath()
-    ctx.moveTo(xTriangle, yTriangle)
-    ctx.lineTo(xTriangle + 6, yTriangle + heightOfTriangle)
-    ctx.lineTo(xTriangle - 6, yTriangle + heightOfTriangle)
-    ctx.closePath()
-    ctx.fillStyle = getRandomColor()
-    ctx.fill()
+function Rect(x, y) {
+    this.x = x;
+    this.y = y;
+    this.size = getRandomNumber(10, 15);
+    this.gravity = getRandomNumber(0.5, 1) * 0.075;
+    this.rotationSpeed = (Math.PI * 2) * Math.random() * 0.0005;
+    this.rotation = (Math.PI * 2) * Math.random();
+    this.color = getRandomColor();
 }
 
-function drawCircle (xCircle, yCircle, r, start) {
-    ctx.beginPath();
-    ctx.arc(xCircle, yCircle, r, start, 2 * Math.PI)
-    ctx.fillStyle = getRandomColor()
-    ctx.fill()
+while(pieces.length < numberOfPieces) {
+    pieces.push(new Rect(Math.random() * 800, Math.random() * 800));
 }
 
-function confettiExplode () {
-    drawRect(xRect, yRect, widthOfRect, heightOfRect)
-    drawTriangle(xTriangle, yTriangle)
-    drawCircle(xCircle, yCircle, r, start)
+function confettiFallin() {
+    let now = Date.now()
+        deltaTime = now - lastUpdateTime;
+    
+    for(let i = pieces.length -1; i >= 0; i--) {
+        let p = pieces[i];
+        if(p.y > 800) {
+            pieces.splice(i, 1);
+            continue;
+        }
+        p.y += p.gravity * deltaTime;
+        p.rotation += p.rotationSpeed * deltaTime;
+    }
+
+    while(pieces.length < numberOfPieces) {
+        pieces.push(new Rect(Math.random() * 800, -20));
+    }
+
+    lastUpdateTime = now;
+
+    setTimeout(confettiFallin, 1);
+
+function confettiExplode() {
+    confettiFallin();
+    drawRect();
 }
-
-confettiExplode()
-confettiExplode()
-confettiExplode()
-confettiExplode()
+    
 confettiExplode()
 
+//
+//function confettiFallinTriangle() {
+//    let now = Date.now()
+//        deltaTime = now - lastUpdateTime;
+//    
+//    for(let i = pieces.length -1; i >= 0; i--) {
+//        let pt = pieces[i];
+//        if(pt.y > 800) {
+//            pieces.splice(i, 1);
+//            continue;
+//        }
+//        pt.y += pt.gravity * deltaTime;
+//        pt.rotation += pt.rotationSpeed * deltaTime;
+//    }
+//
+//    while(pieces.length < numberOfPieces) {
+//        pieces.push(new Rect(Math.random() * 800, -20));
+//    }
+//
+//    lastUpdateTime = now;
+//
+//    setTimeout(confettiFallinTriangle, 1);
+//
+//}
+//
+//function drawTriangle() {
+//    ctx.clearRect(0, 0, 800, 800);
+//
+//    pieces.forEach(function (p) {
+//        ctx.save();
+//        ctx.fillStyle = p.color;
+//        ctx.beginPath()
+//        ctx.moveTo(p.x, p.y);
+//        ctx.lineTo(p.x + 6, p.y + p.size);
+//        ctx.lineTo(p.x - 6, p.y + p.size);
+//        ctx.closePath()
+//        ctx.translate((p.x + 6) - p.size / 2, p.y / 2);
+//        ctx.rotate(p.rotation);
+//        ctx.fill()
+//        ctx.restore();
+//    });
+//    requestAnimationFrame(drawTriangle);
+//}
+//
+//
+//function Triangle(x, y) {
+//    this.x = x;
+//    this.y = y;
+//    this.size = 12 * (Math.sqrt(3)/2);
+//    this.gravity = getRandomNumber(0.75, 1) * 0.1;
+//    this.rotationSpeed = (Math.PI * 2) * Math.random() * 0.0005;
+//    this.rotation = (Math.PI * 2) * Math.random();
+//    this.color = getRandomColor();
+//}
+//
+//while(pieces.length < numberOfPieces) {
+//    pieces.push(new Triangle(Math.random() * 800, Math.random() * 800));
+//}
+//
+//
+//
+//
+//
+//function drawCircle ((xCircle, yCircle, r, start) {
+//   ctx.beginPath();
+//   ctx.arc(xCircle, yCircle, r, start, 2 * Math.PI)
+//   ctx.fillStyle = getRandomColor()
+//   ctx.fill()
+//
