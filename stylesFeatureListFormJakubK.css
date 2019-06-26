@@ -1,167 +1,248 @@
 /* -----------------Feature list, JakubK ------------*/
 
-.featureListCol1>div>img, .featureListCol2>div>img{
-    width: 60px;
-    height: 60px;
-    margin: 5px 5px 5px 5px;
-  }
-  .featureListHeader{
-    text-align: center;
-    margin: 5px;
-    background-color: rgb(230, 230, 230);
-    box-shadow: 0px 0px 38px -21px rgba(0,0,0,0.68);
-    padding: 2% 10%; 
-  }
-  #featureListWrapperID:hover>h1{
-    background-color:  rgb(255, 255, 153);
-    color: grey;
-  }
-  
-  .featureListCol1>div, .featureListCol2>div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .featureListCol1, .featureListCol2{
-    width: 100%;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    text-align: center;
-  }
-  
-  .featureListCol1{
-    border-right: 1px solid #000000 
-  }
-  
-  div.featureList{
-    display: grid;
-    grid-auto-columns: 1fr 1fr;
-    justify-items: center;
-  
-  }
-  
-  /* Desktop styles for the feature list, JakubK */
-  
-  @media (min-width: 481px){
-    div.featureList {
+.featureListCol1 > div > img,
+.featureListCol2 > div > img {
+  width: 60px;
+  height: 60px;
+  margin: 5px 5px 5px 5px;
+}
+.featureListHeader {
+  text-align: center;
+  margin: 5px;
+  background-color: rgb(230, 230, 230);
+  box-shadow: 0px 0px 38px -21px rgba(0, 0, 0, 0.68);
+  padding: 2% 10%;
+}
+#featureListWrapperID:hover > h1 {
+  background-color: rgb(255, 255, 153);
+  color: grey;
+}
+
+.featureListCol1 > div,
+.featureListCol2 > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.featureListCol1,
+.featureListCol2 {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.featureListCol1 {
+  border-right: 1px solid #000000;
+}
+
+div.featureList {
+  display: grid;
+  grid-auto-columns: 1fr 1fr;
+  justify-items: center;
+}
+
+/* Desktop styles for the feature list, JakubK */
+
+@media (min-width: 481px) {
+  div.featureList {
     display: grid;
     grid-template-columns: 50% 50%;
     height: 20%;
     margin: 0 3% 0 3%;
-    justify-items: center;       
+    justify-items: center;
   }
+}
+
+/* Desktop transition and animation for the extended feature menu */
+
+#featureListWrapperID:not(.featureListWrapperForHover) > div {
+  height: 0px;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  transition-property: height;
+  transition-duration: 1s;
+}
+
+.featureListWrapperForHover > div {
+  transition-property: height;
+  transition-duration: 2s;
+  height: 402px;
+  overflow: hidden;
+}
+
+/* Mobile transitions and animation for the extended feature menu */
+
+@media (max-width: 480px) {
+  div.featureList {
+    display: flex;
+    flex-flow: column;
   }
-  
-  /* Desktop transition and animation for the extended feature menu */
-  
-  #featureListWrapperID:not(.featureListWrapperForHover)>div {
-    height: 0px;
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
-    transition-property: height;
-    transition-duration: 1s;
+
+  div.featureList > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
-      
-  .featureListWrapperForHover>div{
-      
+
+  div.featureList > div > div > p {
+    text-align: left;
+  }
+
+  .featureListWrapperForHover > div {
     transition-property: height;
     transition-duration: 2s;
-    height: 402px;
+    height: 560px;
     overflow: hidden;
   }
-  
-  /* Mobile transitions and animation for the extended feature menu */
-  
-  @media (max-width: 480px){
+}
 
-    div.featureList{
-      display: flex;
-      flex-flow: column; 
-
-    }
-
-    div.featureList>div{
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-    
-    }
-
-    div.featureList>div>div>p{
-      text-align: left;
-    }
-  
-    .featureListWrapperForHover>div{
-      
-      transition-property: height;
-      transition-duration: 2s;
-      height: 560px;
-      overflow: hidden;
-    }
-  }
-  
-  /*-----------------feature list end----------*/
-  /* Newsletter form, JakubK */
+/*-----------------feature list end----------*/
+/* Newsletter form, JakubK */
 /* Desktop styles for newsletter premiere form - Jakub Karolak*/
-.formWrapper{
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    box-shadow: 0px 0px 38px -21px rgba(0,0,0,0.68);
-    background: rgb(230, 230, 230);
+.formWrapper {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  box-shadow: 0px 0px 38px -21px rgba(0, 0, 0, 0.68);
+  background: rgb(230, 230, 230);
 }
 
-.form{
-    display: flex;
-    align-items: center;
-    flex-flow: column;
-    text-align: center;
-    width: 800px;
-    background: rgb(230, 230, 230);
-    box-shadow: 0px 0px 38px -21px rgba(0,0,0,0.68);
-    margin: 0;
+.form {
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  text-align: center;
+  width: 800px;
+  background: rgb(230, 230, 230);
+  box-shadow: 0px 0px 38px -21px rgba(0, 0, 0, 0.68);
+  margin: 0;
 }
 
-input[type="submit"]{
-    margin-top: 5px;
-    font-size: 1.05em;
-    text-decoration: none;
-    color: rgb(253, 255, 255);
-    width: 100%;
-    height: 100%; 
-    background-color: green;
-    border: solid;
-    border-radius: 15px 15px 15px 15px;
-    text-decoration: none;
-    padding: 10%;
+.formHidden {
+  display: none;
 }
 
-input[name="name"], input[name="userEmail"]{
-    padding: 0px;
-    border: 1px solid black;
-    width: 200px;
-    height: 10px;
-    padding: 10%;
-    border-radius: 15px 15px 15px 15px;
+.formWasFilledHidden {
+  display: none;
 }
 
-.premiereNewsletter{
-    display: flex;
-    flex-flow: column;
-    align-items: center;
+.formWasFilled{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  text-align: center;
 }
 
-.newsletterSecurity{
-    width: 80%;
-    font-size: 0.7em;
+input[type="submit"] {
+  margin-top: 5px;
+  font-size: 1.05em;
+  text-decoration: none;
+  color: rgb(253, 255, 255);
+  height: 100px;
+  background-color: green;
+  border: solid;
+  border-radius: 15px 15px 15px 15px;
+  text-decoration: none;
+  padding-left: 75px;
+  padding-right: 75px;
+  cursor: pointer;
+}
+
+input[name="name"],
+input[name="userEmail"] {
+  padding: 0px;
+  border: 1px solid black;
+  width: 200px;
+  height: 75px;
+  padding-left: 75px;
+  padding-right: 75px;
+  border-radius: 15px 15px 15px 15px;
+  font-size: 1em;
+  text-align: center;
+}
+
+.premiereNewsletter {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  height: 400px;
+}
+
+.newsletterSecurity {
+  width: 80%;
+  font-size: 0.7em;
 }
 /* Mobile styles for newsletter form, JakubK */
-@media (max-width: 480px){
-    .form{
-        font-size: 0.8em;
-    }
-}  
+@media (max-width: 480px) {
+  .form {
+    font-size: 0.8em;
+  }
+}
 /*--------------newsletter form end-------------*/
+
+.formPopUpBackgroundOff {
+  display: none;
+}
+
+.formPopUp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-flow: column;
+  width: 50vw;
+  height: 50vh;
+  position: fixed;
+  background-color: rgb(202, 202, 202);
+  top: 25%;
+  font-size: 1.5em;
+}
+
+.formPopUpBackground {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.68);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+}
+.buttonsWrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: inherit;
+  height: inherit;
+}
+.buttonsWrapper>a, .formWasFilled>a{
+  cursor: pointer;
+  font-size: 1.05em;
+  text-decoration: none;
+  color: rgb(253, 255, 255);
+  width: 20%;
+  height: auto;
+  background-color: green;
+  border: solid white;
+  border-radius: 15px 15px 15px 15px;
+  text-decoration: none;
+  padding: 10%;
+  cursor: pointer;
+  text-justify: auto;
+}
+
+/* .toGameButton {
+  left: 0;
+  bottom: 0;
+}
+.backOutButton {
+  left: 0;
+  bottom: 0;
+} */
