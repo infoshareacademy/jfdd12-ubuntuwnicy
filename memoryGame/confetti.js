@@ -80,19 +80,20 @@ function confettiFallin() {
     lastUpdateTime = now;
 
     setTimeout(confettiFallin, 1);
+}    
 
 function confettiExplode() {
     confettiFallin();
     drawRect();
 }
     
-confettiExplode()
+confettiExplode();
 
-//
+
 //function confettiFallinTriangle() {
 //    let now = Date.now()
 //        deltaTime = now - lastUpdateTime;
-//    
+   
 //    for(let i = pieces.length -1; i >= 0; i--) {
 //        let pt = pieces[i];
 //        if(pt.y > 800) {
@@ -102,20 +103,19 @@ confettiExplode()
 //        pt.y += pt.gravity * deltaTime;
 //        pt.rotation += pt.rotationSpeed * deltaTime;
 //    }
-//
+
 //    while(pieces.length < numberOfPieces) {
 //        pieces.push(new Rect(Math.random() * 800, -20));
 //    }
-//
+
 //    lastUpdateTime = now;
-//
+
 //    setTimeout(confettiFallinTriangle, 1);
-//
 //}
-//
+
 //function drawTriangle() {
 //    ctx.clearRect(0, 0, 800, 800);
-//
+
 //    pieces.forEach(function (p) {
 //        ctx.save();
 //        ctx.fillStyle = p.color;
@@ -131,8 +131,7 @@ confettiExplode()
 //    });
 //    requestAnimationFrame(drawTriangle);
 //}
-//
-//
+
 //function Triangle(x, y) {
 //    this.x = x;
 //    this.y = y;
@@ -142,18 +141,13 @@ confettiExplode()
 //    this.rotation = (Math.PI * 2) * Math.random();
 //    this.color = getRandomColor();
 //}
-//
+
 //while(pieces.length < numberOfPieces) {
 //    pieces.push(new Triangle(Math.random() * 800, Math.random() * 800));
 //}
-//
-//
-//
-//
-//
+
 //function drawCircle ((xCircle, yCircle, r, start) {
 //   ctx.beginPath();
 //   ctx.arc(xCircle, yCircle, r, start, 2 * Math.PI)
 //   ctx.fillStyle = getRandomColor()
 //   ctx.fill()
-//
