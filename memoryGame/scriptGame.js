@@ -23,11 +23,16 @@ let cardPairsArrHard = cardPairsArr.concat([
   19,
   19
 ]);
-let randomizedCards = randomizeCardsFunc(cardPairsArr);
-let randomizedCardsHard = randomizeCardsFunc(cardPairsArrHard);
+let randomizedCards
+let randomizedCardsHard
+let randomizedCardsGlobal
 let timeoutLength = 3000;
 let howManyPairsLeft = 8;
 let cardsGlobal;
+let gridContainerElements = []
+let gridContainer = document.querySelector(".gridContainer")
+
+randomizePairs()
 
 initializeGame(); // initializing game for the first time
 
@@ -37,16 +42,17 @@ const game = {
   cardsAreLoading: false
 };
 
-function randomizeCardsFunc(cards) {
-  return cards.slice().sort(() => Math.random() - 0.5);
-}
-
 function randomizePairs() {
   randomizedCards = randomizeCardsFunc(cardPairsArr);
   randomizedCardsHard = randomizeCardsFunc(cardPairsArrHard);
+  function randomizeCardsFunc(cards) {
+    return cards.slice().sort(() => Math.random() - 0.5);
+  }
 }
 
 function initializeGame() {
+
+  randomizedCardsGlobal = randomizedCards
 
   howManyPairsLeft = 8
 
@@ -55,25 +61,22 @@ function initializeGame() {
   let cards = document.querySelectorAll(".card");
   if (isHardModeOn) {
     isHardModeOn = false;
-    let gridContainer = document.querySelector(".gridContainerHard");
+    gridContainer = document.querySelector(".gridContainerHard");
     gridContainer.classList.remove("gridContainerHard");
     gridContainer.classList.add("gridContainer");
-    cards.forEach(cardsElement => {
-      cardsElement.remove();
-    });
-  }
+    };
+  
   cards.forEach(cardsElement => {
     cardsElement.remove();
   });
-  let gridContainer = document.querySelector(".gridContainer");
 
-  // let divs = document.createElement("div");
+  gridContainer = document.querySelector(".gridContainer");
+
   randomizePairs();
   for (let i = 0; i < 16; i++) {
     console.log(i);
     let divs = document.createElement("div");
     divs.classList.add("card");
-    divs.classList.add(randomizedCards[i]);
     gridContainer.appendChild(divs);
   }
   cardsGlobal = document.querySelectorAll(".card");
@@ -89,7 +92,7 @@ function toggleHardMode() {
   cards = document.querySelectorAll(".card");
 
   isHardModeOn = true;
-  let gridContainer = document.querySelector(".gridContainer");
+  gridContainer = document.querySelector(".gridContainer");
   gridContainer.classList.remove("gridContainer");
   gridContainer.classList.add("gridContainerHard");
   cards.forEach(cardsElement => {
@@ -101,9 +104,9 @@ function toggleHardMode() {
     console.log(i);
     divs = document.createElement("div");
     divs.classList.add("card");
-    divs.classList.add(randomizedCardsHard[i]);
     gridContainer.appendChild(divs);
   }
+  randomizedCardsGlobal = randomizedCardsHard
   gameLogicAndEventListener();
 }
 
@@ -140,7 +143,15 @@ function gameLogicAndEventListener() {
         highlightedCards.push(card);
 
         if (highlightedCards.length === 2) {
-          if (highlightedCards[0].className === highlightedCards[1].className) {
+
+          gridContainerElements = Array.from(gridContainer.children)
+
+          let indexOfHighligted0 = gridContainerElements.indexOf(highlightedCards[0])
+
+          let indexOfHighligted1 = gridContainerElements.indexOf(highlightedCards[1])
+
+
+          if (randomizedCardsGlobal[indexOfHighligted0] === randomizedCardsGlobal[indexOfHighligted1]) {
             cardsAreMatching();
           } else {
             cardsArentMatching();
@@ -154,6 +165,7 @@ function gameLogicAndEventListener() {
 }
 
 function cardsAreMatching() {
+
   addRemoveCardsClass("add", "cardsAreMatching");
 
   highlightedCards = [];
@@ -188,15 +200,6 @@ function cardsArentMatching() {
   highlightedCards = [];
 }
 
-function isGameFinished() {
-
-  if (howManyPairsLeft === 0) {
-
-    console.log("koniec gry");
-    pauseGame()
-
-  }
-}
 
 function isGameFinished() {
 
