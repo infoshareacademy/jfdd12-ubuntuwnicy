@@ -64,8 +64,8 @@ function initializeGame() {
     gridContainer = document.querySelector(".gridContainerHard");
     gridContainer.classList.remove("gridContainerHard");
     gridContainer.classList.add("gridContainer");
-    };
-  
+  };
+
   cards.forEach(cardsElement => {
     cardsElement.remove();
   });
@@ -140,11 +140,15 @@ function gameLogicAndEventListener() {
         card.classList.toggle("cardIsHighlighted"); // highlighting a card and pushing to the arr
         console.log("toggling class to card is highlighted");
 
+        gridContainerElements = Array.from(gridContainer.children)
+
+        let cardValue = randomizedCardsGlobal[gridContainerElements.indexOf(card)]
+
+        card.innerHTML = `<img src='cardsIcons/${cardValue}.svg'><img>`
+
         highlightedCards.push(card);
 
         if (highlightedCards.length === 2) {
-
-          gridContainerElements = Array.from(gridContainer.children)
 
           let indexOfHighligted0 = gridContainerElements.indexOf(highlightedCards[0])
 
@@ -168,6 +172,7 @@ function cardsAreMatching() {
 
   addRemoveCardsClass("add", "cardsAreMatching");
 
+
   highlightedCards = [];
 
   howManyPairsLeft--;
@@ -179,6 +184,11 @@ function cardsAreMatching() {
 }
 
 function cardsArentMatching() {
+
+  highlightedCards[0].innerHTML = ``
+
+
+
   addRemoveCardsClass("remove", "cardIsHighlighted");
   addRemoveCardsClass("add", "cardsArentMatching");
 
@@ -196,7 +206,7 @@ function cardsArentMatching() {
       ),
     timeoutLength
   );
-
+  highlightedCards[1].innerHTML = ``
   highlightedCards = [];
 }
 
