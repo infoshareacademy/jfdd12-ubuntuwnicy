@@ -47,6 +47,9 @@ function randomizePairs() {
 }
 
 function initializeGame() {
+
+  howManyPairsLeft = 8
+
   let cards = document.querySelectorAll(".card");
   if (isHardModeOn) {
     isHardModeOn = false;
@@ -76,6 +79,9 @@ function initializeGame() {
 }
 
 function toggleHardMode() {
+
+  howManyPairsLeft = 18
+
   cards = document.querySelectorAll(".card");
 
   isHardModeOn = true;
@@ -182,13 +188,17 @@ function isGameFinished() {
 
   if (howManyPairsLeft === 0) {
 
-    console.log("koniec gry");
+    console.log("koniec gry")
+    pauseGame()
+    inGameScore.style.opacity = "1"
   }
 }
 
 function finishGame() { //debug tool for finishing the game from console
-
   howManyPairsLeft = 0
+  cardsAreLoading = true;
+  console.log("koniec gry");
+  pauseGame()
+  inGameScore.style.opacity = "1"
   isGameFinished()
-
 }
