@@ -145,6 +145,55 @@ div.menuIsHidden{
     opacity: 0;
 }
 
+.putScoreShow{
+  width: 80%;
+  height: 60%;
+  display: block;
+  position: fixed;
+  margin: 5em auto;
+  background-color: white;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  border: 20px outset green;
+  z-index: 2;
+  display: block;
+  opacity: 1;
+  color: green;
+}
+
+.putScoreHide{
+  opacity: 0;
+  display: none;
+}
+
+#scoreWindowShow{
+  margin: 10% 10%;
+  min-width: 50px;
+}
+
+#scoreWindowHide{
+  display: none;
+}s
+
+#putLogin #finalScore{
+  min-width: 20px;
+  max-width: 80%;
+  margin: 10% 10%;
+}
+
+#scoreButton{
+  float: right;
+  font-size: 30px;
+  color: white;
+  background: black;
+  width: 50px;
+  height: 50px;
+}
+
+
 @media all and (min-width: 481px) and (max-width: 1120px){
     .gameRules{
         font-size: 2.7vw;

@@ -191,6 +191,10 @@ function isGameFinished() {
     console.log("koniec gry")
     pauseGame()
     inGameScore.style.opacity = "1"
+    setTimeout(function() {
+      putScoreHide.setAttribute("class","putScoreShow")
+      putScoreHide.classList.remove("putScoreHide")
+  }, 1 * 1000)
   }
 }
 
@@ -201,4 +205,10 @@ function finishGame() { //debug tool for finishing the game from console
   pauseGame()
   inGameScore.style.opacity = "1"
   isGameFinished()
+  setTimeout(function() {
+    putScoreHide.setAttribute("class","putScoreShow")
+    putScoreHide.classList.remove("putScoreHide")
+    getScore()
+}, 1 * 1000)
+  finalScore.append(score + 5)
 }

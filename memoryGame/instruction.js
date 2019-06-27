@@ -12,6 +12,14 @@ const diffBackground = document.querySelector('#difficultyBackground')
 const BackDiv = document.querySelector('#backDiv')
 const inGameTimer = document.getElementById("timer")
 const inGameScore = document.getElementById("score")
+const finalScore = document.querySelector("#finalScore")
+const putScoreHide = document.querySelector(".putScoreHide")
+const scoreButton = document.querySelector('#scoreButton')
+const putLogin = document.querySelector("#putLogin")
+const topThree = document.querySelector('#topThree')
+const showTop = document.getElementById('showTop')
+const highScoresList = document.querySelector("#highScores");
+const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 let timer = 0;
 let timerId;
 let score = 10000;
@@ -42,7 +50,6 @@ buttonInstruction.addEventListener("click", function(event){
 // Adds functionality to button "Poziom łatwy" on the main page
 
 selectDiffEasy.addEventListener("click", function(event){
-    console.log("toggling class")
     button.classList.remove("menuButtonHidden")
     button.setAttribute("class", "menuButtonShown")
     resetGame()
@@ -151,4 +158,43 @@ function resetGame(){
     score = 10000
 }
 
+scoreButton.addEventListener("click", function(event){
+    var inputLogin = document.querySelector("#putLogin");
+    putScoreHide.setAttribute("class", "putScoreHide");
+    putScoreHide.classList.remove("putScoreShow")
+    console.log("toggling class")
+    localStorage.setItem(`${inputLogin.value}`, `${score + 5}`);
+})
+
+scoreButton.onclick = function(){
+    const key = putLogin.value;
+    console.log(key)
+}
+
+// ADD FINAL SCORE TO ARRAY OF SCORES
+function getScore(){
+showTop.addEventListener("click", function(event){
+    let getscore = score + 5
+
+    const finalscore = {
+        login: putLogin.value,
+        score: getscore + Math.floor(Math.random() * 100)
+    }
+    console.log(finalscore)
+    highScores.push(finalscore)
+    highScores.sort( (a, b) => b.score - a.score)
+    highScores.splice(3);
+
+    localStorage.setItem('highScores', JSON.stringify(highScores));
+    highScoresList.innerHTML = highScores
+    .map(score => {
+    return `<li class="high-score">${finalscore.login}-${finalscore.score}</li>`
+    })
+    .join('');
+    console.log(highScoresList)
+    })
+}
+
+
+console.log(highScores)
 
