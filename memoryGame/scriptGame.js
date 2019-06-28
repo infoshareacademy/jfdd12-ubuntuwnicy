@@ -26,7 +26,7 @@ let cardPairsArrHard = cardPairsArr.concat([
 let randomizedCards
 let randomizedCardsHard
 let randomizedCardsGlobal
-let timeoutLength = 3000;
+let timeoutLength = 1000;
 let howManyPairsLeft = 8;
 let cardsGlobal;
 let gridContainerElements = []
@@ -135,6 +135,7 @@ function gameLogicAndEventListener() {
       if (card.classList.contains("cardIsHighlighted")) {
         card.classList.toggle("cardIsHighlighted"); // checking if card is already highlighted
         highlightedCards.pop(card);
+        card.innerHTML = ''
         console.log("toggling class to card is highlighted");
       } else {
         card.classList.toggle("cardIsHighlighted"); // highlighting a card and pushing to the arr
@@ -158,7 +159,9 @@ function gameLogicAndEventListener() {
           if (randomizedCardsGlobal[indexOfHighligted0] === randomizedCardsGlobal[indexOfHighligted1]) {
             cardsAreMatching();
           } else {
+
             cardsArentMatching();
+
           }
           game.cardsAreLoading = true;
           setTimeout(() => (game.cardsAreLoading = false), timeoutLength);
@@ -185,29 +188,33 @@ function cardsAreMatching() {
 
 function cardsArentMatching() {
 
-  highlightedCards[0].innerHTML = ``
+
 
 
 
   addRemoveCardsClass("remove", "cardIsHighlighted");
   addRemoveCardsClass("add", "cardsArentMatching");
 
-  let highlightedCardsForTimeout = []; // creating new array for setTimeout
-  highlightedCardsForTimeout = highlightedCards;
+  // let highlightedCardsForTimeout = []; // creating new array for setTimeout
+  // highlightedCardsForTimeout = highlightedCards;
 
-  timeoutLength = 2000;
+  timeoutLength = 1000;
 
   setTimeout(
-    () =>
+    () => {
       addRemoveCardsClass(
         "remove",
         "cardsArentMatching",
-        highlightedCardsForTimeout
+        highlightedCards
       ),
+        highlightedCards[0].innerHTML = ``
+      highlightedCards[1].innerHTML = ``
+      highlightedCards = [];
+    },
     timeoutLength
   );
-  highlightedCards[1].innerHTML = ``
-  highlightedCards = [];
+
+
 }
 
 

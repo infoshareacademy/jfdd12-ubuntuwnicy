@@ -30,7 +30,7 @@ body {
     justify-content: center;
 }
 
-.card {
+.card{
     background-image: url('../logo.png');
     background-size: cover;
     background-color: rgb(255, 255, 153);
@@ -47,18 +47,23 @@ body {
 }
 
 .cardsArentMatching {
-    transform: rotate(45deg);
+    transform: rotate(90deg);
     background-color: red;
-    transition: all 500ms linear;
+    background-image: none;
+    transition: transform 1000ms linear;
 }
 
 .cardIsHighlighted {
     /* background-color: yellow; */
     animation: cardIsHighlighted  0.5s linear both;
     background-color: green;
-    background-image: url(../plus480.png);
+    background-image: none;
     transform: background-image;
 
+}
+
+.card>img{
+    transform: rotate(180deg)
 }
 
 @keyframes cardIsHighlighted {
