@@ -20,6 +20,7 @@ const topThree = document.querySelector('#topThree')
 const showTop = document.getElementById('showTop')
 const highScoresList = document.querySelector("#highScores");
 const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+const MAX_HIGH_SCORES = 3;
 let timer = 0;
 let timerId;
 let score = 10000;
@@ -56,7 +57,6 @@ selectDiffEasy.addEventListener("click", function(event){
     pauseGame()
     startTimer()
     startScore()
-    inGameScore.style.opacity = "0"
     initializeGame()
 })
 
@@ -70,7 +70,6 @@ selectDiffHard.addEventListener("click", function(event){
     pauseGame()
     startTimer()
     startScore()
-    inGameScore.style.opacity = "0"
     toggleHardMode()
 })
 
@@ -163,7 +162,7 @@ scoreButton.addEventListener("click", function(event){
     putScoreHide.setAttribute("class", "putScoreHide");
     putScoreHide.classList.remove("putScoreShow")
     console.log("toggling class")
-    localStorage.setItem(`${inputLogin.value}`, `${score + 5}`);
+    localStorage.setItem(`${inputLogin.value}`, `${score}`);
 })
 
 scoreButton.onclick = function(){
@@ -172,29 +171,34 @@ scoreButton.onclick = function(){
 }
 
 // ADD FINAL SCORE TO ARRAY OF SCORES
-function getScore(){
-showTop.addEventListener("click", function(event){
-    let getscore = score + 5
-
-    const finalscore = {
-        login: putLogin.value,
-        score: getscore + Math.floor(Math.random() * 100)
-    }
-    console.log(finalscore)
-    highScores.push(finalscore)
-    highScores.sort( (a, b) => b.score - a.score)
-    highScores.splice(3);
-
-    localStorage.setItem('highScores', JSON.stringify(highScores));
-    highScoresList.innerHTML = highScores
-    .map(score => {
-    return `<li class="high-score">${finalscore.login}-${finalscore.score}</li>`
-    })
-    .join('');
-    console.log(highScoresList)
-    })
-}
-
+let mostRecentScore = localStorage.getItem("mostRecentScore", score)
 
 console.log(highScores)
+
+putLogin.addEventListener("keyup", () => {
+    showTop.disabled = !putLogin.value;
+});
+
+SaveHighScore = e => {
+    console.log("clicked save button");
+    e.preventDefault();
+    
+let finalscore = {
+    login: putLogin.value,
+    score: mostRecentScore
+}
+
+highScores.push(finalscore)
+console.log(finalscore)
+highScores.sort( (a, b) => b.score - a.score)
+highScores.splice(3);
+
+localStorage.setItem('highScores', JSON.stringify(highScores));
+}
+
+highScoresList.innerHTML = highScores
+.map(score => {
+return `<li class="high-score">${score.login}-${score.score}</li>`
+})
+.join('');
 

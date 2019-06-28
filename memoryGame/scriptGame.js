@@ -190,7 +190,7 @@ function isGameFinished() {
 
     console.log("koniec gry")
     pauseGame()
-    inGameScore.style.opacity = "1"
+    localStorage.setItem("mostRecentScore", score)
     setTimeout(function() {
       putScoreHide.setAttribute("class","putScoreShow")
       putScoreHide.classList.remove("putScoreHide")
@@ -203,12 +203,10 @@ function finishGame() { //debug tool for finishing the game from console
   cardsAreLoading = true;
   console.log("koniec gry");
   pauseGame()
-  inGameScore.style.opacity = "1"
+  localStorage.setItem("mostRecentScore", score)
   isGameFinished()
   setTimeout(function() {
     putScoreHide.setAttribute("class","putScoreShow")
     putScoreHide.classList.remove("putScoreHide")
-    getScore()
 }, 1 * 1000)
-  finalScore.append(score + 5)
 }
