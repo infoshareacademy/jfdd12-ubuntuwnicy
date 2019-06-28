@@ -36,15 +36,14 @@
     <div class="putScoreHide">
         <button id="scoreButton">X</button>
         <fieldset id="scoreWindowShow">        
-          <label for="putLogin">Podaj swój login</label>
-          <input id="putLogin" type="text" name="inputText">
-        <p id="finalScore">Twój wynik to: </p>
+          <input id="putLogin" type="text" name="inputText" placholder="Podaj swój nick">
+        <p id="finalScore"></p>
         <button id="showTop" onclick="SaveHighScore(event)">Zapisz</button>
         </fieldset>
-      <fieldset>
+      <fieldset id="highScoresShow">
       <div class="scoresContainer">
         <div id="highScores" class="flex-center flex-column">
-            <h1 id="finalScore">High Scores</h1>
+            <h1 id="finalScore">Najlepsze wyniki</h1>
             <ul id="highScoresList"></ul>
         </div>
       </div>

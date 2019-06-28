@@ -18,14 +18,13 @@ const scoreButton = document.querySelector('#scoreButton')
 const putLogin = document.querySelector("#putLogin")
 const topThree = document.querySelector('#topThree')
 const showTop = document.getElementById('showTop')
-const highScoresList = document.querySelector("#highScores");
+const highScoresList = document.querySelector("#highScoresList");
 const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 const MAX_HIGH_SCORES = 3;
 let timer = 0;
 let timerId;
 let score = 10000;
 let scoreId;
-
 // Adds functionality to instruction panel -> button to hide
 
 button.addEventListener("click", function(event){
@@ -161,44 +160,37 @@ scoreButton.addEventListener("click", function(event){
     var inputLogin = document.querySelector("#putLogin");
     putScoreHide.setAttribute("class", "putScoreHide");
     putScoreHide.classList.remove("putScoreShow")
-    console.log("toggling class")
-    localStorage.setItem(`${inputLogin.value}`, `${score}`);
 })
 
-scoreButton.onclick = function(){
-    const key = putLogin.value;
-    console.log(key)
-}
-
 // ADD FINAL SCORE TO ARRAY OF SCORES
-let mostRecentScore = localStorage.getItem("mostRecentScore", score)
-
-console.log(highScores)
 
 putLogin.addEventListener("keyup", () => {
     showTop.disabled = !putLogin.value;
 });
 
 SaveHighScore = e => {
-    console.log("clicked save button");
     e.preventDefault();
-    
+
 let finalscore = {
     login: putLogin.value,
-    score: mostRecentScore
+    score: score
 }
 
 highScores.push(finalscore)
-console.log(finalscore)
 highScores.sort( (a, b) => b.score - a.score)
 highScores.splice(3);
 
 localStorage.setItem('highScores', JSON.stringify(highScores));
+
+// DISPLAY SCORES ON THE SCREEN
+
+setTimeout(function() {
+    highScoresList.innerHTML = highScores.map(finalscore => {
+        return `<li class="high-score">${finalscore.login}-${finalscore.score}</li>`
+    }).join('');
+}, 0)
+
+putLogin.value = ''
+showTop.disabled = true
+putLogin.disabled = true
 }
-
-highScoresList.innerHTML = highScores
-.map(score => {
-return `<li class="high-score">${score.login}-${score.score}</li>`
-})
-.join('');
-
