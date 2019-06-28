@@ -160,10 +160,15 @@ function gameLogicAndEventListener() {
             cardsAreMatching();
           } else {
 
-            cardsArentMatching();
+            setTimeout(cardsArentMatching, 700)
+
 
           }
+
+          timeoutLength = 1900
+
           game.cardsAreLoading = true;
+
           setTimeout(() => (game.cardsAreLoading = false), timeoutLength);
         }
       }
@@ -188,15 +193,8 @@ function cardsAreMatching() {
 
 function cardsArentMatching() {
 
-
-
-
-
   addRemoveCardsClass("remove", "cardIsHighlighted");
   addRemoveCardsClass("add", "cardsArentMatching");
-
-  // let highlightedCardsForTimeout = []; // creating new array for setTimeout
-  // highlightedCardsForTimeout = highlightedCards;
 
   timeoutLength = 1000;
 
@@ -213,7 +211,6 @@ function cardsArentMatching() {
     },
     timeoutLength
   );
-
 
 }
 

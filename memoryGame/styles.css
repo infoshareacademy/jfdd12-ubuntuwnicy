@@ -47,10 +47,10 @@ body {
 }
 
 .cardsArentMatching {
-    transform: rotate(90deg);
+    /* transform: rotate(90deg); */
     background-color: red;
     background-image: none;
-    transition: transform 1000ms linear;
+    transition: all 1000ms linear;
 }
 
 .cardIsHighlighted {
@@ -62,8 +62,12 @@ body {
 
 }
 
-.card>img{
+.cardIsHighlighted>img{
     transform: rotate(180deg)
+}
+
+.cardsArentMatching>img{
+    transform: scaleX(-1)
 }
 
 @keyframes cardIsHighlighted {
