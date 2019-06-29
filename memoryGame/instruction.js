@@ -12,11 +12,19 @@ const diffBackground = document.querySelector('#difficultyBackground')
 const BackDiv = document.querySelector('#backDiv')
 const inGameTimer = document.getElementById("timer")
 const inGameScore = document.getElementById("score")
+const finalScore = document.querySelector("#finalScore")
+const putScoreHide = document.querySelector(".putScoreHide")
+const scoreButton = document.querySelector('#scoreButton')
+const putLogin = document.querySelector("#putLogin")
+const topThree = document.querySelector('#topThree')
+const showTop = document.getElementById('showTop')
+const highScoresList = document.querySelector("#highScoresList");
+const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+const MAX_HIGH_SCORES = 3;
 let timer = 0;
 let timerId;
 let score = 10000;
 let scoreId;
-
 // Adds functionality to instruction panel -> button to hide
 
 button.addEventListener("click", function(event){
@@ -42,14 +50,12 @@ buttonInstruction.addEventListener("click", function(event){
 // Adds functionality to button "Poziom łatwy" on the main page
 
 selectDiffEasy.addEventListener("click", function(event){
-    console.log("toggling class")
     button.classList.remove("menuButtonHidden")
     button.setAttribute("class", "menuButtonShown")
     resetGame()
     pauseGame()
     startTimer()
     startScore()
-    inGameScore.style.opacity = "0"
     initializeGame()
 })
 
@@ -63,7 +69,6 @@ selectDiffHard.addEventListener("click", function(event){
     pauseGame()
     startTimer()
     startScore()
-    inGameScore.style.opacity = "0"
     toggleHardMode()
 })
 
@@ -151,4 +156,41 @@ function resetGame(){
     score = 10000
 }
 
+scoreButton.addEventListener("click", function(event){
+    var inputLogin = document.querySelector("#putLogin");
+    putScoreHide.setAttribute("class", "putScoreHide");
+    putScoreHide.classList.remove("putScoreShow")
+})
 
+// ADD FINAL SCORE TO ARRAY OF SCORES
+
+putLogin.addEventListener("keyup", () => {
+    showTop.disabled = !putLogin.value;
+});
+
+SaveHighScore = e => {
+    e.preventDefault();
+
+let finalscore = {
+    login: putLogin.value,
+    score: score
+}
+
+highScores.push(finalscore)
+highScores.sort( (a, b) => b.score - a.score)
+highScores.splice(3);
+
+localStorage.setItem('highScores', JSON.stringify(highScores));
+
+// DISPLAY SCORES ON THE SCREEN
+
+setTimeout(function() {
+    highScoresList.innerHTML = highScores.map(finalscore => {
+        return `<li class="high-score">${finalscore.login}-${finalscore.score}</li>`
+    }).join('');
+}, 0)
+
+putLogin.value = ''
+showTop.disabled = true
+putLogin.disabled = true
+}

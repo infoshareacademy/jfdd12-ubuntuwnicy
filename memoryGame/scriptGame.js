@@ -190,7 +190,11 @@ function isGameFinished() {
 
     console.log("koniec gry")
     pauseGame()
-    inGameScore.style.opacity = "1"
+    localStorage.setItem("mostRecentScore", score)
+    setTimeout(function() {
+      putScoreHide.setAttribute("class","putScoreShow")
+      putScoreHide.classList.remove("putScoreHide")
+  }, 1 * 1000)
   }
 }
 
@@ -199,6 +203,14 @@ function finishGame() { //debug tool for finishing the game from console
   cardsAreLoading = true;
   console.log("koniec gry");
   pauseGame()
-  inGameScore.style.opacity = "1"
+  localStorage.setItem("mostRecentScore", score)
   isGameFinished()
+  showTop.disabled = false
+  putLogin.disabled = false
+  setTimeout(function() {
+    let mostRecentScore = localStorage.getItem("mostRecentScore", score)
+    putScoreHide.setAttribute("class","putScoreShow")
+    putScoreHide.classList.remove("putScoreHide")
+    finalScore.innerText = `Twój wynik to: ${mostRecentScore}`
+}, 1 * 1000)
 }
