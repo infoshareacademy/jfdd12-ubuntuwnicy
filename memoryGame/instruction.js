@@ -49,12 +49,7 @@ buttonInstruction.addEventListener("click", function (event) {
 
 // Adds functionality to button "Poziom łatwy" on the main page
 
-<<<<<<< HEAD
-selectDiffEasy.addEventListener("click", function (event) {
-    console.log("toggling class")
-=======
 selectDiffEasy.addEventListener("click", function(event){
->>>>>>> develop
     button.classList.remove("menuButtonHidden")
     button.setAttribute("class", "menuButtonShown")
     resetGame()
