@@ -160,6 +160,10 @@ scoreButton.addEventListener("click", function(event){
     var inputLogin = document.querySelector("#putLogin");
     putScoreHide.setAttribute("class", "putScoreHide");
     putScoreHide.classList.remove("putScoreShow")
+    buttonInstruction.disabled = false
+    selectDifficultyEasy.disabled = false
+    selectDifficultyHard.disabled = false
+    seeScore.disabled = false
 })
 
 // ADD FINAL SCORE TO ARRAY OF SCORES

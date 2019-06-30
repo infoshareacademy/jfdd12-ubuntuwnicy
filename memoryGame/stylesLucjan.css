@@ -34,10 +34,13 @@ div.menuIsHidden{
 
 #buttonInstruction,
 #selectDifficultyEasy,
-#selectDifficultyHard {
+#selectDifficultyHard,
+#seeScore {
   background: green;
   color: white;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 10px 10px;
+  padding: 10px 10px;
 }
 
 .backgroundDiv {
@@ -74,21 +77,6 @@ div.menuIsHidden{
   margin-top: 70px;
   display: flex;
   justify-content: center;
-}
-
-#buttonInstruction {
-  margin: 10px 10px;
-  padding: 10px 10px;
-}
-
-#selectDifficultyEasy {
-  margin: 10px 10px;
-  padding: 10px 10px;
-}
-
-#selectDifficultyHard {
-  margin: 10px 10px;
-  padding: 10px 10px;
 }
 
 #diffContainer {

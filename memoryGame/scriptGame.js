@@ -222,9 +222,16 @@ function isGameFinished() {
     console.log("koniec gry")
     pauseGame()
     localStorage.setItem("mostRecentScore", score)
+    showTop.disabled = false
+    putLogin.disabled = false
     setTimeout(function() {
       putScoreHide.setAttribute("class","putScoreShow")
       putScoreHide.classList.remove("putScoreHide")
+      buttonInstruction.disabled = true
+      selectDifficultyEasy.disabled = true
+      selectDifficultyHard.disabled = true
+      seeScore.disabled = true
+      finalScore.innerText = `Twój wynik to: ${mostRecentScore}`
   }, 1 * 1000)
   }
 }
@@ -238,6 +245,10 @@ function finishGame() { //debug tool for finishing the game from console
   isGameFinished()
   showTop.disabled = false
   putLogin.disabled = false
+  buttonInstruction.disabled = true
+  selectDifficultyEasy.disabled = true
+  selectDifficultyHard.disabled = true
+  seeScore.disabled = true
   setTimeout(function() {
     let mostRecentScore = localStorage.getItem("mostRecentScore", score)
     putScoreHide.setAttribute("class","putScoreShow")
