@@ -55,7 +55,7 @@ function drawRect() {
 
 function Rect() {
     this.x = getRandomNumber(0, w);
-    this.y = -10 * getRandomNumber(0, h);
+    this.y = -1 * getRandomNumber(0, h);
     this.size = getRandomNumber(10, 15);
     this.gravity = getRandomNumber(0.5, 1) * 0.075;
     this.rotationSpeed = (Math.PI * 2) * Math.random() * 0.0005;
