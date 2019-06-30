@@ -1,6 +1,10 @@
 
 const canvas = document.createElement('canvas');
 
+function confettiAll() {
+
+
+
 body.append(canvas);
 
 canvas.classList.add("hiddenCanvas");
@@ -18,8 +22,12 @@ function getCongratsTitle() {
     
 }
 
+function removeCongratsTitle() {
+    congratulations.setAttribute('class', 'congratsConfetti');
+}
+
 let pieces = [];
-let numberOfPieces = 400;
+let numberOfPieces = 1000;
 let lastUpdateTime = Date.now();
 let heightOfTriangle = 12 * (Math.sqrt(3)/2);
 
@@ -37,12 +45,6 @@ function getRandomColor() {
 
 function drawRect() {
     ctx.clearRect(0, 0, w, h);
-    
-    //ctx.font = "60px Arial";
-    //ctx.fillStyle = "white";
-    //ctx.textAlign = "center";
-    //ctx.textBaseline = 'middle';
-    //ctx.fillText("Congratulations!", h/2, w/2);
 
     pieces.forEach(function (p) {
         ctx.save();
@@ -56,8 +58,8 @@ function drawRect() {
 }
 
 function Rect() {
-    this.x = Math.round(Math.random() * w);
-    this.y = Math.round(Math.random() * h)-(h/2);
+    this.x = getRandomNumber(0, w);
+    this.y = -1 * getRandomNumber(0, h);
     this.size = getRandomNumber(10, 15);
     this.gravity = getRandomNumber(0.5, 1) * 0.075;
     this.rotationSpeed = (Math.PI * 2) * Math.random() * 0.0005;
@@ -70,7 +72,7 @@ while(pieces.length < numberOfPieces) {
 }
 
 function confettiFalling() {
-    let now = Date.now()
+    let now = Date.now();
         deltaTime = now - lastUpdateTime;
     
     for(let i = pieces.length -1; i >= 0; i--) {
@@ -96,8 +98,9 @@ function confettiExplode() {
     drawRect();
     confettiFalling();
 }
-
-
+confettiExplode();
+getCongratsTitle();
+}
 
 
 

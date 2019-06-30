@@ -27,6 +27,9 @@ let timer = 0;
 let timerId;
 let score = 10000;
 let scoreId;
+let congrats = document.querySelector('.congratsConfetti');
+
+
 // Adds functionality to instruction panel -> button to hide
 
 button.addEventListener("click", function (event) {
@@ -47,6 +50,9 @@ buttonInstruction.addEventListener("click", function (event) {
     button.classList.remove("menuButtonHidden")
     button.setAttribute("class", "menuButtonShown")
     pauseGame()
+    canvas.classList.add("hiddenCanvas");
+    congrats.setAttribute('class', 'congratsConfetti');
+    
 })
 
 // Adds functionality to button "Poziom łatwy" on the main page
@@ -59,6 +65,8 @@ selectDiffEasy.addEventListener("click", function(event){
     startTimer()
     startScore()
     initializeGame()
+    canvas.classList.add("hiddenCanvas");
+    congrats.setAttribute('class', 'congratsConfetti');
 })
 
 // Adds functionality to button "Poziom trudny" on the main page
@@ -72,6 +80,8 @@ selectDiffHard.addEventListener("click", function (event) {
     startTimer()
     startScore()
     toggleHardMode()
+    canvas.classList.add("hiddenCanvas");
+    congrats.setAttribute('class', 'congratsConfetti');
 })
 
 // Adds functionality to button "Łatwy" on the welcome window
@@ -84,6 +94,7 @@ selectEasy.addEventListener("click", function (event) {
     initializeGame()
     startTimer()
     startScore()
+    
 })
 
 // Adds functionality to button "Trudny" on the welcome window
