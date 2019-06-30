@@ -48,11 +48,11 @@ h1.heading{
 }
 
 .arrow{
-  cursor: grab;
+  cursor: pointer;
 }
 
 .featureListHeader{
-  cursor: grab;
+  cursor: pointer;
 }
 
 /* Navigation bar - list of all sections */

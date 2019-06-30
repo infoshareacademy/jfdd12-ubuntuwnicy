@@ -12,22 +12,28 @@ const diffBackground = document.querySelector('#difficultyBackground')
 const BackDiv = document.querySelector('#backDiv')
 const inGameTimer = document.getElementById("timer")
 const inGameScore = document.getElementById("score")
+const finalScore = document.querySelector("#finalScore")
+const putScoreHide = document.querySelector(".putScoreHide")
+const scoreButton = document.querySelector('#scoreButton')
+const putLogin = document.querySelector("#putLogin")
+const topThree = document.querySelector('#topThree')
+const showTop = document.getElementById('showTop')
+const highScoresList = document.querySelector("#highScoresList");
+const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+const MAX_HIGH_SCORES = 3;
 let timer = 0;
-let timerId = 0;
+let timerId;
 let score = 10000;
-let scoreId = 0;
-
-scoreId = inGameScore.innerHTML = "SCORE:0"
-timerId = inGameTimer.innerHTML = "TIME:0"
-timer = timer + 1;
-
+let scoreId;
 // Adds functionality to instruction panel -> button to hide
 
 button.addEventListener("click", function(event){
     instruction.classList.toggle("menuIsHidden");
     console.log("toggling class")
     BackDiv.classList.toggle("backgroundDiv")
-    startGame()
+    if (howManyPairsLeft !== 0){
+    startTimerAfterPause()
+    startScoreAfterPause()}
 })
 
 // Adds functionality to instruction button on game page -> button to display instruction
@@ -44,11 +50,12 @@ buttonInstruction.addEventListener("click", function(event){
 // Adds functionality to button "Poziom łatwy" on the main page
 
 selectDiffEasy.addEventListener("click", function(event){
-    resetGame()
-    console.log("toggling class")
     button.classList.remove("menuButtonHidden")
     button.setAttribute("class", "menuButtonShown")
-    startGame()
+    resetGame()
+    pauseGame()
+    startTimer()
+    startScore()
     initializeGame()
 })
 
@@ -59,7 +66,10 @@ selectDiffHard.addEventListener("click", function(event){
     console.log("toggling class")
     button.classList.remove("menuButtonHidden")
     button.setAttribute("class", "menuButtonShown")
-    startGame()
+    resetGame()
+    pauseGame()
+    startTimer()
+    startScore()
     toggleHardMode()
 })
 
@@ -71,7 +81,8 @@ selectEasy.addEventListener("click", function(event){
     BackDiv.classList.remove("backgroundDiv")
     instruction.classList.toggle("menuIsHidden")
     initializeGame()
-    startGame()
+    startTimer()
+    startScore()
 })
 
 // Adds functionality to button "Trudny" on the welcome window
@@ -82,22 +93,53 @@ selectHard.addEventListener("click", function(event){
     BackDiv.classList.remove("backgroundDiv")
     instruction.classList.toggle("menuIsHidden")
     toggleHardMode()
-    startGame()
+    startTimer()
+    startScore()
 })
 
 // Set's a timer while the game is run
 
-function startGame(){
+function startTimer(){
+timerId = inGameTimer.innerHTML = `TIME:0`
+timer = timer + 1;
+timerId = setInterval(function() {
+    inGameTimer.innerHTML = `TIME:${timer}`;
+    timer = timer + 1;
+}, 1000); 
+return timerId
+}
+
+// Set's a score while the game is run
+
+function startScore(){
+scoreId = inGameScore.innerHTML = `SCORE:10000`
+score = score - 5;
+scoreId = setInterval(function() {
+    inGameScore.innerHTML = `SCORE:${score}`;
+    score = score - 5;
+}, 1000); 
+return scoreId
+}
+
+// Resumes the timer after leaving instruction panel
+
+function startTimerAfterPause(){
+this.timer = timer;
 timerId = setInterval(function() {
     inGameTimer.innerHTML = `TIME:${timer}`;
     timer = timer + 1;
 }, 1000);
+}
+
+// Resumes the score after leaving instruction panel
+
+function startScoreAfterPause(){
+this.score = score;
 scoreId = setInterval(function() {
     inGameScore.innerHTML = `SCORE:${score}`;
     score = score - 5;
 }, 1000);
 }
-
 
 // Stops the game timer
 
@@ -115,4 +157,41 @@ function resetGame(){
     score = 10000
 }
 
+scoreButton.addEventListener("click", function(event){
+    var inputLogin = document.querySelector("#putLogin");
+    putScoreHide.setAttribute("class", "putScoreHide");
+    putScoreHide.classList.remove("putScoreShow")
+})
 
+// ADD FINAL SCORE TO ARRAY OF SCORES
+
+putLogin.addEventListener("keyup", () => {
+    showTop.disabled = !putLogin.value;
+});
+
+SaveHighScore = e => {
+    e.preventDefault();
+
+let finalscore = {
+    login: putLogin.value,
+    score: score
+}
+
+highScores.push(finalscore)
+highScores.sort( (a, b) => b.score - a.score)
+highScores.splice(3);
+
+localStorage.setItem('highScores', JSON.stringify(highScores));
+
+// DISPLAY SCORES ON THE SCREEN
+
+setTimeout(function() {
+    highScoresList.innerHTML = highScores.map(finalscore => {
+        return `<li class="high-score">${finalscore.login}-${finalscore.score}</li>`
+    }).join('');
+}, 0)
+
+putLogin.value = ''
+showTop.disabled = true
+putLogin.disabled = true
+}

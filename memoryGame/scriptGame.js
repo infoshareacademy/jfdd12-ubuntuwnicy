@@ -27,9 +27,9 @@ let randomizedCards = randomizeCardsFunc(cardPairsArr);
 let randomizedCardsHard = randomizeCardsFunc(cardPairsArrHard);
 let timeoutLength = 3000;
 let howManyPairsLeft = 8;
-let cardsGlobal
+let cardsGlobal;
 
-initializeGame();
+initializeGame(); // initializing game for the first time
 
 cardsGlobal = document.querySelectorAll(".card");
 
@@ -42,12 +42,15 @@ function randomizeCardsFunc(cards) {
 }
 
 function randomizePairs() {
-  randomizedCards = randomizeCardsFunc(cardPairsArr)
-  randomizedCardsHard = randomizeCardsFunc(cardPairsArrHard)
+  randomizedCards = randomizeCardsFunc(cardPairsArr);
+  randomizedCardsHard = randomizeCardsFunc(cardPairsArrHard);
 }
 
 function initializeGame() {
-  let cards = document.querySelectorAll(".card")
+
+  howManyPairsLeft = 8
+
+  let cards = document.querySelectorAll(".card");
   if (isHardModeOn) {
     isHardModeOn = false;
     let gridContainer = document.querySelector(".gridContainerHard");
@@ -56,16 +59,17 @@ function initializeGame() {
     cards.forEach(cardsElement => {
       cardsElement.remove();
     });
-  } cards.forEach(cardsElement => {
+  }
+  cards.forEach(cardsElement => {
     cardsElement.remove();
   });
   let gridContainer = document.querySelector(".gridContainer");
 
-  let divs = document.createElement("div");
-  randomizePairs()
+  // let divs = document.createElement("div");
+  randomizePairs();
   for (let i = 0; i < 16; i++) {
     console.log(i);
-    divs = document.createElement("div");
+    let divs = document.createElement("div");
     divs.classList.add("card");
     divs.classList.add(randomizedCards[i]);
     gridContainer.appendChild(divs);
@@ -75,6 +79,9 @@ function initializeGame() {
 }
 
 function toggleHardMode() {
+
+  howManyPairsLeft = 18
+
   cards = document.querySelectorAll(".card");
 
   isHardModeOn = true;
@@ -85,7 +92,7 @@ function toggleHardMode() {
     cardsElement.remove();
   });
 
-  randomizePairs()
+  randomizePairs();
   for (let i = 0; i < 36; i++) {
     console.log(i);
     divs = document.createElement("div");
@@ -108,43 +115,6 @@ function addRemoveCardsClass(
     cardsArr[0].classList.remove(cardsClass);
     cardsArr[1].classList.remove(cardsClass);
   }
-}
-
-function cardsAreMatching() {
-  addRemoveCardsClass("add", "cardsAreMatching");
-
-  highlightedCards = [];
-
-  howManyPairsLeft--;
-
-  timeoutLength = 500;
-
-  if (howManyPairsLeft === 0) {
-    cardsAreLoading = true;
-    console.log("koniec gry");
-  }
-}
-
-function cardsArentMatching() {
-  addRemoveCardsClass("remove", "cardIsHighlighted");
-  addRemoveCardsClass("add", "cardsArentMatching");
-
-  let highlightedCardsForTimeout = []; // creating new array for setTimeout
-  highlightedCardsForTimeout = highlightedCards;
-
-  timeoutLength = 2000;
-
-  setTimeout(
-    () =>
-      addRemoveCardsClass(
-        "remove",
-        "cardsArentMatching",
-        highlightedCardsForTimeout
-      ),
-    timeoutLength
-  );
-
-  highlightedCards = [];
 }
 
 function gameLogicAndEventListener() {
@@ -179,9 +149,68 @@ function gameLogicAndEventListener() {
   );
 }
 
+function cardsAreMatching() {
+  addRemoveCardsClass("add", "cardsAreMatching");
 
+  highlightedCards = [];
 
+  howManyPairsLeft--;
 
+  timeoutLength = 500;
 
+  isGameFinished()
 
+}
 
+function cardsArentMatching() {
+  addRemoveCardsClass("remove", "cardIsHighlighted");
+  addRemoveCardsClass("add", "cardsArentMatching");
+
+  let highlightedCardsForTimeout = []; // creating new array for setTimeout
+  highlightedCardsForTimeout = highlightedCards;
+
+  timeoutLength = 2000;
+
+  setTimeout(
+    () =>
+      addRemoveCardsClass(
+        "remove",
+        "cardsArentMatching",
+        highlightedCardsForTimeout
+      ),
+    timeoutLength
+  );
+
+  highlightedCards = [];
+}
+
+function isGameFinished() {
+
+  if (howManyPairsLeft === 0) {
+
+    console.log("koniec gry")
+    pauseGame()
+    localStorage.setItem("mostRecentScore", score)
+    setTimeout(function() {
+      putScoreHide.setAttribute("class","putScoreShow")
+      putScoreHide.classList.remove("putScoreHide")
+  }, 1 * 1000)
+  }
+}
+
+function finishGame() { //debug tool for finishing the game from console
+  howManyPairsLeft = 0
+  cardsAreLoading = true;
+  console.log("koniec gry");
+  pauseGame()
+  localStorage.setItem("mostRecentScore", score)
+  isGameFinished()
+  showTop.disabled = false
+  putLogin.disabled = false
+  setTimeout(function() {
+    let mostRecentScore = localStorage.getItem("mostRecentScore", score)
+    putScoreHide.setAttribute("class","putScoreShow")
+    putScoreHide.classList.remove("putScoreHide")
+    finalScore.innerText = `Twój wynik to: ${mostRecentScore}`
+}, 1 * 1000)
+}

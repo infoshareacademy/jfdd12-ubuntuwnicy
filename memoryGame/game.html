@@ -12,9 +12,7 @@
     <link href="styles.css" rel="stylesheet" />
     <link href="stylesLucjan.css" rel="stylesheet" />
   </head>
-
   <body>
-
     <div id="backDiv" class="backgroundDiv">
       <div class="instruction">
         <button id="menuButton" class="menuButtonHidden">X</button>
@@ -35,6 +33,23 @@
         </div>
       </div>
     </div>
+    <div class="putScoreHide">
+        <button id="scoreButton">X</button>
+        <fieldset id="scoreWindowShow">        
+          <input id="putLogin" type="text" name="inputText" placeholder="Podaj swój nick">
+        <p id="finalScore"></p>
+        <button id="showTop" onclick="SaveHighScore(event)">Zapisz</button>
+        </fieldset>
+      <fieldset id="highScoresShow">
+      <div class="scoresContainer">
+        <div id="highScores" class="flex-center flex-column">
+            <h1 id="finalScore">Najlepsze wyniki</h1>
+            <ul id="highScoresList"></ul>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+    </div>
     <div class="wrapper">
       <header>
         <h1>sQuizYour Memory</h1>
@@ -43,14 +58,16 @@
             <p id="score"></p>
             <p id="timer"></p>
         </div>
-      <div class="gridContainer"></div>
+      <div class="gridContainer"></div> 
     </div>
     <div class="buttonContainer">
       <button id="buttonInstruction">Instrukcja</button>
       <button id="selectDifficultyEasy">Poziom łatwy</button>
       <button id="selectDifficultyHard">Poziom trudny</button>
     </div>
-    <script src="scriptGame.js"></script>
-    <script src="instruction.js"></script>
-  </body>
+    <script src='scriptGame.js'></script>
+    <script src='instruction.js'></script>
+    <script src='confetti.js'></script>
+</body>
+
 </html>
