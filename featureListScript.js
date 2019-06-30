@@ -5,7 +5,7 @@ const formSubmitButton = document.getElementById("submitButton");
 
 let backOutButton = document.querySelector('.backOutButton')
 
-if (checkIfFormWasFilled === true) {
+if (checkIfFormWasFilled() === 'true') {
   hideForm()
   console.log('hiding form')
 }
