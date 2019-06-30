@@ -233,6 +233,7 @@ function isGameFinished() {
       putScoreHide.classList.remove("putScoreHide")
   }, 1 * 1000)
   canvas.classList.remove("hiddenCanvas");
+  getCongratsTitle();
   confettiExplode();
   }
 }

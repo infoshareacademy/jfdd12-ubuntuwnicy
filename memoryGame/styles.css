@@ -100,8 +100,26 @@ header {
 canvas {
     position: fixed;
     top: 0;
+
 }
 
 .hiddenCanvas {
     display: none;
 }
+
+.congratsConfetti {
+    display: none;
+}
+
+.showCongratsConfetti {
+    position: fixed;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Press Start 2P', cursive;
+    line-height: 100vh;
+    color: white;
+    text-align: center;
+}
+
+
