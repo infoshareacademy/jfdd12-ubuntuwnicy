@@ -91,10 +91,16 @@ function toggleHardMode() {
 
   cards = document.querySelectorAll(".card");
 
-  isHardModeOn = true;
-  gridContainer = document.querySelector(".gridContainer");
-  gridContainer.classList.remove("gridContainer");
-  gridContainer.classList.add("gridContainerHard");
+  if (!isHardModeOn) {
+
+    isHardModeOn = true;
+    gridContainer = document.querySelector(".gridContainer");
+    gridContainer.classList.remove("gridContainer");
+    gridContainer.classList.add("gridContainerHard");
+
+  }
+
+
   cards.forEach(cardsElement => {
     cardsElement.remove();
   });
@@ -222,10 +228,10 @@ function isGameFinished() {
     console.log("koniec gry")
     pauseGame()
     localStorage.setItem("mostRecentScore", score)
-    setTimeout(function() {
-      putScoreHide.setAttribute("class","putScoreShow")
+    setTimeout(function () {
+      putScoreHide.setAttribute("class", "putScoreShow")
       putScoreHide.classList.remove("putScoreHide")
-  }, 1 * 1000)
+    }, 1 * 1000)
   }
 }
 
@@ -238,10 +244,10 @@ function finishGame() { //debug tool for finishing the game from console
   isGameFinished()
   showTop.disabled = false
   putLogin.disabled = false
-  setTimeout(function() {
+  setTimeout(function () {
     let mostRecentScore = localStorage.getItem("mostRecentScore", score)
-    putScoreHide.setAttribute("class","putScoreShow")
+    putScoreHide.setAttribute("class", "putScoreShow")
     putScoreHide.classList.remove("putScoreHide")
     finalScore.innerText = `Twój wynik to: ${mostRecentScore}`
-}, 1 * 1000)
+  }, 1 * 1000)
 }
