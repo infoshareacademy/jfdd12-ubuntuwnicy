@@ -59,7 +59,7 @@ while(pieces.length < numberOfPieces) {
     pieces.push(new Rect(Math.random() * 800, Math.random() * 800));
 }
 
-function confettiFallin() {
+function confettiFalling() {
     let now = Date.now()
         deltaTime = now - lastUpdateTime;
     
@@ -79,11 +79,11 @@ function confettiFallin() {
 
     lastUpdateTime = now;
 
-    setTimeout(confettiFallin, 1);
+    setTimeout(confettiFalling, 1);
 }    
 
 function confettiExplode() {
-    confettiFallin();
+    confettiFalling();
     drawRect();
 }
     
