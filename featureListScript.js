@@ -33,6 +33,9 @@ formSubmitButton.addEventListener("click", function () {
 
     hideForm()
   }
+  else{
+    window.alert('Podaj poprawny adres email.')
+  }
 });
 
 backOutButton.addEventListener('click', function () {
