@@ -34,11 +34,15 @@ div.menuIsHidden{
 
 #buttonInstruction,
 #selectDifficultyEasy,
-#selectDifficultyHard {
+#selectDifficultyHard,
+#showScoreButton {
   background: green;
   color: white;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   z-index: 2;
+  margin: 10px 10px;
+  padding: 10px 10px;
+  cursor: pointer;
 }
 
 .backgroundDiv {
@@ -71,35 +75,10 @@ div.menuIsHidden{
   display: none;
 }
 
-#diffButton {
-  float: right;
-  font-size: 30px;
-  color: white;
-  background: black;
-  /* background: r */
-  width: 50px;
-  height: 50px;
-}
-
 .buttonContainer {
   margin-top: 70px;
   display: flex;
   justify-content: center;
-}
-
-#buttonInstruction {
-  margin: 10px 10px;
-  padding: 10px 10px;
-}
-
-#selectDifficultyEasy {
-  margin: 10px 10px;
-  padding: 10px 10px;
-}
-
-#selectDifficultyHard {
-  margin: 10px 10px;
-  padding: 10px 10px;
 }
 
 #diffContainer {
@@ -113,6 +92,7 @@ div.menuIsHidden{
     width: 16vw;
     height: 6vh;
     font-size: 3vw;
+    cursor: pointer;
 }
 
 .menuButtonHidden{
@@ -143,7 +123,7 @@ div.menuIsHidden{
     padding-left: 0.25rem;
 }
 #score{
-    opacity: 0;
+    opacity: 1;
 }
 
 .putScoreShow{
@@ -171,41 +151,57 @@ div.menuIsHidden{
 }
 
 #scoreWindowShow{
-  margin: 10% 10%;
+  margin: 32% 16% 5%;
   min-width: 50px;
 }
 
+.scoreWindowShow{
+display: block
+}
+
+.scoreWindowHide{
+  display: none;
+}
+
 #highScoresShow{
-  margin: 12% 12%;
+  margin: 5% 16%;
+  min-width: 50px;
 }
 
 #showTop{
   float: right;
+  width: 5rem;
+  height: 5rem;
+  font-size: 1rem;
 }
 
 #scoreWindowHide{
   display: none;
-}s
+}
 
 #putLogin #finalScore{
-  min-width: 20px;
-  max-width: 80%;
-  margin: 10% 10%;
+  padding: 30% 30%;
+  margin: 7% 7%;
 }
 
 #putLogin{
-  margin-top: 2em;
-  margin-left: 11em;
-  margin-right: 11em;
+  padding: 3% 3%;
+  margin-top: 2rem;
+  margin-left: 1.8rem;
+  margin-right: 1rem;
+  width: 25vw;
+  height: 5vh;
+  font-size: 0.7rem;
+  text-align: center;
 }
 
 #scoreButton{
   float: right;
-  font-size: 30px;
+  font-size: 110%;
   color: white;
   background: black;
-  width: 50px;
-  height: 50px;
+  width: 20%;
+  height: 10%;
 }
 
 #finalScore{
@@ -218,12 +214,8 @@ div.menuIsHidden{
   padding-left: 0;
 }
 
-#putLogin{
-  font-size: 1rem;
-}
-
 .high-score, #finalScore{
-  font-size: 1.5rem;
+  font-size: 1rem;
   margin-bottom: 0.5rem;
 }
 
@@ -233,9 +225,27 @@ div.menuIsHidden{
 
 @media all and (min-width: 481px) and (max-width: 1120px){
     .gameRules{
-        font-size: 2.7vw;
+      font-size: 2.7vw;
     }
-}
+    #scoreButton{
+      font-size: 90%;
+      width: 7%;
+    }
+    .high-score, #finalScore{
+      font-size: 1.2rem;
+    }
+    #putLogin{
+      padding: 3% 3%;
+      margin-top: 2rem;
+      margin-left: 30%;
+      margin-right: 3rem;
+      width: 20vw;
+      font-size: 0.8rem;
+      text-align: center;
+    }
+    #scoreWindowShow{
+      margin: 18% 16% 5%;
+}}
 
 @media all and (min-width: 1120px){
     .gameRules{
@@ -257,5 +267,22 @@ div.menuIsHidden{
     #selectEasy, #selectHard{
         padding: 0% 0%;
         margin-bottom: 2em;
+    }
+    #putLogin{
+      padding: 3% 3%;
+      margin-top: 2rem;
+      margin-left: 30%;
+      margin-right: 3.5rem;
+      width: 20vw;
+      font-size: 1.2rem;
+    }
+    #scoreWindowShow{
+      margin: 7% 16% 5%}
+    #scoreButton{
+        font-size: 80%;
+        width: 4%;
+    }
+    .high-score, #finalScore{
+      font-size: 1.9rem;
     }
 }

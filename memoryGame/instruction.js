@@ -18,6 +18,8 @@ const scoreButton = document.querySelector('#scoreButton')
 const putLogin = document.querySelector("#putLogin")
 const topThree = document.querySelector('#topThree')
 const showTop = document.getElementById('showTop')
+const showScoreButton = document.querySelector('#showScoreButton')
+const scoreWindowShow = document.querySelector("#scoreWindowShow")
 const highScoresList = document.querySelector("#highScoresList");
 const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 const MAX_HIGH_SCORES = 3;
@@ -168,9 +170,26 @@ function resetGame() {
 }
 
 scoreButton.addEventListener("click", function(event){
-    var inputLogin = document.querySelector("#putLogin");
     putScoreHide.setAttribute("class", "putScoreHide");
     putScoreHide.classList.remove("putScoreShow")
+    buttonInstruction.disabled = false
+    selectDifficultyEasy.disabled = false
+    selectDifficultyHard.disabled = false
+    showScoreButton.disabled = false
+    if (howManyPairsLeft !== 0){
+        startTimerAfterPause()
+        startScoreAfterPause()
+    }
+})
+
+showScoreButton.addEventListener("click", function(event){
+    putScoreHide.setAttribute("class", "putScoreShow");
+    putScoreHide.classList.remove("putScoreHide")
+    scoreWindowShow.setAttribute("class", "scoreWindowHide")
+    pauseGame() 
+    highScoresList.innerHTML = highScores.map(finalscore => {
+        return `<li class="high-score">${finalscore.login}-${finalscore.score+5}</li>`
+    }).join('')
 })
 
 // ADD FINAL SCORE TO ARRAY OF SCORES
@@ -181,6 +200,8 @@ putLogin.addEventListener("keyup", () => {
 
 SaveHighScore = e => {
     e.preventDefault();
+
+if (putLogin.value !== ''){
 
 let finalscore = {
     login: putLogin.value,
@@ -197,11 +218,12 @@ localStorage.setItem('highScores', JSON.stringify(highScores));
 
 setTimeout(function() {
     highScoresList.innerHTML = highScores.map(finalscore => {
-        return `<li class="high-score">${finalscore.login}-${finalscore.score}</li>`
+        return `<li class="high-score">${finalscore.login}-${finalscore.score+5}</li>`
     }).join('');
 }, 0)
 
 putLogin.value = ''
 showTop.disabled = true
-putLogin.disabled = true
+putLogin.disabled = true} else
+{ return alert("Proszę podaj swój nick")}
 }
