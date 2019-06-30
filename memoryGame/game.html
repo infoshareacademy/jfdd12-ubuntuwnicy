@@ -36,7 +36,7 @@
   </div>
   <div class="putScoreHide">
     <button id="scoreButton">X</button>
-    <fieldset id="scoreWindowShow">
+    <fieldset id="scoreWindowShow" class="scoreWindowShow">
       <input id="putLogin" type="text" name="inputText" placeholder="Podaj swój nick" maxlength="6">
       <p id="finalScore"></p>
       <button id="showTop" onclick="SaveHighScore(event)">Zapisz</button>
@@ -64,7 +64,7 @@
     <button id="buttonInstruction">Instrukcja</button>
     <button id="selectDifficultyEasy">Poziom łatwy</button>
     <button id="selectDifficultyHard">Poziom trudny</button>
-    <button id="seeScore">Wyniki</button>
+    <button id="showScoreButton">Wyniki</button>
   </div>
   <script src='scriptGame.js'></script>
   <script src='instruction.js'></script>

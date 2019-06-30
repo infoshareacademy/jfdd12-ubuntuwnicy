@@ -211,7 +211,6 @@ function cardsArentMatching() {
     },
     timeoutLength
   );
-
 }
 
 
@@ -230,8 +229,10 @@ function isGameFinished() {
       buttonInstruction.disabled = true
       selectDifficultyEasy.disabled = true
       selectDifficultyHard.disabled = true
-      seeScore.disabled = true
+      showScoreButton.disabled = true
       finalScore.innerText = `Twój wynik to: ${mostRecentScore}`
+      scoreWindowShow.setAttribute("class", "scoreWindowShow")
+      scoreWindowShow.classlist.remove("scoreWindowHide")
   }, 1 * 1000)
   }
 }
@@ -248,11 +249,12 @@ function finishGame() { //debug tool for finishing the game from console
   buttonInstruction.disabled = true
   selectDifficultyEasy.disabled = true
   selectDifficultyHard.disabled = true
-  seeScore.disabled = true
+  showScoreButton.disabled = true
   setTimeout(function() {
     let mostRecentScore = localStorage.getItem("mostRecentScore", score)
     putScoreHide.setAttribute("class","putScoreShow")
     putScoreHide.classList.remove("putScoreHide")
     finalScore.innerText = `Twój wynik to: ${mostRecentScore}`
+    scoreWindowShow.setAttribute("class", "scoreWindowShow")
 }, 1 * 1000)
 }

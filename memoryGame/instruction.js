@@ -18,6 +18,8 @@ const scoreButton = document.querySelector('#scoreButton')
 const putLogin = document.querySelector("#putLogin")
 const topThree = document.querySelector('#topThree')
 const showTop = document.getElementById('showTop')
+const showScoreButton = document.querySelector('#showScoreButton')
+const scoreWindowShow = document.querySelector("#scoreWindowShow")
 const highScoresList = document.querySelector("#highScoresList");
 const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 const MAX_HIGH_SCORES = 3;
@@ -157,13 +159,23 @@ function resetGame() {
 }
 
 scoreButton.addEventListener("click", function(event){
-    var inputLogin = document.querySelector("#putLogin");
     putScoreHide.setAttribute("class", "putScoreHide");
     putScoreHide.classList.remove("putScoreShow")
     buttonInstruction.disabled = false
     selectDifficultyEasy.disabled = false
     selectDifficultyHard.disabled = false
-    seeScore.disabled = false
+    showScoreButton.disabled = false
+    if (howManyPairsLeft !== 0){
+        startTimerAfterPause()
+        startScoreAfterPause()
+    }
+})
+
+showScoreButton.addEventListener("click", function(event){
+    putScoreHide.setAttribute("class", "putScoreShow");
+    putScoreHide.classList.remove("putScoreHide")
+    scoreWindowShow.setAttribute("class", "scoreWindowHide")
+    pauseGame() 
 })
 
 // ADD FINAL SCORE TO ARRAY OF SCORES
