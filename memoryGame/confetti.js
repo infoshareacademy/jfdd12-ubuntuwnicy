@@ -3,13 +3,13 @@ const canvas = document.createElement('canvas');
 
 body.append(canvas);
 
-canvas.setAttribute('width', '800');
-canvas.setAttribute('height', '800');
+const w = canvas.width = window.innerWidth;
+const h = canvas.height = window.innerHeight * 2;
 
 const ctx = canvas.getContext('2d');
 
 let pieces = [];
-let numberOfPieces = 80;
+let numberOfPieces = 400;
 let lastUpdateTime = Date.now();
 let heightOfTriangle = 12 * (Math.sqrt(3)/2);
 
@@ -26,13 +26,13 @@ function getRandomColor() {
 }
 
 function drawRect() {
-    ctx.clearRect(0, 0, 800, 800);
+    ctx.clearRect(0, 0, w, h);
     
     ctx.font = "60px Arial";
     ctx.fillStyle = "white";
     ctx.textAlign = "center";
     ctx.textBaseline = 'middle';
-    ctx.fillText("Congratulations!", 800/2, 800/2);
+    ctx.fillText("Congratulations!", h/2, w/2);
 
     pieces.forEach(function (p) {
         ctx.save();
@@ -56,7 +56,7 @@ function Rect(x, y) {
 }
 
 while(pieces.length < numberOfPieces) {
-    pieces.push(new Rect(Math.random() * 800, Math.random() * 800));
+    pieces.push(new Rect(Math.random() * w, Math.random() * w));
 }
 
 function confettiFalling() {
@@ -65,7 +65,7 @@ function confettiFalling() {
     
     for(let i = pieces.length -1; i >= 0; i--) {
         let p = pieces[i];
-        if(p.y > 800) {
+        if(p.y > h) {
             pieces.splice(i, 1);
             continue;
         }
@@ -74,7 +74,7 @@ function confettiFalling() {
     }
 
     while(pieces.length < numberOfPieces) {
-        pieces.push(new Rect(Math.random() * 800, -20));
+        pieces.push(new Rect(Math.random() * h, -20));
     }
 
     lastUpdateTime = now;
