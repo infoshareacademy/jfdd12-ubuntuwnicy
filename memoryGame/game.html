@@ -1,74 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>sQuizYour Memory</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap"
-      rel="stylesheet"
-    />
-    <link href="styles.css" rel="stylesheet" />
-    <link href="stylesLucjan.css" rel="stylesheet" />
-  </head>
-  <body>
-    <div id="backDiv" class="backgroundDiv">
-      <div class="instruction">
-        <button id="menuButton" class="menuButtonHidden">X</button>
-        <p class="gameRules">
-            Memory game! <br /><br />
-            Gra memory polega na odnajdywaniu par takich samych kart. Gracz
-            odsłania 2 karty. Jeśli są to takie same karty, zostaną one zdjęte z
-            planszy, jeśli nie, karty będą odwrócone z powrotem (po ok. 2
-            sekundach). Celem gracza jest zdjęcie wszystkich kart w jak najkrótszym czasie, co będzie
-            miało wpływ na wynik końcowy. Gra posiada dwa poziomy trudności: Łatwy (plansza 4x4) i Trudny (plansza 6x6)
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>sQuizYour Memory</title>
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <link href="styles.css" rel="stylesheet" />
+  <link href="stylesLucjan.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="backDiv" class="backgroundDiv">
+    <div class="instruction">
+      <button id="menuButton" class="menuButtonHidden">X</button>
+      <p class="gameRules">
+        Memory game! <br /><br />
+        Gra memory polega na odnajdywaniu par takich samych kart. Gracz
+        odsłania 2 karty. Jeśli są to takie same karty, zostaną one zdjęte z
+        planszy, jeśli nie, karty będą odwrócone z powrotem (po ok. 2
+        sekundach). Celem gracza jest zdjęcie wszystkich kart w jak najkrótszym czasie, co będzie
+        miało wpływ na wynik końcowy. Gra posiada dwa poziomy trudności: Łatwy (plansza 4x4) i Trudny (plansza 6x6)
         <p>
-        <div class="difficultyShow">        
-            <span class="diffText"><p>Wybierz poziom trudności gry:</p></span>
+          <div class="difficultyShow">
+            <span class="diffText">
+              <p>Wybierz poziom trudności gry:</p>
+            </span>
             <div id="diffContainer">
-                <button id="selectEasy">Łatwy</button>
-                <button id="selectHard">Trudny</button>
+              <button id="selectEasy">Łatwy</button>
+              <button id="selectHard">Trudny</button>
             </div>
-        </div>
-      </div>
+          </div>
     </div>
-    <div class="putScoreHide">
-        <button id="scoreButton">X</button>
-        <fieldset id="scoreWindowShow">        
-          <input id="putLogin" type="text" name="inputText" placholder="Podaj swój nick">
-        <p id="finalScore"></p>
-        <button id="showTop" onclick="SaveHighScore(event)">Zapisz</button>
-        </fieldset>
-      <fieldset id="highScoresShow">
+  </div>
+  <div class="putScoreHide">
+    <button id="scoreButton">X</button>
+    <fieldset id="scoreWindowShow" class="scoreWindowShow">
+      <input id="putLogin" type="text" name="inputText" placeholder="Podaj swój nick" maxlength="6">
+      <p id="finalScore"></p>
+      <button id="showTop" onclick="SaveHighScore(event)">Zapisz</button>
+    </fieldset>
+    <fieldset id="highScoresShow">
       <div class="scoresContainer">
         <div id="highScores" class="flex-center flex-column">
-            <h1 id="finalScore">Najlepsze wyniki</h1>
-            <ul id="highScoresList"></ul>
+          <h1 id="finalScore">Najlepsze wyniki</h1>
+          <ul id="highScoresList"></ul>
         </div>
-      </div>
     </fieldset>
   </div>
+  </div>
+  <div class="wrapper">
+    <header>
+      <h1>sQuizYour Memory</h1>
+    </header>
+    <div class="container">
+      <p id="score"></p>
+      <p id="timer"></p>
     </div>
-    <div class="wrapper">
-      <header>
-        <h1>sQuizYour Memory</h1>
-      </header>
-        <div class="container">
-            <p id="score"></p>
-            <p id="timer"></p>
-        </div>
-      <div class="gridContainer"></div> 
-    </div>
-    <div class="buttonContainer">
-      <button id="buttonInstruction">Instrukcja</button>
-      <button id="selectDifficultyEasy">Poziom łatwy</button>
-      <button id="selectDifficultyHard">Poziom trudny</button>
-    </div>
-  <h1 class="congratsConfetti">Congratulations!</h1>  
-    <script src='scriptGame.js'></script>
-    <script src='instruction.js'></script>
-    <script src='confetti.js'></script>
+    <div class="gridContainer"></div>
+  </div>
+  <div class="buttonContainer">
+      <h1 class="congratsConfetti">Congratulations!</h1>
+    <button id="buttonInstruction">Instrukcja</button>
+    <button id="selectDifficultyEasy">Poziom łatwy</button>
+    <button id="selectDifficultyHard">Poziom trudny</button>
+    <button id="showScoreButton">Wyniki</button>
+  </div>
+  <script src='scriptGame.js'></script>
+  <script src='instruction.js'></script>
+  <script src='confetti.js'></script>
 </body>
 
 </html>
