@@ -186,7 +186,7 @@ display: block
 }
 
 #highScoresShow{
-  margin: 5% 16%;
+  margin: 3% 16%;
   min-width: 50px;
 }
 
@@ -195,6 +195,11 @@ display: block
   width: 5rem;
   height: 5rem;
   font-size: 1rem;
+}
+
+#highScores{
+  display: flex;
+  justify-content: space-between;
 }
 
 #scoreWindowHide{
@@ -237,7 +242,7 @@ display: block
 }
 
 .high-score, #finalScoreEasy, #finalScoreHard{
-  font-size: 1rem;
+  font-size: 0.8rem;
   margin-bottom: 0.5rem;
 }
 
@@ -266,7 +271,7 @@ display: block
       text-align: center;
     }
     #scoreWindowShow{
-      margin: 5% 16% 5%;
+      margin: 3% 13% 3%;
     }
       #buttonInstruction,
       #selectDifficultyEasy,
@@ -312,7 +317,7 @@ display: block
       font-size: 1.2rem;
     }
     #scoreWindowShow{
-      margin: 3% 16% 5%}
+      margin: 3% 16% 0%}
     #scoreButton{
         font-size: 80%;
         width: 4%;

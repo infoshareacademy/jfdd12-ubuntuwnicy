@@ -233,6 +233,7 @@ function isGameFinished() {
     selectDifficultyEasy.disabled = true
     selectDifficultyHard.disabled = true
     showScoreButton.disabled = true
+    addScoreButtonProperty()
     setTimeout(function() {
       let mostRecentScore = localStorage.getItem("mostRecentScore", score)
       putScoreHide.setAttribute("class","putScoreShow")
@@ -259,6 +260,7 @@ function finishGame() { //debug tool for finishing the game from console
   selectDifficultyEasy.disabled = true
   selectDifficultyHard.disabled = true
   showScoreButton.disabled = true
+  addScoreButtonProperty()
   setTimeout(function() {
     let mostRecentScore = localStorage.getItem("mostRecentScore", score)
     putScoreHide.setAttribute("class", "putScoreShow")

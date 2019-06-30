@@ -67,15 +67,6 @@ selectDiffEasy.addEventListener("click", function(event){
     startTimer()
     startScore()
     initializeGame()
-    showScoreButton.addEventListener("click", function(event){
-        putScoreHide.setAttribute("class", "putScoreShow");
-        putScoreHide.classList.remove("putScoreHide")
-        scoreWindowShow.setAttribute("class", "scoreWindowHide")
-        pauseGame() 
-        highScoresListEasy.innerHTML = highScoresEasy.map(finalscore => {
-            return `<li class="high-score">${finalscore.login}-${finalscore.score+5}</li>`
-        }).join('')
-    })
     canvas.classList.add("hiddenCanvas");
     congrats.setAttribute('class', 'congratsConfetti');
 })
@@ -91,15 +82,6 @@ selectDiffHard.addEventListener("click", function (event) {
     startTimer()
     startScore()
     toggleHardMode()
-    showScoreButton.addEventListener("click", function(event){
-        putScoreHide.setAttribute("class", "putScoreShow");
-        putScoreHide.classList.remove("putScoreHide")
-        scoreWindowShow.setAttribute("class", "scoreWindowHide")
-        pauseGame() 
-        highScoresListHard.innerHTML = highScoresHard.map(finalscore => {
-            return `<li class="high-score">${finalscore.login}-${finalscore.score+5}</li>`
-        }).join('')
-    })
     canvas.classList.add("hiddenCanvas");
     congrats.setAttribute('class', 'congratsConfetti');
 })
@@ -112,15 +94,6 @@ selectEasy.addEventListener("click", function (event) {
     BackDiv.classList.remove("backgroundDiv")
     instruction.classList.toggle("menuIsHidden")
     initializeGame()
-    showScoreButton.addEventListener("click", function(event){
-        putScoreHide.setAttribute("class", "putScoreShow");
-        putScoreHide.classList.remove("putScoreHide")
-        scoreWindowShow.setAttribute("class", "scoreWindowHide")
-        pauseGame() 
-        highScoresListEasy.innerHTML = highScoresEasy.map(finalscore => {
-            return `<li class="high-score">${finalscore.login}-${finalscore.score+5}</li>`
-        }).join('')
-    })
     startTimer()
     startScore()
     
@@ -134,15 +107,6 @@ selectHard.addEventListener("click", function (event) {
     BackDiv.classList.remove("backgroundDiv")
     instruction.classList.toggle("menuIsHidden")
     toggleHardMode()
-    showScoreButton.addEventListener("click", function(event){
-        putScoreHide.setAttribute("class", "putScoreShow");
-        putScoreHide.classList.remove("putScoreHide")
-        scoreWindowShow.setAttribute("class", "scoreWindowHide")
-        pauseGame() 
-        highScoresListHard.innerHTML = highScoresHard.map(finalscore => {
-            return `<li class="high-score">${finalscore.login}-${finalscore.score+5}</li>`
-        }).join('')
-    })
     startTimer()
     startScore()
 })
@@ -227,7 +191,7 @@ putLogin.addEventListener("keyup", () => {
 });
 
 SaveHighScore = e => {
-if(checkDifficultyHard() === 36 && checkDifficulty() === 0){
+if(checkDifficultyHard() === 36 || checkDifficulty() === 0){
     e.preventDefault();
 
 if (putLogin.value !== ''){
@@ -287,3 +251,47 @@ else
 
 function checkDifficulty(){ return document.querySelectorAll('.gridContainer .card').length } // 16
 function checkDifficultyHard(){console.log(document.querySelectorAll('.gridContainerHard .card').length)} // 36
+
+function addScoreButtonProperty(){
+showScoreButton.addEventListener("click", function(event){
+    if(checkDifficultyHard() === 36 || checkDifficulty() === 0){
+    putScoreHide.setAttribute("class", "putScoreShow");
+    putScoreHide.classList.remove("putScoreHide")
+    scoreWindowShow.setAttribute("class", "scoreWindowHide")
+    
+    pauseGame() 
+    highScoresListHard.innerHTML = highScoresHard.map(finalscore => {
+        return `<li class="high-score">${finalscore.login}-${finalscore.score+5}</li>`
+    }).join('')
+    } else 
+    {
+        putScoreHide.setAttribute("class", "putScoreShow");
+        putScoreHide.classList.remove("putScoreHide")
+        scoreWindowShow.setAttribute("class", "scoreWindowHide")
+        pauseGame() 
+        highScoresListEasy.innerHTML = highScoresEasy.map(finalscore => {
+            return `<li class="high-score">${finalscore.login}-${finalscore.score+5}</li>`
+        }).join('')
+        }
+    })}
+
+showScoreButton.addEventListener("click", function(event){
+    if(checkDifficultyHard() === 36 || checkDifficulty() === 0){
+    putScoreHide.setAttribute("class", "putScoreShow");
+    putScoreHide.classList.remove("putScoreHide")
+    scoreWindowShow.setAttribute("class", "scoreWindowHide")
+    pauseGame() 
+    highScoresListHard.innerHTML = highScoresHard.map(finalscore => {
+        return `<li class="high-score">${finalscore.login}-${finalscore.score+5}</li>`
+    }).join('')
+    } else 
+    {
+        putScoreHide.setAttribute("class", "putScoreShow");
+        putScoreHide.classList.remove("putScoreHide")
+        scoreWindowShow.setAttribute("class", "scoreWindowHide")
+        pauseGame() 
+        highScoresListEasy.innerHTML = highScoresEasy.map(finalscore => {
+            return `<li class="high-score">${finalscore.login}-${finalscore.score+5}</li>`
+        }).join('')
+        }
+    })
