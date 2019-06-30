@@ -240,9 +240,9 @@ function isGameFinished() {
       finalScore.innerText = `Twój wynik to: ${Number(mostRecentScore)+5}`
       scoreWindowShow.setAttribute("class", "scoreWindowShow")
   }, 1 * 1000)
+  confettiAll();
   canvas.classList.remove("hiddenCanvas");
-  getCongratsTitle();
-  confettiExplode();
+  
   }
 }
 
