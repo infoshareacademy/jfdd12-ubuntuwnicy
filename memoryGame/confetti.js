@@ -3,6 +3,8 @@ const canvas = document.createElement('canvas');
 
 body.append(canvas);
 
+canvas.classList.add("hiddenCanvas");
+
 const w = canvas.width = window.innerWidth;
 const h = canvas.height = window.innerHeight * 2;
 
@@ -86,8 +88,8 @@ function confettiExplode() {
     confettiFalling();
     drawRect();
 }
-    
-confettiExplode();
+
+
 
 
 //function confettiFallinTriangle() {

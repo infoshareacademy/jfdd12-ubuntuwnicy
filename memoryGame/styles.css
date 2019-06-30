@@ -101,3 +101,7 @@ canvas {
     position: fixed;
     top: 0;
 }
+
+.hiddenCanvas {
+    display: none;
+}
