@@ -229,16 +229,16 @@ function isGameFinished() {
     localStorage.setItem("mostRecentScore", score)
     showTop.disabled = false
     putLogin.disabled = false
+    buttonInstruction.disabled = true
+    selectDifficultyEasy.disabled = true
+    selectDifficultyHard.disabled = true
+    showScoreButton.disabled = true
     setTimeout(function() {
+      let mostRecentScore = localStorage.getItem("mostRecentScore", score)
       putScoreHide.setAttribute("class","putScoreShow")
       putScoreHide.classList.remove("putScoreHide")
-      buttonInstruction.disabled = true
-      selectDifficultyEasy.disabled = true
-      selectDifficultyHard.disabled = true
-      showScoreButton.disabled = true
-      finalScore.innerText = `Twój wynik to: ${mostRecentScore}`
+      finalScore.innerText = `Twój wynik to: ${Number(mostRecentScore)+5}`
       scoreWindowShow.setAttribute("class", "scoreWindowShow")
-      scoreWindowShow.classlist.remove("scoreWindowHide")
   }, 1 * 1000)
   canvas.classList.remove("hiddenCanvas");
   getCongratsTitle();

@@ -190,6 +190,8 @@ putLogin.addEventListener("keyup", () => {
 SaveHighScore = e => {
     e.preventDefault();
 
+if (putLogin.value !== ''){
+
 let finalscore = {
     login: putLogin.value,
     score: score
@@ -211,5 +213,6 @@ setTimeout(function() {
 
 putLogin.value = ''
 showTop.disabled = true
-putLogin.disabled = true
+putLogin.disabled = true} else
+{ return alert("Proszę podaj swój nick")}
 }
