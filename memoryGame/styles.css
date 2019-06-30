@@ -105,3 +105,17 @@ canvas {
 .hiddenCanvas {
     display: none;
 }
+
+@media (max-width: 480px){
+
+    .gridContainer {
+        width: 50vw;
+        height: 50vw;
+    }
+    
+    /* .gridContainerHard {
+        width: 60vw;
+        height: 60vw;
+    } */
+
+}

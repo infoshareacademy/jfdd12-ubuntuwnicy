@@ -139,10 +139,10 @@ function gameLogicAndEventListener() {
       }
 
       if (card.classList.contains("cardIsHighlighted")) {
-        card.classList.toggle("cardIsHighlighted"); // checking if card is already highlighted
-        highlightedCards.pop(card);
-        card.innerHTML = ''
-        console.log("toggling class to card is highlighted");
+        // card.classList.toggle("cardIsHighlighted"); // checking if card is already highlighted
+        // highlightedCards.pop(card);
+        // card.innerHTML = ''
+        // console.log("toggling class to card is highlighted");
       } else {
         card.classList.toggle("cardIsHighlighted"); // highlighting a card and pushing to the arr
         console.log("toggling class to card is highlighted");
