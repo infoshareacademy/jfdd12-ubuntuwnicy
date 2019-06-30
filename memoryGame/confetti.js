@@ -10,6 +10,14 @@ const h = canvas.height = window.innerHeight * 2;
 
 const ctx = canvas.getContext('2d');
 
+let congratulations = document.querySelector('.congratsConfetti');
+
+
+function getCongratsTitle() {
+    congratulations.setAttribute('class', 'showCongratsConfetti');
+    
+}
+
 let pieces = [];
 let numberOfPieces = 400;
 let lastUpdateTime = Date.now();
@@ -30,11 +38,11 @@ function getRandomColor() {
 function drawRect() {
     ctx.clearRect(0, 0, w, h);
     
-    ctx.font = "60px Arial";
-    ctx.fillStyle = "white";
-    ctx.textAlign = "center";
-    ctx.textBaseline = 'middle';
-    ctx.fillText("Congratulations!", h/2, w/2);
+    //ctx.font = "60px Arial";
+    //ctx.fillStyle = "white";
+    //ctx.textAlign = "center";
+    //ctx.textBaseline = 'middle';
+    //ctx.fillText("Congratulations!", h/2, w/2);
 
     pieces.forEach(function (p) {
         ctx.save();
@@ -47,9 +55,9 @@ function drawRect() {
     requestAnimationFrame(drawRect);
 }
 
-function Rect(x, y) {
-    this.x = x;
-    this.y = y;
+function Rect() {
+    this.x = Math.round(Math.random() * w);
+    this.y = Math.round(Math.random() * h)-(h/2);
     this.size = getRandomNumber(10, 15);
     this.gravity = getRandomNumber(0.5, 1) * 0.075;
     this.rotationSpeed = (Math.PI * 2) * Math.random() * 0.0005;
@@ -58,7 +66,7 @@ function Rect(x, y) {
 }
 
 while(pieces.length < numberOfPieces) {
-    pieces.push(new Rect(Math.random() * w, Math.random() * w));
+    pieces.push(new Rect(Math.random() * w, Math.random() * h));
 }
 
 function confettiFalling() {
@@ -85,9 +93,13 @@ function confettiFalling() {
 }    
 
 function confettiExplode() {
-    confettiFalling();
     drawRect();
+    confettiFalling();
 }
+
+
+
+
 
 
 
