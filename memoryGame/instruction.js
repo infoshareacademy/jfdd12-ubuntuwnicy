@@ -20,8 +20,10 @@ const topThree = document.querySelector('#topThree')
 const showTop = document.getElementById('showTop')
 const showScoreButton = document.querySelector('#showScoreButton')
 const scoreWindowShow = document.querySelector("#scoreWindowShow")
-const highScoresList = document.querySelector("#highScoresList");
-const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+const highScoresListHard = document.querySelector("#highScoresListHard");
+const highScoresListEasy = document.querySelector("#highScoresListEasy");
+const highScoresHard = JSON.parse(localStorage.getItem("highScoresHard")) || [];
+const highScoresEasy = JSON.parse(localStorage.getItem("highScoresEasy")) || [];
 const MAX_HIGH_SCORES = 3;
 let timer = 0;
 let timerId;
@@ -65,6 +67,15 @@ selectDiffEasy.addEventListener("click", function(event){
     startTimer()
     startScore()
     initializeGame()
+    showScoreButton.addEventListener("click", function(event){
+        putScoreHide.setAttribute("class", "putScoreShow");
+        putScoreHide.classList.remove("putScoreHide")
+        scoreWindowShow.setAttribute("class", "scoreWindowHide")
+        pauseGame() 
+        highScoresListEasy.innerHTML = highScoresEasy.map(finalscore => {
+            return `<li class="high-score">${finalscore.login}-${finalscore.score+5}</li>`
+        }).join('')
+    })
     canvas.classList.add("hiddenCanvas");
     congrats.setAttribute('class', 'congratsConfetti');
 })
@@ -80,6 +91,15 @@ selectDiffHard.addEventListener("click", function (event) {
     startTimer()
     startScore()
     toggleHardMode()
+    showScoreButton.addEventListener("click", function(event){
+        putScoreHide.setAttribute("class", "putScoreShow");
+        putScoreHide.classList.remove("putScoreHide")
+        scoreWindowShow.setAttribute("class", "scoreWindowHide")
+        pauseGame() 
+        highScoresListHard.innerHTML = highScoresHard.map(finalscore => {
+            return `<li class="high-score">${finalscore.login}-${finalscore.score+5}</li>`
+        }).join('')
+    })
     canvas.classList.add("hiddenCanvas");
     congrats.setAttribute('class', 'congratsConfetti');
 })
@@ -92,6 +112,15 @@ selectEasy.addEventListener("click", function (event) {
     BackDiv.classList.remove("backgroundDiv")
     instruction.classList.toggle("menuIsHidden")
     initializeGame()
+    showScoreButton.addEventListener("click", function(event){
+        putScoreHide.setAttribute("class", "putScoreShow");
+        putScoreHide.classList.remove("putScoreHide")
+        scoreWindowShow.setAttribute("class", "scoreWindowHide")
+        pauseGame() 
+        highScoresListEasy.innerHTML = highScoresEasy.map(finalscore => {
+            return `<li class="high-score">${finalscore.login}-${finalscore.score+5}</li>`
+        }).join('')
+    })
     startTimer()
     startScore()
     
@@ -105,6 +134,15 @@ selectHard.addEventListener("click", function (event) {
     BackDiv.classList.remove("backgroundDiv")
     instruction.classList.toggle("menuIsHidden")
     toggleHardMode()
+    showScoreButton.addEventListener("click", function(event){
+        putScoreHide.setAttribute("class", "putScoreShow");
+        putScoreHide.classList.remove("putScoreHide")
+        scoreWindowShow.setAttribute("class", "scoreWindowHide")
+        pauseGame() 
+        highScoresListHard.innerHTML = highScoresHard.map(finalscore => {
+            return `<li class="high-score">${finalscore.login}-${finalscore.score+5}</li>`
+        }).join('')
+    })
     startTimer()
     startScore()
 })
@@ -182,16 +220,6 @@ scoreButton.addEventListener("click", function(event){
     }
 })
 
-showScoreButton.addEventListener("click", function(event){
-    putScoreHide.setAttribute("class", "putScoreShow");
-    putScoreHide.classList.remove("putScoreHide")
-    scoreWindowShow.setAttribute("class", "scoreWindowHide")
-    pauseGame() 
-    highScoresList.innerHTML = highScores.map(finalscore => {
-        return `<li class="high-score">${finalscore.login}-${finalscore.score+5}</li>`
-    }).join('')
-})
-
 // ADD FINAL SCORE TO ARRAY OF SCORES
 
 putLogin.addEventListener("keyup", () => {
@@ -199,6 +227,7 @@ putLogin.addEventListener("keyup", () => {
 });
 
 SaveHighScore = e => {
+if(checkDifficultyHard() === 36 && checkDifficulty() === 0){
     e.preventDefault();
 
 if (putLogin.value !== ''){
@@ -208,16 +237,16 @@ let finalscore = {
     score: score
 }
 
-highScores.push(finalscore)
-highScores.sort( (a, b) => b.score - a.score)
-highScores.splice(3);
+highScoresHard.push(finalscore)
+highScoresHard.sort( (a, b) => b.score - a.score)
+highScoresHard.splice(3);
 
-localStorage.setItem('highScores', JSON.stringify(highScores));
+localStorage.setItem('highScoresHard', JSON.stringify(highScoresHard));
 
 // DISPLAY SCORES ON THE SCREEN
 
 setTimeout(function() {
-    highScoresList.innerHTML = highScores.map(finalscore => {
+    highScoresListHard.innerHTML = highScoresHard.map(finalscore => {
         return `<li class="high-score">${finalscore.login}-${finalscore.score+5}</li>`
     }).join('');
 }, 0)
@@ -225,5 +254,36 @@ setTimeout(function() {
 putLogin.value = ''
 showTop.disabled = true
 putLogin.disabled = true} else
-{ return alert("Proszę podaj swój nick")}
+{ return alert("Proszę podaj swój nick")}}
+else
+{    e.preventDefault();
+
+    if (putLogin.value !== ''){
+    
+    let finalscore = {
+        login: putLogin.value,
+        score: score
+    }
+    
+    highScoresEasy.push(finalscore)
+    highScoresEasy.sort( (a, b) => b.score - a.score)
+    highScoresEasy.splice(3);
+    
+    localStorage.setItem('highScoresEasy', JSON.stringify(highScoresEasy));
+    
+    // DISPLAY SCORES ON THE SCREEN
+
+    setTimeout(function() {
+        highScoresListEasy.innerHTML = highScoresEasy.map(finalscore => {
+            return `<li class="high-score">${finalscore.login}-${finalscore.score+5}</li>`
+        }).join('');
+    }, 0)
+    
+    putLogin.value = ''
+    showTop.disabled = true
+    putLogin.disabled = true} else
+    { return alert("Proszę podaj swój nick")}}
 }
+
+function checkDifficulty(){ return document.querySelectorAll('.gridContainer .card').length } // 16
+function checkDifficultyHard(){console.log(document.querySelectorAll('.gridContainerHard .card').length)} // 36

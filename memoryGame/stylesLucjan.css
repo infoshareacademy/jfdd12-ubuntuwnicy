@@ -6,7 +6,8 @@ body {
 /* ADDS COOL EFFECT FOR CARDS */
 
 .card:hover{
-  transform: scale(1.08)
+  transform: scale(1.08);
+  cursor: pointer
 }
 
 /* Styling of the closing button of welcome window */
@@ -200,7 +201,7 @@ display: block
   display: none;
 }
 
-#putLogin #finalScore{
+#putLogin{
   padding: 30% 30%;
   margin: 7% 7%;
 }
@@ -225,17 +226,17 @@ display: block
   height: 10%;
 }
 
-#finalScore{
+#finalScoreEasy, #finalScoreHard{
   text-align: center;
 }
 
-#highScoresList{
+#highScoresListHard, #highScoresListEasy{
   text-align: center;
   list-style: none;
   padding-left: 0;
 }
 
-.high-score, #finalScore{
+.high-score, #finalScoreEasy, #finalScoreHard{
   font-size: 1rem;
   margin-bottom: 0.5rem;
 }
@@ -252,7 +253,7 @@ display: block
       font-size: 90%;
       width: 7%;
     }
-    .high-score, #finalScore{
+    .high-score, #finalScoreEasy, #finalScoreHard{
       font-size: 1.2rem;
     }
     #putLogin{
@@ -316,7 +317,7 @@ display: block
         font-size: 80%;
         width: 4%;
     }
-    .high-score, #finalScore{
+    .high-score, #finalScoreEasy, #finalScoreHard{
       font-size: 1.2rem;
     }
   #buttonInstruction,
@@ -335,7 +336,7 @@ display: block
     margin: 1% 16%;
     min-width: 50px;
   }
-  #highScoresList{
+  #highScoresListHard, #highScoresListEasy{
     font-size: 0.5em;
   }
 }
