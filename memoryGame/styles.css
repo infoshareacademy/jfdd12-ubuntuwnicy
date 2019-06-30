@@ -23,11 +23,12 @@ body {
 
 .gridContainerHard {
     display: grid;
-    width: 50vh;
-    height: 50vh;
+    width: 60vh;
+    height: 60vh;
     grid-template-columns: repeat(6, 15%);
     grid-template-rows: repeat(6, 15%);
     justify-content: center;
+    grid-gap: 1%;
 }
 
 .card{
@@ -109,13 +110,13 @@ canvas {
 @media (max-width: 480px){
 
     .gridContainer {
-        width: 50vw;
-        height: 50vw;
+        width: 70vw;
+        height: 70vw;
     }
     
-    /* .gridContainerHard {
-        width: 60vw;
-        height: 60vw;
-    } */
+    .gridContainerHard {
+        width: 90vw;
+        height: 90vw;
+    }
 
 }
