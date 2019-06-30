@@ -3,13 +3,23 @@ const canvas = document.createElement('canvas');
 
 body.append(canvas);
 
-canvas.setAttribute('width', '800');
-canvas.setAttribute('height', '800');
+canvas.classList.add("hiddenCanvas");
+
+const w = canvas.width = window.innerWidth;
+const h = canvas.height = window.innerHeight * 2;
 
 const ctx = canvas.getContext('2d');
 
+let congratulations = document.querySelector('.congratsConfetti');
+
+
+function getCongratsTitle() {
+    congratulations.setAttribute('class', 'showCongratsConfetti');
+    
+}
+
 let pieces = [];
-let numberOfPieces = 80;
+let numberOfPieces = 400;
 let lastUpdateTime = Date.now();
 let heightOfTriangle = 12 * (Math.sqrt(3)/2);
 
@@ -26,13 +36,13 @@ function getRandomColor() {
 }
 
 function drawRect() {
-    ctx.clearRect(0, 0, 800, 800);
+    ctx.clearRect(0, 0, w, h);
     
-    ctx.font = "60px Arial";
-    ctx.fillStyle = "white";
-    ctx.textAlign = "center";
-    ctx.textBaseline = 'middle';
-    ctx.fillText("Congratulations!", 800/2, 800/2);
+    //ctx.font = "60px Arial";
+    //ctx.fillStyle = "white";
+    //ctx.textAlign = "center";
+    //ctx.textBaseline = 'middle';
+    //ctx.fillText("Congratulations!", h/2, w/2);
 
     pieces.forEach(function (p) {
         ctx.save();
@@ -45,9 +55,9 @@ function drawRect() {
     requestAnimationFrame(drawRect);
 }
 
-function Rect(x, y) {
-    this.x = x;
-    this.y = y;
+function Rect() {
+    this.x = Math.round(Math.random() * w);
+    this.y = Math.round(Math.random() * h)-(h/2);
     this.size = getRandomNumber(10, 15);
     this.gravity = getRandomNumber(0.5, 1) * 0.075;
     this.rotationSpeed = (Math.PI * 2) * Math.random() * 0.0005;
@@ -56,16 +66,16 @@ function Rect(x, y) {
 }
 
 while(pieces.length < numberOfPieces) {
-    pieces.push(new Rect(Math.random() * 800, Math.random() * 800));
+    pieces.push(new Rect(Math.random() * w, Math.random() * h));
 }
 
-function confettiFallin() {
+function confettiFalling() {
     let now = Date.now()
         deltaTime = now - lastUpdateTime;
     
     for(let i = pieces.length -1; i >= 0; i--) {
         let p = pieces[i];
-        if(p.y > 800) {
+        if(p.y > h) {
             pieces.splice(i, 1);
             continue;
         }
@@ -74,20 +84,24 @@ function confettiFallin() {
     }
 
     while(pieces.length < numberOfPieces) {
-        pieces.push(new Rect(Math.random() * 800, -20));
+        pieces.push(new Rect(Math.random() * h, -20));
     }
 
     lastUpdateTime = now;
 
-    setTimeout(confettiFallin, 1);
+    setTimeout(confettiFalling, 1);
 }    
 
 function confettiExplode() {
-    confettiFallin();
     drawRect();
+    confettiFalling();
 }
-    
-confettiExplode();
+
+
+
+
+
+
 
 
 //function confettiFallinTriangle() {

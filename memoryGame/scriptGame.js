@@ -91,10 +91,16 @@ function toggleHardMode() {
 
   cards = document.querySelectorAll(".card");
 
-  isHardModeOn = true;
-  gridContainer = document.querySelector(".gridContainer");
-  gridContainer.classList.remove("gridContainer");
-  gridContainer.classList.add("gridContainerHard");
+  if (!isHardModeOn) {
+
+    isHardModeOn = true;
+    gridContainer = document.querySelector(".gridContainer");
+    gridContainer.classList.remove("gridContainer");
+    gridContainer.classList.add("gridContainerHard");
+
+  }
+
+
   cards.forEach(cardsElement => {
     cardsElement.remove();
   });
@@ -234,6 +240,9 @@ function isGameFinished() {
       scoreWindowShow.setAttribute("class", "scoreWindowShow")
       scoreWindowShow.classlist.remove("scoreWindowHide")
   }, 1 * 1000)
+  canvas.classList.remove("hiddenCanvas");
+  getCongratsTitle();
+  confettiExplode();
   }
 }
 
@@ -252,7 +261,7 @@ function finishGame() { //debug tool for finishing the game from console
   showScoreButton.disabled = true
   setTimeout(function() {
     let mostRecentScore = localStorage.getItem("mostRecentScore", score)
-    putScoreHide.setAttribute("class","putScoreShow")
+    putScoreHide.setAttribute("class", "putScoreShow")
     putScoreHide.classList.remove("putScoreHide")
     finalScore.innerText = `Twój wynik to: ${mostRecentScore}`
     scoreWindowShow.setAttribute("class", "scoreWindowShow")
