@@ -232,9 +232,9 @@ function isGameFinished() {
       putScoreHide.setAttribute("class", "putScoreShow")
       putScoreHide.classList.remove("putScoreHide")
   }, 1 * 1000)
+  confettiAll();
   canvas.classList.remove("hiddenCanvas");
-  getCongratsTitle();
-  confettiExplode();
+  
   }
 }
 
