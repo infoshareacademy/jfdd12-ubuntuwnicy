@@ -38,6 +38,7 @@ div.menuIsHidden{
   background: green;
   color: white;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  z-index: 2;
 }
 
 .backgroundDiv {

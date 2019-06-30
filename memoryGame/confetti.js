@@ -22,6 +22,10 @@ function getCongratsTitle() {
     
 }
 
+function removeCongratsTitle() {
+    congratulations.setAttribute('class', 'congratsConfetti');
+}
+
 let pieces = [];
 let numberOfPieces = 1000;
 let lastUpdateTime = Date.now();
