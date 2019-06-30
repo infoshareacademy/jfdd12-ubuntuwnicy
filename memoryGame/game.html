@@ -33,6 +33,23 @@
         </div>
       </div>
     </div>
+    <div class="putScoreHide">
+        <button id="scoreButton">X</button>
+        <fieldset id="scoreWindowShow">        
+          <input id="putLogin" type="text" name="inputText" placholder="Podaj swój nick">
+        <p id="finalScore"></p>
+        <button id="showTop" onclick="SaveHighScore(event)">Zapisz</button>
+        </fieldset>
+      <fieldset id="highScoresShow">
+      <div class="scoresContainer">
+        <div id="highScores" class="flex-center flex-column">
+            <h1 id="finalScore">Najlepsze wyniki</h1>
+            <ul id="highScoresList"></ul>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+    </div>
     <div class="wrapper">
       <header>
         <h1>sQuizYour Memory</h1>
