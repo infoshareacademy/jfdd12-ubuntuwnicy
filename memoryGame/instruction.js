@@ -44,10 +44,10 @@ buttonInstruction.addEventListener("click", function(event){
 // Adds functionality to button "Poziom łatwy" on the main page
 
 selectDiffEasy.addEventListener("click", function(event){
+    resetGame()
     console.log("toggling class")
     button.classList.remove("menuButtonHidden")
     button.setAttribute("class", "menuButtonShown")
-    resetGame()
     startGame()
     initializeGame()
 })
@@ -55,10 +55,10 @@ selectDiffEasy.addEventListener("click", function(event){
 // Adds functionality to button "Poziom trudny" on the main page
 
 selectDiffHard.addEventListener("click", function(event){
+    resetGame()
     console.log("toggling class")
     button.classList.remove("menuButtonHidden")
     button.setAttribute("class", "menuButtonShown")
-    resetGame()
     startGame()
     toggleHardMode()
 })
@@ -89,12 +89,11 @@ selectHard.addEventListener("click", function(event){
 
 function startGame(){
 timerId = setInterval(function() {
-    console.log('timer', timer);
     inGameTimer.innerHTML = `TIME:${timer}`;
     timer = timer + 1;
 }, 1000);
 scoreId = setInterval(function() {
-    console.log(inGameScore.innerHTML = `SCORE:${score}`);
+    inGameScore.innerHTML = `SCORE:${score}`;
     score = score - 5;
 }, 1000);
 }
