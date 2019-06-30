@@ -263,7 +263,7 @@ function finishGame() { //debug tool for finishing the game from console
     let mostRecentScore = localStorage.getItem("mostRecentScore", score)
     putScoreHide.setAttribute("class", "putScoreShow")
     putScoreHide.classList.remove("putScoreHide")
-    finalScore.innerText = `Twój wynik to: ${mostRecentScore}`
+    finalScore.innerText = `Twój wynik to: ${Number(mostRecentScore)+5}`
     scoreWindowShow.setAttribute("class", "scoreWindowShow")
 }, 1 * 1000)
 }

@@ -176,6 +176,9 @@ showScoreButton.addEventListener("click", function(event){
     putScoreHide.classList.remove("putScoreHide")
     scoreWindowShow.setAttribute("class", "scoreWindowHide")
     pauseGame() 
+    highScoresList.innerHTML = highScores.map(finalscore => {
+        return `<li class="high-score">${finalscore.login}-${finalscore.score+5}</li>`
+    }).join('')
 })
 
 // ADD FINAL SCORE TO ARRAY OF SCORES
@@ -202,7 +205,7 @@ localStorage.setItem('highScores', JSON.stringify(highScores));
 
 setTimeout(function() {
     highScoresList.innerHTML = highScores.map(finalscore => {
-        return `<li class="high-score">${finalscore.login}-${finalscore.score}</li>`
+        return `<li class="high-score">${finalscore.login}-${finalscore.score+5}</li>`
     }).join('');
 }, 0)
 
