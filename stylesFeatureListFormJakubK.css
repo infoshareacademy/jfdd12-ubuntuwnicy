@@ -76,7 +76,7 @@ div.featureList {
 
 /* Mobile transitions and animation for the extended feature menu */
 
-@media (max-width: 480px) {
+@media (max-width: 512px) {
   div.featureList {
     display: flex;
     flex-flow: column;
@@ -137,7 +137,7 @@ div.featureList {
   text-align: center;
 }
 
-input[type="submit"] {
+/* input[type="submit"] {
   margin-top: 5px;
   font-size: 1.05em;
   text-decoration: none;
@@ -150,7 +150,7 @@ input[type="submit"] {
   padding-left: 75px;
   padding-right: 75px;
   cursor: pointer;
-}
+} */
 
 input[name="name"],
 input[name="userEmail"] {
@@ -169,7 +169,7 @@ input[name="userEmail"] {
   display: flex;
   flex-flow: column;
   align-items: center;
-  height: 400px;
+  height: 200px;
 }
 
 .newsletterSecurity {
@@ -238,13 +238,13 @@ input[name="userEmail"] {
   text-justify: auto;
 }
 
-.toGameButton {
+#submitButton{
   cursor: pointer;
   font-size: 1.05em;
   text-decoration: none;
   color: rgb(253, 255, 255);
   width: 20%;
-  height: 150px;
+  height: auto;
   background-color: green;
   border: solid white;
   border-radius: 15px 15px 15px 15px;
@@ -253,7 +253,33 @@ input[name="userEmail"] {
   cursor: pointer;
   text-justify: auto;
 }
+
+.toGameButton {
+  cursor: pointer;
+  font-size: 1.05em;
+  text-decoration: none;
+  color: rgb(253, 255, 255);
+  width: 20%;
+  height: 50px;
+  background-color: green;
+  border: solid white;
+  border-radius: 15px 15px 15px 15px;
+  text-decoration: none;
+  padding: 2%;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .backOutButton {
   left: 0;
   bottom: 0;
-} */
+}
+
+@media (max-width: 480px){
+  .formPopUp{
+    font-size: 1em;
+    padding: 0 5% 0;
+  }
+}
