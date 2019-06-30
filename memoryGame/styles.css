@@ -38,6 +38,10 @@ body {
     border-radius: 10%;
 }
 
+.card:hover{
+    transform: scale(1.08)
+}
+
 .cardsAreMatching {
     transform: rotate(90deg) translateX(900px);
     background-color: blue;
