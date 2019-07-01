@@ -51,10 +51,7 @@ buttonInstruction.addEventListener("click", function (event) {
     BackDiv.setAttribute("class", "backgroundDiv")
     button.classList.remove("menuButtonHidden")
     button.setAttribute("class", "menuButtonShown")
-    pauseGame()
-    canvas.classList.add("hiddenCanvas");
-    congrats.setAttribute('class', 'congratsConfetti');
-    
+    pauseGame()    
 })
 
 // Adds functionality to button "Poziom łatwy" on the main page
