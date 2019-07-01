@@ -55,6 +55,7 @@ div.menuIsHidden{
   border-width: 5px;
   border-color: white;
   flex-basis: 170px;
+  z-index: 2;
 }
 #buttonInstruction:hover,
 #selectDifficultyEasy:hover,
