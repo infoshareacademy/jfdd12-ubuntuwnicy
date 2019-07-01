@@ -17,7 +17,6 @@ body {
     height: 50vh;
     grid-template-columns: repeat(4, 25%);
     grid-template-rows: repeat(4, 25%);
-    grid-gap: 3%;
     justify-content: center;
 }
 
@@ -28,7 +27,7 @@ body {
     grid-template-columns: repeat(6, 15%);
     grid-template-rows: repeat(6, 15%);
     justify-content: center;
-    grid-gap: 1%;
+
 }
 
 .card{
@@ -37,6 +36,8 @@ body {
     background-color: rgb(255, 255, 153);
     border: 1px solid rgb(0, 0, 0);
     border-radius: 10%;
+    margin: 2px;
+    user-select: none;
 }
 
 .card:hover{
@@ -100,6 +101,8 @@ header {
   color: white;
   text-align: center;
   font-size: 1.5em;
+  height: auto;
+
 }
 
 header h1 {
@@ -135,6 +138,35 @@ canvas {
     font-size: 1.75rem;
 }
 
+.home{
+    height: 60px;
+    width: auto;
+    margin: 2px;
+
+}
+
+.homeLink{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    /* margin-right: 5%;
+    margin-left: 1%;
+    margin-top: 1%; */
+    /* position: absolute;
+    top: 0;
+    left: 0; */
+    width: fit-content;
+    justify-self: center;
+    justify-content: center;
+    border: 5px white solid;
+}
+
+.homeLinkWrapper{
+    display: flex;
+    justify-content: center;
+    margin-top: 1%;
+}
 
 @media (max-width: 480px){
 
@@ -146,6 +178,15 @@ canvas {
     .gridContainerHard {
         width: 90vw;
         height: 90vw;
+    }
+
+}
+
+@media (max-width: 837px) and (min-width: 481px){
+
+    .gridContainerHard {
+        width: 70vw;
+        height: 70vw;
     }
 
 }
