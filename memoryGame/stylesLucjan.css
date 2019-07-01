@@ -242,8 +242,8 @@ display: block
 
 #finalScore{
   text-align: center;
-  font-size: 2em;
-  margin: 0% 0%;
+  font-size: 1em;
+  margin: 1% 0%;
 }
 
 #highScoresListHard, #highScoresListEasy{
@@ -295,6 +295,9 @@ display: block
     #timer, #score{
       color: #fff;
       font-size: 1.4em;
+    }
+    #finalScore{
+      font-size: 1.8em;
     }
 }
 
@@ -354,5 +357,8 @@ display: block
   }
   #highScoresListHard, #highScoresListEasy{
     font-size: 0.5em;
+  }
+  #finalScore{
+    font-size: 2.2em;
   }
 }
