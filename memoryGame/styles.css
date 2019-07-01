@@ -142,8 +142,11 @@ canvas {
     height: 60px;
     width: auto;
     margin: 2px;
+   
 
 }
+
+
 
 .homeLink{
     display: flex;
@@ -160,7 +163,12 @@ canvas {
     justify-self: center;
     justify-content: center;
     border: 5px white solid;
+    z-index: 2;
 }
+
+.homeLink:hover{
+    transform: scale(1.025);
+    }
 
 .homeLinkWrapper{
     display: flex;
