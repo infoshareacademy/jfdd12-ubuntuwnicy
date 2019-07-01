@@ -19,17 +19,11 @@ let congratulations = document.querySelector('.congratsConfetti');
 
 function getCongratsTitle() {
     congratulations.setAttribute('class', 'showCongratsConfetti');
-    
-}
-
-function removeCongratsTitle() {
-    congratulations.setAttribute('class', 'congratsConfetti');
 }
 
 let pieces = [];
 let numberOfPieces = 1000;
 let lastUpdateTime = Date.now();
-let heightOfTriangle = 12 * (Math.sqrt(3)/2);
 
 function getRandomNumber(min, max) {
     return Math.random() * (max - min) + min;
@@ -103,68 +97,3 @@ getCongratsTitle();
 }
 
 
-
-
-
-
-//function confettiFallinTriangle() {
-//    let now = Date.now()
-//        deltaTime = now - lastUpdateTime;
-   
-//    for(let i = pieces.length -1; i >= 0; i--) {
-//        let pt = pieces[i];
-//        if(pt.y > 800) {
-//            pieces.splice(i, 1);
-//            continue;
-//        }
-//        pt.y += pt.gravity * deltaTime;
-//        pt.rotation += pt.rotationSpeed * deltaTime;
-//    }
-
-//    while(pieces.length < numberOfPieces) {
-//        pieces.push(new Rect(Math.random() * 800, -20));
-//    }
-
-//    lastUpdateTime = now;
-
-//    setTimeout(confettiFallinTriangle, 1);
-//}
-
-//function drawTriangle() {
-//    ctx.clearRect(0, 0, 800, 800);
-
-//    pieces.forEach(function (p) {
-//        ctx.save();
-//        ctx.fillStyle = p.color;
-//        ctx.beginPath()
-//        ctx.moveTo(p.x, p.y);
-//        ctx.lineTo(p.x + 6, p.y + p.size);
-//        ctx.lineTo(p.x - 6, p.y + p.size);
-//        ctx.closePath()
-//        ctx.translate((p.x + 6) - p.size / 2, p.y / 2);
-//        ctx.rotate(p.rotation);
-//        ctx.fill()
-//        ctx.restore();
-//    });
-//    requestAnimationFrame(drawTriangle);
-//}
-
-//function Triangle(x, y) {
-//    this.x = x;
-//    this.y = y;
-//    this.size = 12 * (Math.sqrt(3)/2);
-//    this.gravity = getRandomNumber(0.75, 1) * 0.1;
-//    this.rotationSpeed = (Math.PI * 2) * Math.random() * 0.0005;
-//    this.rotation = (Math.PI * 2) * Math.random();
-//    this.color = getRandomColor();
-//}
-
-//while(pieces.length < numberOfPieces) {
-//    pieces.push(new Triangle(Math.random() * 800, Math.random() * 800));
-//}
-
-//function drawCircle ((xCircle, yCircle, r, start) {
-//   ctx.beginPath();
-//   ctx.arc(xCircle, yCircle, r, start, 2 * Math.PI)
-//   ctx.fillStyle = getRandomColor()
-//   ctx.fill()

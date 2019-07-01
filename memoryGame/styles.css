@@ -102,6 +102,10 @@ header {
   font-size: 1.5em;
 }
 
+header h1 {
+    font-size: 1.75em;
+}
+
 canvas {
     position: fixed;
     top: 0;
@@ -128,6 +132,7 @@ canvas {
     line-height: 100vh;
     color: white;
     text-align: center;
+    font-size: 1.75rem;
 }
 
 
