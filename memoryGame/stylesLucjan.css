@@ -71,6 +71,7 @@ transform: scale(1.025);
   background-color: rgb(26, 1, 1);
   position: fixed;
   top: 0;
+  z-index: 3;
 }
 
 .instruction{
@@ -86,7 +87,7 @@ transform: scale(1.025);
     left: 0;
     bottom: 0;
     border: 20px outset green;
-    z-index: 2;
+    z-index: 3;
     opacity: 1;
     color: green;
 }
@@ -162,7 +163,7 @@ transform: scale(1.025);
   left: 0;
   bottom: 0;
   border: 20px outset green;
-  z-index: 2;
+  z-index: 3;
   display: block;
   opacity: 1;
   color: green;
