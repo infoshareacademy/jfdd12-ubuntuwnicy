@@ -17,7 +17,6 @@ body {
     height: 50vh;
     grid-template-columns: repeat(4, 25%);
     grid-template-rows: repeat(4, 25%);
-    grid-gap: 3%;
     justify-content: center;
 }
 
@@ -28,7 +27,7 @@ body {
     grid-template-columns: repeat(6, 15%);
     grid-template-rows: repeat(6, 15%);
     justify-content: center;
-    grid-gap: 1%;
+
 }
 
 .card{
@@ -37,6 +36,7 @@ body {
     background-color: rgb(255, 255, 153);
     border: 1px solid rgb(0, 0, 0);
     border-radius: 10%;
+    margin: 2px;
 }
 
 .card:hover{
@@ -141,6 +141,15 @@ canvas {
     .gridContainerHard {
         width: 90vw;
         height: 90vw;
+    }
+
+}
+
+@media (max-width: 837px) and (min-width: 481px){
+
+    .gridContainerHard {
+        width: 70vw;
+        height: 70vw;
     }
 
 }
