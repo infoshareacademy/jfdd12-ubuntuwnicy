@@ -37,6 +37,7 @@ body {
     border: 1px solid rgb(0, 0, 0);
     border-radius: 10%;
     margin: 2px;
+    user-select: none;
 }
 
 .card:hover{
