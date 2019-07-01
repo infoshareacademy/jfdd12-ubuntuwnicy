@@ -139,6 +139,7 @@ function gameLogicAndEventListener() {
       }
 
       if (card.classList.contains("cardIsHighlighted")) {
+        console.log('cards already highlighted')
         return
       } else {
         card.classList.toggle("cardIsHighlighted"); // highlighting a card and pushing to the arr
