@@ -112,10 +112,10 @@ selectHard.addEventListener("click", function (event) {
 // Set's a timer while the game is run
 
 function startTimer() {
-    timerId = inGameTimer.innerHTML = `TIME:0`
+    timerId = inGameTimer.innerHTML = `CZAS:0`
     timer = timer + 1;
     timerId = setInterval(function () {
-        inGameTimer.innerHTML = `TIME:${timer}`;
+        inGameTimer.innerHTML = `CZAS:${timer}`;
         timer = timer + 1;
     }, 1000);
     return timerId
@@ -124,10 +124,10 @@ function startTimer() {
 // Set's a score while the game is run
 
 function startScore() {
-    scoreId = inGameScore.innerHTML = `SCORE:10000`
+    scoreId = inGameScore.innerHTML = `WYNIK:10000`
     score = score - 5;
     scoreId = setInterval(function () {
-        inGameScore.innerHTML = `SCORE:${score}`
+        inGameScore.innerHTML = `WYNIK:${score}`
         score = score - 5;
     }, 1000);
     return scoreId
@@ -138,7 +138,7 @@ function startScore() {
 function startTimerAfterPause() {
     this.timer = timer;
     timerId = setInterval(function () {
-        inGameTimer.innerHTML = `TIME:${timer}`;
+        inGameTimer.innerHTML = `CZAS:${timer}`;
         timer = timer + 1;
     }, 1000);
 }
@@ -148,7 +148,7 @@ function startTimerAfterPause() {
 function startScoreAfterPause(){
 this.score = score;
 scoreId = setInterval(function() {
-    inGameScore.innerHTML = `SCORE:${score}`;
+    inGameScore.innerHTML = `WYNIK:${score}`;
     score = score - 5;
 }, 1000);
 }
