@@ -23,11 +23,12 @@ body {
 
 .gridContainerHard {
     display: grid;
-    width: 50vh;
-    height: 50vh;
+    width: 60vh;
+    height: 60vh;
     grid-template-columns: repeat(6, 15%);
     grid-template-rows: repeat(6, 15%);
     justify-content: center;
+    grid-gap: 1%;
 }
 
 .card{
@@ -112,6 +113,7 @@ canvas {
     display: none;
 }
 
+
 .congratsConfetti {
     display: none;
 }
@@ -129,3 +131,16 @@ canvas {
 }
 
 
+@media (max-width: 480px){
+
+    .gridContainer {
+        width: 70vw;
+        height: 70vw;
+    }
+    
+    .gridContainerHard {
+        width: 90vw;
+        height: 90vw;
+    }
+
+}
