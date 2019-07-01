@@ -18,6 +18,8 @@ const scoreButton = document.querySelector('#scoreButton')
 const putLogin = document.querySelector("#putLogin")
 const topThree = document.querySelector('#topThree')
 const showTop = document.getElementById('showTop')
+const showScoreButton = document.querySelector('#showScoreButton')
+const scoreWindowShow = document.querySelector("#scoreWindowShow")
 const highScoresList = document.querySelector("#highScoresList");
 const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 const MAX_HIGH_SCORES = 3;
@@ -25,6 +27,9 @@ let timer = 0;
 let timerId;
 let score = 10000;
 let scoreId;
+let congrats = document.querySelector('.congratsConfetti');
+
+
 // Adds functionality to instruction panel -> button to hide
 
 button.addEventListener("click", function (event) {
@@ -45,6 +50,9 @@ buttonInstruction.addEventListener("click", function (event) {
     button.classList.remove("menuButtonHidden")
     button.setAttribute("class", "menuButtonShown")
     pauseGame()
+    canvas.classList.add("hiddenCanvas");
+    congrats.setAttribute('class', 'congratsConfetti');
+    
 })
 
 // Adds functionality to button "Poziom łatwy" on the main page
@@ -57,6 +65,8 @@ selectDiffEasy.addEventListener("click", function(event){
     startTimer()
     startScore()
     initializeGame()
+    canvas.classList.add("hiddenCanvas");
+    congrats.setAttribute('class', 'congratsConfetti');
 })
 
 // Adds functionality to button "Poziom trudny" on the main page
@@ -70,6 +80,8 @@ selectDiffHard.addEventListener("click", function (event) {
     startTimer()
     startScore()
     toggleHardMode()
+    canvas.classList.add("hiddenCanvas");
+    congrats.setAttribute('class', 'congratsConfetti');
 })
 
 // Adds functionality to button "Łatwy" on the welcome window
@@ -82,6 +94,7 @@ selectEasy.addEventListener("click", function (event) {
     initializeGame()
     startTimer()
     startScore()
+    
 })
 
 // Adds functionality to button "Trudny" on the welcome window
@@ -99,10 +112,10 @@ selectHard.addEventListener("click", function (event) {
 // Set's a timer while the game is run
 
 function startTimer() {
-    timerId = inGameTimer.innerHTML = `TIME:0`
+    timerId = inGameTimer.innerHTML = `CZAS:0`
     timer = timer + 1;
     timerId = setInterval(function () {
-        inGameTimer.innerHTML = `TIME:${timer}`;
+        inGameTimer.innerHTML = `CZAS:${timer}`;
         timer = timer + 1;
     }, 1000);
     return timerId
@@ -111,10 +124,10 @@ function startTimer() {
 // Set's a score while the game is run
 
 function startScore() {
-    scoreId = inGameScore.innerHTML = `SCORE:10000`
+    scoreId = inGameScore.innerHTML = `WYNIK:10000`
     score = score - 5;
     scoreId = setInterval(function () {
-        inGameScore.innerHTML = `SCORE:${score}`
+        inGameScore.innerHTML = `WYNIK:${score}`
         score = score - 5;
     }, 1000);
     return scoreId
@@ -125,7 +138,7 @@ function startScore() {
 function startTimerAfterPause() {
     this.timer = timer;
     timerId = setInterval(function () {
-        inGameTimer.innerHTML = `TIME:${timer}`;
+        inGameTimer.innerHTML = `CZAS:${timer}`;
         timer = timer + 1;
     }, 1000);
 }
@@ -135,7 +148,7 @@ function startTimerAfterPause() {
 function startScoreAfterPause(){
 this.score = score;
 scoreId = setInterval(function() {
-    inGameScore.innerHTML = `SCORE:${score}`;
+    inGameScore.innerHTML = `WYNIK:${score}`;
     score = score - 5;
 }, 1000);
 }
@@ -157,9 +170,26 @@ function resetGame() {
 }
 
 scoreButton.addEventListener("click", function(event){
-    var inputLogin = document.querySelector("#putLogin");
     putScoreHide.setAttribute("class", "putScoreHide");
     putScoreHide.classList.remove("putScoreShow")
+    buttonInstruction.disabled = false
+    selectDifficultyEasy.disabled = false
+    selectDifficultyHard.disabled = false
+    showScoreButton.disabled = false
+    if (howManyPairsLeft !== 0){
+        startTimerAfterPause()
+        startScoreAfterPause()
+    }
+})
+
+showScoreButton.addEventListener("click", function(event){
+    putScoreHide.setAttribute("class", "putScoreShow");
+    putScoreHide.classList.remove("putScoreHide")
+    scoreWindowShow.setAttribute("class", "scoreWindowHide")
+    pauseGame() 
+    highScoresList.innerHTML = highScores.map(finalscore => {
+        return `<li class="high-score">${finalscore.login}-${finalscore.score+5}</li>`
+    }).join('')
 })
 
 // ADD FINAL SCORE TO ARRAY OF SCORES
@@ -170,6 +200,8 @@ putLogin.addEventListener("keyup", () => {
 
 SaveHighScore = e => {
     e.preventDefault();
+
+if (putLogin.value !== ''){
 
 let finalscore = {
     login: putLogin.value,
@@ -186,11 +218,12 @@ localStorage.setItem('highScores', JSON.stringify(highScores));
 
 setTimeout(function() {
     highScoresList.innerHTML = highScores.map(finalscore => {
-        return `<li class="high-score">${finalscore.login}-${finalscore.score}</li>`
+        return `<li class="high-score">${finalscore.login}-${finalscore.score+5}</li>`
     }).join('');
 }, 0)
 
 putLogin.value = ''
 showTop.disabled = true
-putLogin.disabled = true
+putLogin.disabled = true} else
+{ return alert("Proszę podaj swój nick")}
 }

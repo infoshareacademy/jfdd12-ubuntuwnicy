@@ -185,6 +185,10 @@ input[name="userEmail"] {
   top: 25%;
   font-size: 1.5em;
   padding: 2%;
+  border: 20px outset green;
+  z-index: 2;
+  opacity: 1;
+  color: green;
 }
 
 .formPopUpBackground {
@@ -242,7 +246,7 @@ input[name="userEmail"] {
   text-justify: auto;
 }
 
-/* .toGameButton {
+.toGameButton {
   cursor: pointer;
   font-size: 1.05em;
   text-decoration: none;
@@ -259,7 +263,7 @@ input[name="userEmail"] {
   display: flex;
   align-items: center;
   justify-content: center;
-} */
+}
 .backOutButton {
   left: 0;
   bottom: 0;

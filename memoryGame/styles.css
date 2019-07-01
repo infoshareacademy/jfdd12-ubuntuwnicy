@@ -39,6 +39,10 @@ body {
     border-radius: 10%;
 }
 
+.card:hover{
+    transform: scale(1.08)
+}
+
 .cardsAreMatching {
     transform: rotate(90deg) translateX(900px);
     background-color: blue;
@@ -101,11 +105,31 @@ header {
 canvas {
     position: fixed;
     top: 0;
+    
+
 }
 
 .hiddenCanvas {
     display: none;
 }
+
+
+.congratsConfetti {
+    display: none;
+}
+
+.showCongratsConfetti {
+    position: fixed;
+    top: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Press Start 2P', cursive;
+    line-height: 100vh;
+    color: white;
+    text-align: center;
+}
+
 
 @media (max-width: 480px){
 

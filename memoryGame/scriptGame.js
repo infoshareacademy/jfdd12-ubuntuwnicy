@@ -214,7 +214,6 @@ function cardsArentMatching() {
     },
     timeoutLength
   );
-
 }
 
 
@@ -225,12 +224,22 @@ function isGameFinished() {
     console.log("koniec gry")
     pauseGame()
     localStorage.setItem("mostRecentScore", score)
-    setTimeout(function () {
-      putScoreHide.setAttribute("class", "putScoreShow")
+    showTop.disabled = false
+    putLogin.disabled = false
+    buttonInstruction.disabled = true
+    selectDifficultyEasy.disabled = true
+    selectDifficultyHard.disabled = true
+    showScoreButton.disabled = true
+    setTimeout(function() {
+      let mostRecentScore = localStorage.getItem("mostRecentScore", score)
+      putScoreHide.setAttribute("class","putScoreShow")
       putScoreHide.classList.remove("putScoreHide")
+      finalScore.innerText = `Twój wynik to: ${Number(mostRecentScore)+5}`
+      scoreWindowShow.setAttribute("class", "scoreWindowShow")
   }, 1 * 1000)
+  confettiAll();
   canvas.classList.remove("hiddenCanvas");
-  confettiExplode();
+  
   }
 }
 
@@ -243,10 +252,15 @@ function finishGame() { //debug tool for finishing the game from console
   isGameFinished()
   showTop.disabled = false
   putLogin.disabled = false
-  setTimeout(function () {
+  buttonInstruction.disabled = true
+  selectDifficultyEasy.disabled = true
+  selectDifficultyHard.disabled = true
+  showScoreButton.disabled = true
+  setTimeout(function() {
     let mostRecentScore = localStorage.getItem("mostRecentScore", score)
     putScoreHide.setAttribute("class", "putScoreShow")
     putScoreHide.classList.remove("putScoreHide")
-    finalScore.innerText = `Twój wynik to: ${mostRecentScore}`
-  }, 1 * 1000)
+    finalScore.innerText = `Twój wynik to: ${Number(mostRecentScore)+5}`
+    scoreWindowShow.setAttribute("class", "scoreWindowShow")
+}, 1 * 1000)
 }
