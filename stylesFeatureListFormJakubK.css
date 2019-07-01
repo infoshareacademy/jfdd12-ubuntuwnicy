@@ -277,6 +277,10 @@ input[name="userEmail"] {
     font-size: 1em;
     padding: 0 5% 0;
   }
+  input[name = 'userEmail']{
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .hackyInput{
