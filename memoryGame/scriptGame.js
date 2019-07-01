@@ -244,26 +244,3 @@ function isGameFinished() {
   
   }
 }
-
-function finishGame() { //debug tool for finishing the game from console
-  howManyPairsLeft = 0
-  cardsAreLoading = true;
-  console.log("koniec gry");
-  pauseGame()
-  localStorage.setItem("mostRecentScore", score)
-  isGameFinished()
-  showTop.disabled = false
-  putLogin.disabled = false
-  buttonInstruction.disabled = true
-  selectDifficultyEasy.disabled = true
-  selectDifficultyHard.disabled = true
-  showScoreButton.disabled = true
-  addScoreButtonProperty()
-  setTimeout(function() {
-    let mostRecentScore = localStorage.getItem("mostRecentScore", score)
-    putScoreHide.setAttribute("class", "putScoreShow")
-    putScoreHide.classList.remove("putScoreHide")
-    finalScore.innerText = `Twój wynik to: ${Number(mostRecentScore)+5}`
-    scoreWindowShow.setAttribute("class", "scoreWindowShow")
-}, 1 * 1000)
-}
