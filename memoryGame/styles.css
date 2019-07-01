@@ -101,6 +101,8 @@ header {
   color: white;
   text-align: center;
   font-size: 1.5em;
+  height: auto;
+
 }
 
 header h1 {
@@ -136,6 +138,35 @@ canvas {
     font-size: 1.75rem;
 }
 
+.home{
+    height: 60px;
+    width: auto;
+    margin: 2px;
+
+}
+
+.homeLink{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    /* margin-right: 5%;
+    margin-left: 1%;
+    margin-top: 1%; */
+    /* position: absolute;
+    top: 0;
+    left: 0; */
+    width: fit-content;
+    justify-self: center;
+    justify-content: center;
+    border: 5px white solid;
+}
+
+.homeLinkWrapper{
+    display: flex;
+    justify-content: center;
+    margin-top: 1%;
+}
 
 @media (max-width: 480px){
 
