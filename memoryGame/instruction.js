@@ -275,15 +275,21 @@ showScoreButton.addEventListener("click", function(event){
         }
     })}
 
+    highScoresListHard.innerHTML = highScoresHard.map(finalscore => {
+        return `<li class="high-score">${finalscore.login}-${finalscore.score+5}</li>`
+    }).join('')
+
+    highScoresListEasy.innerHTML = highScoresEasy.map(finalscore => {
+        return `<li class="high-score">${finalscore.login}-${finalscore.score+5}</li>`
+    }).join('')
+
+
 showScoreButton.addEventListener("click", function(event){
     if(checkDifficultyHard() === 36 || checkDifficulty() === 0){
     putScoreHide.setAttribute("class", "putScoreShow");
     putScoreHide.classList.remove("putScoreHide")
     scoreWindowShow.setAttribute("class", "scoreWindowHide")
     pauseGame() 
-    highScoresListHard.innerHTML = highScoresHard.map(finalscore => {
-        return `<li class="high-score">${finalscore.login}-${finalscore.score+5}</li>`
-    }).join('')
     } else 
     {
         putScoreHide.setAttribute("class", "putScoreShow");
