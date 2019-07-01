@@ -289,12 +289,20 @@ showScoreButton.addEventListener("click", function(event){
     putScoreHide.setAttribute("class", "putScoreShow");
     putScoreHide.classList.remove("putScoreHide")
     scoreWindowShow.setAttribute("class", "scoreWindowHide")
+    buttonInstruction.disabled = true
+    selectDifficultyEasy.disabled = true
+    selectDifficultyHard.disabled = true
+    showScoreButton.disabled = true
     pauseGame() 
     } else 
     {
         putScoreHide.setAttribute("class", "putScoreShow");
         putScoreHide.classList.remove("putScoreHide")
         scoreWindowShow.setAttribute("class", "scoreWindowHide")
+        buttonInstruction.disabled = true
+        selectDifficultyEasy.disabled = true
+        selectDifficultyHard.disabled = true
+        showScoreButton.disabled = true
         pauseGame() 
         highScoresListEasy.innerHTML = highScoresEasy.map(finalscore => {
             return `<li class="high-score">${finalscore.login}-${finalscore.score+5}</li>`
