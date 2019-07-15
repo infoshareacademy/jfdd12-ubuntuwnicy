@@ -195,8 +195,8 @@ display: block
 
 #showTop{
   float: right;
-  width: 5rem;
-  height: 5rem;
+  width: 4rem;
+  height: 4rem;
   font-size: 1rem;
   cursor: pointer;
 }
@@ -242,7 +242,7 @@ display: block
 
 #finalScore{
   text-align: center;
-  font-size: 1em;
+  font-size: 0.8em;
   margin: 1% 0%;
 }
 
@@ -327,6 +327,7 @@ display: block
       margin-top: 2rem;
       margin-left: 30%;
       margin-right: 3.5rem;
+      margin-bottom: 1rem;
       width: 20vw;
       font-size: 1.2rem;
     }
